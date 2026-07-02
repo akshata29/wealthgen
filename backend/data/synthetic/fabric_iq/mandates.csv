@@ -1,0 +1,9 @@
+mandate_id,display_name,client_id,strategy,benchmark_id,base_currency,inception,aum_musd,target_holdings
+northbridge-global-balanced,Northbridge Global Balanced,cli-001,Global multi-asset balanced with ESG screen,BM-GBL-6040,GBP,2019-03-01,42.5,MSFT|NVDA|AAPL|JPM|HSBA|NESN|ASML|UNH|XOM|NEE|IEF|LQD|IGLT|GLD|VNQ|BIL
+halvorsen-global-growth,Halvorsen Global Growth,cli-002,Global equity growth with thematic tilt,BM-GBL-EQ,USD,2017-06-15,128.0,MSFT|NVDA|AAPL|ASML|UNH|JPM|VNQ|LQD|BIL
+meadowlark-core-income,Meadowlark Core Income,cli-003,Capital-preservation income mandate,BM-US-CONS,GBP,2015-01-10,310.0,IEF|LQD|IGLT|NESN|UNH|NEE|GLD|BIL
+rivera-opportunistic-equity,Rivera Opportunistic Equity,cli-004,High-conviction global equity,BM-GBL-EQ,USD,2021-09-01,26.0,MSFT|NVDA|AAPL|ASML|UNH|JPM|VNQ|LQD|BIL
+ashcombe-ldi-core,Ashcombe LDI Core,cli-005,Liability-driven conservative income,BM-US-CONS,GBP,2014-04-01,540.0,IEF|LQD|IGLT|NESN|UNH|NEE|GLD|BIL
+thornton-lifestyle-balanced,Thornton Lifestyle Balanced,cli-006,Goals-based balanced with education glide-path,BM-GBL-6040,GBP,2020-11-01,3.8,MSFT|NVDA|AAPL|JPM|HSBA|NESN|ASML|UNH|XOM|NEE|IEF|LQD|IGLT|GLD|VNQ|BIL
+delacroix-global-growth,Delacroix Global Growth,cli-007,Multi-generational growth,BM-GBL-EQ,USD,2016-02-01,96.0,MSFT|NVDA|AAPL|ASML|UNH|JPM|VNQ|LQD|BIL
+sableridge-balanced-esg,Sable Ridge Balanced ESG,cli-008,Mission-aligned balanced (Article 8),BM-GBL-6040,USD,2018-07-01,205.0,MSFT|NVDA|AAPL|JPM|HSBA|NESN|ASML|UNH|XOM|NEE|IEF|LQD|IGLT|GLD|VNQ|BIL

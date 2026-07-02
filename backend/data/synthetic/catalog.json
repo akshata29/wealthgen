@@ -1,0 +1,351 @@
+{
+  "advisors": [
+    {
+      "advisor_id": "adv-001",
+      "name": "A. Okafor",
+      "team": "UK Private Wealth",
+      "jurisdiction": "UK"
+    },
+    {
+      "advisor_id": "adv-002",
+      "name": "M. Lindqvist",
+      "team": "US Private Wealth",
+      "jurisdiction": "US"
+    },
+    {
+      "advisor_id": "adv-003",
+      "name": "R. Nakamura",
+      "team": "Global Family Office",
+      "jurisdiction": "UK"
+    }
+  ],
+  "clients": [
+    {
+      "client_id": "cli-001",
+      "display_name": "Northbridge Family Trust",
+      "advisor_id": "adv-001",
+      "jurisdiction": "UK",
+      "risk_profile": "balanced",
+      "financial_literacy": "informed",
+      "tone_preference": "warm",
+      "segment": "Private Client",
+      "life_event": "Approaching retirement (5y)",
+      "esg_preference": true
+    },
+    {
+      "client_id": "cli-002",
+      "display_name": "Halvorsen Holdings",
+      "advisor_id": "adv-002",
+      "jurisdiction": "US",
+      "risk_profile": "growth",
+      "financial_literacy": "expert",
+      "tone_preference": "formal",
+      "segment": "Family Office",
+      "life_event": null,
+      "esg_preference": false
+    },
+    {
+      "client_id": "cli-003",
+      "display_name": "Meadowlark Endowment",
+      "advisor_id": "adv-003",
+      "jurisdiction": "UK",
+      "risk_profile": "conservative",
+      "financial_literacy": "expert",
+      "tone_preference": "formal",
+      "segment": "Institutional",
+      "life_event": null,
+      "esg_preference": true
+    },
+    {
+      "client_id": "cli-004",
+      "display_name": "Rivera Private Wealth",
+      "advisor_id": "adv-002",
+      "jurisdiction": "US",
+      "risk_profile": "aggressive",
+      "financial_literacy": "informed",
+      "tone_preference": "neutral",
+      "segment": "Private Client",
+      "life_event": "Liquidity event (business sale)",
+      "esg_preference": false
+    },
+    {
+      "client_id": "cli-005",
+      "display_name": "Ashcombe Pension Scheme",
+      "advisor_id": "adv-001",
+      "jurisdiction": "UK",
+      "risk_profile": "conservative",
+      "financial_literacy": "expert",
+      "tone_preference": "formal",
+      "segment": "Institutional",
+      "life_event": null,
+      "esg_preference": true
+    },
+    {
+      "client_id": "cli-006",
+      "display_name": "Thornton Household",
+      "advisor_id": "adv-001",
+      "jurisdiction": "UK",
+      "risk_profile": "balanced",
+      "financial_literacy": "novice",
+      "tone_preference": "warm",
+      "segment": "Private Client",
+      "life_event": "New child / education planning",
+      "esg_preference": true
+    },
+    {
+      "client_id": "cli-007",
+      "display_name": "Delacroix Family Office",
+      "advisor_id": "adv-003",
+      "jurisdiction": "US",
+      "risk_profile": "growth",
+      "financial_literacy": "informed",
+      "tone_preference": "neutral",
+      "segment": "Family Office",
+      "life_event": "Intergenerational wealth transfer",
+      "esg_preference": false
+    },
+    {
+      "client_id": "cli-008",
+      "display_name": "Sable Ridge Foundation",
+      "advisor_id": "adv-003",
+      "jurisdiction": "US",
+      "risk_profile": "balanced",
+      "financial_literacy": "expert",
+      "tone_preference": "formal",
+      "segment": "Institutional",
+      "life_event": null,
+      "esg_preference": true
+    }
+  ],
+  "mandates": [
+    {
+      "mandate_id": "northbridge-global-balanced",
+      "display_name": "Northbridge Global Balanced",
+      "client_id": "cli-001",
+      "strategy": "Global multi-asset balanced with ESG screen",
+      "benchmark_id": "BM-GBL-6040",
+      "base_currency": "GBP",
+      "inception": "2019-03-01",
+      "aum_musd": 42.5,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "JPM",
+        "HSBA",
+        "NESN",
+        "ASML",
+        "UNH",
+        "XOM",
+        "NEE",
+        "IEF",
+        "LQD",
+        "IGLT",
+        "GLD",
+        "VNQ",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "halvorsen-global-growth",
+      "display_name": "Halvorsen Global Growth",
+      "client_id": "cli-002",
+      "strategy": "Global equity growth with thematic tilt",
+      "benchmark_id": "BM-GBL-EQ",
+      "base_currency": "USD",
+      "inception": "2017-06-15",
+      "aum_musd": 128.0,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "ASML",
+        "UNH",
+        "JPM",
+        "VNQ",
+        "LQD",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "meadowlark-core-income",
+      "display_name": "Meadowlark Core Income",
+      "client_id": "cli-003",
+      "strategy": "Capital-preservation income mandate",
+      "benchmark_id": "BM-US-CONS",
+      "base_currency": "GBP",
+      "inception": "2015-01-10",
+      "aum_musd": 310.0,
+      "target_holdings": [
+        "IEF",
+        "LQD",
+        "IGLT",
+        "NESN",
+        "UNH",
+        "NEE",
+        "GLD",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "rivera-opportunistic-equity",
+      "display_name": "Rivera Opportunistic Equity",
+      "client_id": "cli-004",
+      "strategy": "High-conviction global equity",
+      "benchmark_id": "BM-GBL-EQ",
+      "base_currency": "USD",
+      "inception": "2021-09-01",
+      "aum_musd": 26.0,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "ASML",
+        "UNH",
+        "JPM",
+        "VNQ",
+        "LQD",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "ashcombe-ldi-core",
+      "display_name": "Ashcombe LDI Core",
+      "client_id": "cli-005",
+      "strategy": "Liability-driven conservative income",
+      "benchmark_id": "BM-US-CONS",
+      "base_currency": "GBP",
+      "inception": "2014-04-01",
+      "aum_musd": 540.0,
+      "target_holdings": [
+        "IEF",
+        "LQD",
+        "IGLT",
+        "NESN",
+        "UNH",
+        "NEE",
+        "GLD",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "thornton-lifestyle-balanced",
+      "display_name": "Thornton Lifestyle Balanced",
+      "client_id": "cli-006",
+      "strategy": "Goals-based balanced with education glide-path",
+      "benchmark_id": "BM-GBL-6040",
+      "base_currency": "GBP",
+      "inception": "2020-11-01",
+      "aum_musd": 3.8,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "JPM",
+        "HSBA",
+        "NESN",
+        "ASML",
+        "UNH",
+        "XOM",
+        "NEE",
+        "IEF",
+        "LQD",
+        "IGLT",
+        "GLD",
+        "VNQ",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "delacroix-global-growth",
+      "display_name": "Delacroix Global Growth",
+      "client_id": "cli-007",
+      "strategy": "Multi-generational growth",
+      "benchmark_id": "BM-GBL-EQ",
+      "base_currency": "USD",
+      "inception": "2016-02-01",
+      "aum_musd": 96.0,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "ASML",
+        "UNH",
+        "JPM",
+        "VNQ",
+        "LQD",
+        "BIL"
+      ]
+    },
+    {
+      "mandate_id": "sableridge-balanced-esg",
+      "display_name": "Sable Ridge Balanced ESG",
+      "client_id": "cli-008",
+      "strategy": "Mission-aligned balanced (Article 8)",
+      "benchmark_id": "BM-GBL-6040",
+      "base_currency": "USD",
+      "inception": "2018-07-01",
+      "aum_musd": 205.0,
+      "target_holdings": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "JPM",
+        "HSBA",
+        "NESN",
+        "ASML",
+        "UNH",
+        "XOM",
+        "NEE",
+        "IEF",
+        "LQD",
+        "IGLT",
+        "GLD",
+        "VNQ",
+        "BIL"
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "period": "Q3-2025",
+      "label": "Q3 2025",
+      "regime": "risk-on",
+      "vix_close": 14.2,
+      "vix_trigger": false,
+      "equity_return": 5.8,
+      "bond_return": 1.1,
+      "narrative_headline": "Soft-landing optimism and AI capex broaden the equity rally."
+    },
+    {
+      "period": "Q4-2025",
+      "label": "Q4 2025",
+      "regime": "rotation",
+      "vix_close": 18.6,
+      "vix_trigger": false,
+      "equity_return": 2.3,
+      "bond_return": -0.4,
+      "narrative_headline": "Leadership rotates from mega-cap tech toward value and small caps."
+    },
+    {
+      "period": "Q1-2026",
+      "label": "Q1 2026",
+      "regime": "risk-off",
+      "vix_close": 31.4,
+      "vix_trigger": true,
+      "equity_return": -6.9,
+      "bond_return": 2.7,
+      "narrative_headline": "A VIX spike above 30 on growth-scare and rate-path repricing."
+    },
+    {
+      "period": "Q2-2026",
+      "label": "Q2 2026",
+      "regime": "risk-on",
+      "vix_close": 15.9,
+      "vix_trigger": false,
+      "equity_return": 4.6,
+      "bond_return": 0.6,
+      "narrative_headline": "Markets recover as disinflation resumes and earnings beat."
+    }
+  ]
+}

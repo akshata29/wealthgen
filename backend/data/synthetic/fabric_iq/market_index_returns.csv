@@ -1,0 +1,25 @@
+period,index_name,period_return_pct,source_id
+Q3-2025,Developed market equities,5.8,lseg:idx:developed_market_equities:q3-2025
+Q3-2025,Emerging market equities,6.2,lseg:idx:emerging_market_equities:q3-2025
+Q3-2025,Global aggregate bonds,1.1,lseg:idx:global_aggregate_bonds:q3-2025
+Q3-2025,Global high yield,0.6,lseg:idx:global_high_yield:q3-2025
+Q3-2025,Gold,3.9,lseg:idx:gold:q3-2025
+Q3-2025,Brent crude,0.4,lseg:idx:brent_crude:q3-2025
+Q4-2025,Developed market equities,2.3,lseg:idx:developed_market_equities:q4-2025
+Q4-2025,Emerging market equities,1.6,lseg:idx:emerging_market_equities:q4-2025
+Q4-2025,Global aggregate bonds,-0.4,lseg:idx:global_aggregate_bonds:q4-2025
+Q4-2025,Global high yield,-0.1,lseg:idx:global_high_yield:q4-2025
+Q4-2025,Gold,2.7,lseg:idx:gold:q4-2025
+Q4-2025,Brent crude,0.1,lseg:idx:brent_crude:q4-2025
+Q1-2026,Developed market equities,-6.9,lseg:idx:developed_market_equities:q1-2026
+Q1-2026,Emerging market equities,-8.7,lseg:idx:emerging_market_equities:q1-2026
+Q1-2026,Global aggregate bonds,2.7,lseg:idx:global_aggregate_bonds:q1-2026
+Q1-2026,Global high yield,2.8,lseg:idx:global_high_yield:q1-2026
+Q1-2026,Gold,-0.7,lseg:idx:gold:q1-2026
+Q1-2026,Brent crude,-1.7,lseg:idx:brent_crude:q1-2026
+Q2-2026,Developed market equities,4.6,lseg:idx:developed_market_equities:q2-2026
+Q2-2026,Emerging market equities,4.8,lseg:idx:emerging_market_equities:q2-2026
+Q2-2026,Global aggregate bonds,0.6,lseg:idx:global_aggregate_bonds:q2-2026
+Q2-2026,Global high yield,2.3,lseg:idx:global_high_yield:q2-2026
+Q2-2026,Gold,-1.7,lseg:idx:gold:q2-2026
+Q2-2026,Brent crude,3.5,lseg:idx:brent_crude:q2-2026

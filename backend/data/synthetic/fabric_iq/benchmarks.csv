@@ -1,0 +1,34 @@
+benchmark_id,name,sector,weight
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Information Technology,0.16
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Financials,0.09
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Consumer Staples,0.04
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Health Care,0.07
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Energy,0.03
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Utilities,0.02
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Real Estate,0.02
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Commodities,0.03
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Government,0.3
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Credit,0.19
+BM-GBL-6040,60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg),Cash,0.05
+BM-GBL-EQ,MSCI ACWI (Global Equity),Information Technology,0.26
+BM-GBL-EQ,MSCI ACWI (Global Equity),Financials,0.16
+BM-GBL-EQ,MSCI ACWI (Global Equity),Consumer Staples,0.07
+BM-GBL-EQ,MSCI ACWI (Global Equity),Health Care,0.11
+BM-GBL-EQ,MSCI ACWI (Global Equity),Energy,0.05
+BM-GBL-EQ,MSCI ACWI (Global Equity),Utilities,0.03
+BM-GBL-EQ,MSCI ACWI (Global Equity),Real Estate,0.03
+BM-GBL-EQ,MSCI ACWI (Global Equity),Commodities,0.04
+BM-GBL-EQ,MSCI ACWI (Global Equity),Government,0.12
+BM-GBL-EQ,MSCI ACWI (Global Equity),Credit,0.09
+BM-GBL-EQ,MSCI ACWI (Global Equity),Cash,0.04
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Information Technology,0.1
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Financials,0.06
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Consumer Staples,0.03
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Health Care,0.05
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Energy,0.02
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Utilities,0.02
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Real Estate,0.01
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Commodities,0.01
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Government,0.42
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Credit,0.23
+BM-US-CONS,US Conservative (30/70 S&P 500 / US Agg),Cash,0.05

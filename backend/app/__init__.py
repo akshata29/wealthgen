@@ -1,0 +1,1 @@
+"""WealthGen backend application package."""

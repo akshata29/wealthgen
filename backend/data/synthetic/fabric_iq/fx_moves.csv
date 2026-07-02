@@ -1,0 +1,13 @@
+period,pair,change_pct,source_id
+Q3-2025,GBP/USD,0.75,lseg:fx:gbpusd:q3-2025
+Q3-2025,EUR/USD,-2.66,lseg:fx:eurusd:q3-2025
+Q3-2025,USD/JPY,1.08,lseg:fx:usdjpy:q3-2025
+Q4-2025,GBP/USD,-1.15,lseg:fx:gbpusd:q4-2025
+Q4-2025,EUR/USD,-0.86,lseg:fx:eurusd:q4-2025
+Q4-2025,USD/JPY,-1.03,lseg:fx:usdjpy:q4-2025
+Q1-2026,GBP/USD,0.71,lseg:fx:gbpusd:q1-2026
+Q1-2026,EUR/USD,-0.29,lseg:fx:eurusd:q1-2026
+Q1-2026,USD/JPY,1.55,lseg:fx:usdjpy:q1-2026
+Q2-2026,GBP/USD,-2.32,lseg:fx:gbpusd:q2-2026
+Q2-2026,EUR/USD,-1.43,lseg:fx:eurusd:q2-2026
+Q2-2026,USD/JPY,-3.11,lseg:fx:usdjpy:q2-2026

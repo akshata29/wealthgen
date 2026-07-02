@@ -1,0 +1,80 @@
+mandate_id,period,description,direction,magnitude,rationale,source_id
+northbridge-global-balanced,Q3-2025,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q3-2025:0
+northbridge-global-balanced,Q3-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q3-2025:1
+northbridge-global-balanced,Q3-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q3-2025:2
+northbridge-global-balanced,Q4-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q4-2025:0
+northbridge-global-balanced,Q4-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q4-2025:1
+northbridge-global-balanced,Q1-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q1-2026:0
+northbridge-global-balanced,Q1-2026,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q1-2026:1
+northbridge-global-balanced,Q1-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q1-2026:2
+northbridge-global-balanced,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:0
+northbridge-global-balanced,Q2-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q2-2026:1
+halvorsen-global-growth,Q3-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q3-2025:0
+halvorsen-global-growth,Q3-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q3-2025:1
+halvorsen-global-growth,Q4-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q4-2025:0
+halvorsen-global-growth,Q4-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q4-2025:1
+halvorsen-global-growth,Q4-2025,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q4-2025:2
+halvorsen-global-growth,Q1-2026,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q1-2026:0
+halvorsen-global-growth,Q1-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q1-2026:1
+halvorsen-global-growth,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:0
+halvorsen-global-growth,Q2-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q2-2026:1
+halvorsen-global-growth,Q2-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q2-2026:2
+meadowlark-core-income,Q3-2025,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q3-2025:0
+meadowlark-core-income,Q3-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q3-2025:1
+meadowlark-core-income,Q4-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q4-2025:0
+meadowlark-core-income,Q4-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q4-2025:1
+meadowlark-core-income,Q1-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q1-2026:0
+meadowlark-core-income,Q1-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q1-2026:1
+meadowlark-core-income,Q2-2026,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q2-2026:0
+meadowlark-core-income,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:1
+rivera-opportunistic-equity,Q3-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q3-2025:0
+rivera-opportunistic-equity,Q3-2025,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q3-2025:1
+rivera-opportunistic-equity,Q3-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q3-2025:2
+rivera-opportunistic-equity,Q4-2025,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q4-2025:0
+rivera-opportunistic-equity,Q4-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q4-2025:1
+rivera-opportunistic-equity,Q1-2026,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q1-2026:0
+rivera-opportunistic-equity,Q1-2026,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q1-2026:1
+rivera-opportunistic-equity,Q2-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q2-2026:0
+rivera-opportunistic-equity,Q2-2026,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q2-2026:1
+ashcombe-ldi-core,Q3-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q3-2025:0
+ashcombe-ldi-core,Q3-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q3-2025:1
+ashcombe-ldi-core,Q3-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q3-2025:2
+ashcombe-ldi-core,Q4-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q4-2025:0
+ashcombe-ldi-core,Q4-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q4-2025:1
+ashcombe-ldi-core,Q4-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q4-2025:2
+ashcombe-ldi-core,Q1-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q1-2026:0
+ashcombe-ldi-core,Q1-2026,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q1-2026:1
+ashcombe-ldi-core,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:0
+ashcombe-ldi-core,Q2-2026,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q2-2026:1
+ashcombe-ldi-core,Q2-2026,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q2-2026:2
+thornton-lifestyle-balanced,Q3-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q3-2025:0
+thornton-lifestyle-balanced,Q3-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q3-2025:1
+thornton-lifestyle-balanced,Q3-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q3-2025:2
+thornton-lifestyle-balanced,Q4-2025,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q4-2025:0
+thornton-lifestyle-balanced,Q4-2025,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q4-2025:1
+thornton-lifestyle-balanced,Q4-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q4-2025:2
+thornton-lifestyle-balanced,Q1-2026,Added to Health Care on defensive quality,add,+120 bps,Rotate toward earnings resilience amid growth-scare.,pos:q1-2026:0
+thornton-lifestyle-balanced,Q1-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q1-2026:1
+thornton-lifestyle-balanced,Q2-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q2-2026:0
+thornton-lifestyle-balanced,Q2-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q2-2026:1
+thornton-lifestyle-balanced,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:2
+delacroix-global-growth,Q3-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q3-2025:0
+delacroix-global-growth,Q3-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q3-2025:1
+delacroix-global-growth,Q4-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q4-2025:0
+delacroix-global-growth,Q4-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q4-2025:1
+delacroix-global-growth,Q1-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q1-2026:0
+delacroix-global-growth,Q1-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q1-2026:1
+delacroix-global-growth,Q2-2026,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q2-2026:0
+delacroix-global-growth,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:1
+delacroix-global-growth,Q2-2026,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q2-2026:2
+sableridge-balanced-esg,Q3-2025,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q3-2025:0
+sableridge-balanced-esg,Q3-2025,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q3-2025:1
+sableridge-balanced-esg,Q3-2025,Exited a low-conviction Real Estate sleeve,exit,-90 bps,Recycle capital into higher-conviction ideas.,pos:q3-2025:2
+sableridge-balanced-esg,Q4-2025,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q4-2025:0
+sableridge-balanced-esg,Q4-2025,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q4-2025:1
+sableridge-balanced-esg,Q4-2025,Extended duration in Government bonds,duration,+0.4y,Position for a lower forward rate path.,pos:q4-2025:2
+sableridge-balanced-esg,Q1-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q1-2026:0
+sableridge-balanced-esg,Q1-2026,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q1-2026:1
+sableridge-balanced-esg,Q2-2026,Initiated Utilities for downside ballast,initiate,+80 bps,Increase low-beta exposure ahead of expected volatility.,pos:q2-2026:0
+sableridge-balanced-esg,Q2-2026,Trimmed Information Technology into strength,trim,-150 bps,Lock in gains after outsized AI-led rally; manage concentration risk.,pos:q2-2026:1
+sableridge-balanced-esg,Q2-2026,Reduced Energy on demand concerns,trim,-60 bps,Fade cyclical exposure as leading indicators soften.,pos:q2-2026:2

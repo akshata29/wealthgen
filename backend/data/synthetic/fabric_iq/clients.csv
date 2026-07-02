@@ -1,0 +1,9 @@
+client_id,display_name,advisor_id,jurisdiction,risk_profile,financial_literacy,tone_preference,segment,life_event,esg_preference
+cli-001,Northbridge Family Trust,adv-001,UK,balanced,informed,warm,Private Client,Approaching retirement (5y),True
+cli-002,Halvorsen Holdings,adv-002,US,growth,expert,formal,Family Office,,False
+cli-003,Meadowlark Endowment,adv-003,UK,conservative,expert,formal,Institutional,,True
+cli-004,Rivera Private Wealth,adv-002,US,aggressive,informed,neutral,Private Client,Liquidity event (business sale),False
+cli-005,Ashcombe Pension Scheme,adv-001,UK,conservative,expert,formal,Institutional,,True
+cli-006,Thornton Household,adv-001,UK,balanced,novice,warm,Private Client,New child / education planning,True
+cli-007,Delacroix Family Office,adv-003,US,growth,informed,neutral,Family Office,Intergenerational wealth transfer,False
+cli-008,Sable Ridge Foundation,adv-003,US,balanced,expert,formal,Institutional,,True

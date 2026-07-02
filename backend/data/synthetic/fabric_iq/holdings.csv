@@ -1,0 +1,365 @@
+mandate_id,period,ticker,instrument,isin,asset_class,sector,region,weight,market_value_usd,period_return_pct
+northbridge-global-balanced,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0887,3769750.0,11.86
+northbridge-global-balanced,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0899,3820750.0,9.59
+northbridge-global-balanced,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0717,3047250.0,10.74
+northbridge-global-balanced,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.06,2550000.0,2.07
+northbridge-global-balanced,Q3-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0945,4016250.0,6.42
+northbridge-global-balanced,Q3-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0922,3918500.0,3.19
+northbridge-global-balanced,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1028,4369000.0,7.91
+northbridge-global-balanced,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0532,2261000.0,4.58
+northbridge-global-balanced,Q3-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0666,2830500.0,2.34
+northbridge-global-balanced,Q3-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.07,2975000.0,1.51
+northbridge-global-balanced,Q3-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.082,3485000.0,1.29
+northbridge-global-balanced,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0452,1921000.0,-0.07
+northbridge-global-balanced,Q3-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0619,2630750.0,1.05
+northbridge-global-balanced,Q3-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.005,212500.0,2.32
+northbridge-global-balanced,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0117,497250.0,2.7
+northbridge-global-balanced,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0047,199750.0,1.68
+northbridge-global-balanced,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0887,3769750.0,-0.4
+northbridge-global-balanced,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0899,3820750.0,-1.75
+northbridge-global-balanced,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0717,3047250.0,-0.17
+northbridge-global-balanced,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.06,2550000.0,4.43
+northbridge-global-balanced,Q4-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0945,4016250.0,4.64
+northbridge-global-balanced,Q4-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0922,3918500.0,5.21
+northbridge-global-balanced,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1028,4369000.0,-2.75
+northbridge-global-balanced,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0532,2261000.0,3.01
+northbridge-global-balanced,Q4-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0666,2830500.0,5.3
+northbridge-global-balanced,Q4-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.07,2975000.0,1.54
+northbridge-global-balanced,Q4-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.082,3485000.0,-0.37
+northbridge-global-balanced,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0452,1921000.0,-0.34
+northbridge-global-balanced,Q4-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0619,2630750.0,-1.63
+northbridge-global-balanced,Q4-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.005,212500.0,2.53
+northbridge-global-balanced,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0117,497250.0,3.16
+northbridge-global-balanced,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0047,199750.0,1.77
+northbridge-global-balanced,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0887,3769750.0,-10.41
+northbridge-global-balanced,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0899,3820750.0,-10.98
+northbridge-global-balanced,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0717,3047250.0,-12.8
+northbridge-global-balanced,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.06,2550000.0,-9.91
+northbridge-global-balanced,Q1-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0945,4016250.0,-6.48
+northbridge-global-balanced,Q1-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0922,3918500.0,-0.68
+northbridge-global-balanced,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1028,4369000.0,-13.74
+northbridge-global-balanced,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0532,2261000.0,-1.61
+northbridge-global-balanced,Q1-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0666,2830500.0,-4.93
+northbridge-global-balanced,Q1-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.07,2975000.0,2.2
+northbridge-global-balanced,Q1-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.082,3485000.0,2.24
+northbridge-global-balanced,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0452,1921000.0,0.02
+northbridge-global-balanced,Q1-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0619,2630750.0,4.96
+northbridge-global-balanced,Q1-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.005,212500.0,4.25
+northbridge-global-balanced,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0117,497250.0,-7.58
+northbridge-global-balanced,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0047,199750.0,1.87
+northbridge-global-balanced,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0887,3769750.0,8.36
+northbridge-global-balanced,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0899,3820750.0,11.04
+northbridge-global-balanced,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0717,3047250.0,8.21
+northbridge-global-balanced,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.06,2550000.0,3.35
+northbridge-global-balanced,Q2-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0945,4016250.0,4.39
+northbridge-global-balanced,Q2-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0922,3918500.0,0.06
+northbridge-global-balanced,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1028,4369000.0,7.5
+northbridge-global-balanced,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0532,2261000.0,2.93
+northbridge-global-balanced,Q2-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0666,2830500.0,2.71
+northbridge-global-balanced,Q2-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.07,2975000.0,1.72
+northbridge-global-balanced,Q2-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.082,3485000.0,1.26
+northbridge-global-balanced,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0452,1921000.0,3.82
+northbridge-global-balanced,Q2-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0619,2630750.0,0.61
+northbridge-global-balanced,Q2-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.005,212500.0,3.76
+northbridge-global-balanced,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0117,497250.0,1.56
+northbridge-global-balanced,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0047,199750.0,-0.92
+halvorsen-global-growth,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1667,21337600.0,11.86
+halvorsen-global-growth,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1421,18188800.0,9.59
+halvorsen-global-growth,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1394,17843200.0,10.74
+halvorsen-global-growth,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1339,17139200.0,7.91
+halvorsen-global-growth,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0882,11289600.0,4.58
+halvorsen-global-growth,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1231,15756800.0,2.07
+halvorsen-global-growth,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0192,2457600.0,2.7
+halvorsen-global-growth,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.119,15232000.0,-0.07
+halvorsen-global-growth,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0685,8768000.0,1.68
+halvorsen-global-growth,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1667,21337600.0,-0.4
+halvorsen-global-growth,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1421,18188800.0,-1.75
+halvorsen-global-growth,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1394,17843200.0,-0.17
+halvorsen-global-growth,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1339,17139200.0,-2.75
+halvorsen-global-growth,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0882,11289600.0,3.01
+halvorsen-global-growth,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1231,15756800.0,4.43
+halvorsen-global-growth,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0192,2457600.0,3.16
+halvorsen-global-growth,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.119,15232000.0,-0.34
+halvorsen-global-growth,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0685,8768000.0,1.77
+halvorsen-global-growth,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1667,21337600.0,-10.41
+halvorsen-global-growth,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1421,18188800.0,-10.98
+halvorsen-global-growth,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1394,17843200.0,-12.8
+halvorsen-global-growth,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1339,17139200.0,-13.74
+halvorsen-global-growth,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0882,11289600.0,-1.61
+halvorsen-global-growth,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1231,15756800.0,-9.91
+halvorsen-global-growth,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0192,2457600.0,-7.58
+halvorsen-global-growth,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.119,15232000.0,0.02
+halvorsen-global-growth,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0685,8768000.0,1.87
+halvorsen-global-growth,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1667,21337600.0,8.36
+halvorsen-global-growth,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1421,18188800.0,11.04
+halvorsen-global-growth,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1394,17843200.0,8.21
+halvorsen-global-growth,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1339,17139200.0,7.5
+halvorsen-global-growth,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0882,11289600.0,2.93
+halvorsen-global-growth,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1231,15756800.0,3.35
+halvorsen-global-growth,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0192,2457600.0,1.56
+halvorsen-global-growth,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.119,15232000.0,3.82
+halvorsen-global-growth,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0685,8768000.0,-0.92
+meadowlark-core-income,Q3-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.1705,52855000.0,1.29
+meadowlark-core-income,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.142,44020000.0,-0.07
+meadowlark-core-income,Q3-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1717,53227000.0,1.05
+meadowlark-core-income,Q3-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.2018,62558000.0,3.19
+meadowlark-core-income,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1447,44857000.0,4.58
+meadowlark-core-income,Q3-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1056,32736000.0,1.51
+meadowlark-core-income,Q3-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0402,12462000.0,2.32
+meadowlark-core-income,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0235,7285000.0,1.68
+meadowlark-core-income,Q4-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.1705,52855000.0,-0.37
+meadowlark-core-income,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.142,44020000.0,-0.34
+meadowlark-core-income,Q4-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1717,53227000.0,-1.63
+meadowlark-core-income,Q4-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.2018,62558000.0,5.21
+meadowlark-core-income,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1447,44857000.0,3.01
+meadowlark-core-income,Q4-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1056,32736000.0,1.54
+meadowlark-core-income,Q4-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0402,12462000.0,2.53
+meadowlark-core-income,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0235,7285000.0,1.77
+meadowlark-core-income,Q1-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.1705,52855000.0,2.24
+meadowlark-core-income,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.142,44020000.0,0.02
+meadowlark-core-income,Q1-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1717,53227000.0,4.96
+meadowlark-core-income,Q1-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.2018,62558000.0,-0.68
+meadowlark-core-income,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1447,44857000.0,-1.61
+meadowlark-core-income,Q1-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1056,32736000.0,2.2
+meadowlark-core-income,Q1-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0402,12462000.0,4.25
+meadowlark-core-income,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0235,7285000.0,1.87
+meadowlark-core-income,Q2-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.1705,52855000.0,1.26
+meadowlark-core-income,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.142,44020000.0,3.82
+meadowlark-core-income,Q2-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1717,53227000.0,0.61
+meadowlark-core-income,Q2-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.2018,62558000.0,0.06
+meadowlark-core-income,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1447,44857000.0,2.93
+meadowlark-core-income,Q2-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1056,32736000.0,1.72
+meadowlark-core-income,Q2-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0402,12462000.0,3.76
+meadowlark-core-income,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0235,7285000.0,-0.92
+rivera-opportunistic-equity,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1052,2735200.0,11.86
+rivera-opportunistic-equity,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1273,3309800.0,9.59
+rivera-opportunistic-equity,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1397,3632200.0,10.74
+rivera-opportunistic-equity,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1636,4253600.0,7.91
+rivera-opportunistic-equity,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1114,2896400.0,4.58
+rivera-opportunistic-equity,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1585,4121000.0,2.07
+rivera-opportunistic-equity,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0159,413400.0,2.7
+rivera-opportunistic-equity,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0996,2589600.0,-0.07
+rivera-opportunistic-equity,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0789,2051400.0,1.68
+rivera-opportunistic-equity,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1052,2735200.0,-0.4
+rivera-opportunistic-equity,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1273,3309800.0,-1.75
+rivera-opportunistic-equity,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1397,3632200.0,-0.17
+rivera-opportunistic-equity,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1636,4253600.0,-2.75
+rivera-opportunistic-equity,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1114,2896400.0,3.01
+rivera-opportunistic-equity,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1585,4121000.0,4.43
+rivera-opportunistic-equity,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0159,413400.0,3.16
+rivera-opportunistic-equity,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0996,2589600.0,-0.34
+rivera-opportunistic-equity,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0789,2051400.0,1.77
+rivera-opportunistic-equity,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1052,2735200.0,-10.41
+rivera-opportunistic-equity,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1273,3309800.0,-10.98
+rivera-opportunistic-equity,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1397,3632200.0,-12.8
+rivera-opportunistic-equity,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1636,4253600.0,-13.74
+rivera-opportunistic-equity,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1114,2896400.0,-1.61
+rivera-opportunistic-equity,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1585,4121000.0,-9.91
+rivera-opportunistic-equity,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0159,413400.0,-7.58
+rivera-opportunistic-equity,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0996,2589600.0,0.02
+rivera-opportunistic-equity,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0789,2051400.0,1.87
+rivera-opportunistic-equity,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1052,2735200.0,8.36
+rivera-opportunistic-equity,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1273,3309800.0,11.04
+rivera-opportunistic-equity,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1397,3632200.0,8.21
+rivera-opportunistic-equity,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1636,4253600.0,7.5
+rivera-opportunistic-equity,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1114,2896400.0,2.93
+rivera-opportunistic-equity,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.1585,4121000.0,3.35
+rivera-opportunistic-equity,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0159,413400.0,1.56
+rivera-opportunistic-equity,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0996,2589600.0,3.82
+rivera-opportunistic-equity,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0789,2051400.0,-0.92
+ashcombe-ldi-core,Q3-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0662,35748000.0,1.29
+ashcombe-ldi-core,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.1552,83808000.0,-0.07
+ashcombe-ldi-core,Q3-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1104,59616000.0,1.05
+ashcombe-ldi-core,Q3-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.1602,86508000.0,3.19
+ashcombe-ldi-core,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1981,106974000.0,4.58
+ashcombe-ldi-core,Q3-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1815,98010000.0,1.51
+ashcombe-ldi-core,Q3-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.059,31860000.0,2.32
+ashcombe-ldi-core,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0693,37422000.0,1.68
+ashcombe-ldi-core,Q4-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0662,35748000.0,-0.37
+ashcombe-ldi-core,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.1552,83808000.0,-0.34
+ashcombe-ldi-core,Q4-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1104,59616000.0,-1.63
+ashcombe-ldi-core,Q4-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.1602,86508000.0,5.21
+ashcombe-ldi-core,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1981,106974000.0,3.01
+ashcombe-ldi-core,Q4-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1815,98010000.0,1.54
+ashcombe-ldi-core,Q4-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.059,31860000.0,2.53
+ashcombe-ldi-core,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0693,37422000.0,1.77
+ashcombe-ldi-core,Q1-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0662,35748000.0,2.24
+ashcombe-ldi-core,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.1552,83808000.0,0.02
+ashcombe-ldi-core,Q1-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1104,59616000.0,4.96
+ashcombe-ldi-core,Q1-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.1602,86508000.0,-0.68
+ashcombe-ldi-core,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1981,106974000.0,-1.61
+ashcombe-ldi-core,Q1-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1815,98010000.0,2.2
+ashcombe-ldi-core,Q1-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.059,31860000.0,4.25
+ashcombe-ldi-core,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0693,37422000.0,1.87
+ashcombe-ldi-core,Q2-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0662,35748000.0,1.26
+ashcombe-ldi-core,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.1552,83808000.0,3.82
+ashcombe-ldi-core,Q2-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.1104,59616000.0,0.61
+ashcombe-ldi-core,Q2-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.1602,86508000.0,0.06
+ashcombe-ldi-core,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1981,106974000.0,2.93
+ashcombe-ldi-core,Q2-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.1815,98010000.0,1.72
+ashcombe-ldi-core,Q2-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.059,31860000.0,3.76
+ashcombe-ldi-core,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0693,37422000.0,-0.92
+thornton-lifestyle-balanced,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0543,206340.0,11.86
+thornton-lifestyle-balanced,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0543,206340.0,9.59
+thornton-lifestyle-balanced,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1062,403560.0,10.74
+thornton-lifestyle-balanced,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0653,248140.0,2.07
+thornton-lifestyle-balanced,Q3-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0627,238260.0,6.42
+thornton-lifestyle-balanced,Q3-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0865,328700.0,3.19
+thornton-lifestyle-balanced,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0908,345040.0,7.91
+thornton-lifestyle-balanced,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.092,349600.0,4.58
+thornton-lifestyle-balanced,Q3-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0768,291840.0,2.34
+thornton-lifestyle-balanced,Q3-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0917,348460.0,1.51
+thornton-lifestyle-balanced,Q3-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0478,181640.0,1.29
+thornton-lifestyle-balanced,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.063,239400.0,-0.07
+thornton-lifestyle-balanced,Q3-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0375,142500.0,1.05
+thornton-lifestyle-balanced,Q3-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0239,90820.0,2.32
+thornton-lifestyle-balanced,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0263,99940.0,2.7
+thornton-lifestyle-balanced,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0212,80560.0,1.68
+thornton-lifestyle-balanced,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0543,206340.0,-0.4
+thornton-lifestyle-balanced,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0543,206340.0,-1.75
+thornton-lifestyle-balanced,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1062,403560.0,-0.17
+thornton-lifestyle-balanced,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0653,248140.0,4.43
+thornton-lifestyle-balanced,Q4-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0627,238260.0,4.64
+thornton-lifestyle-balanced,Q4-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0865,328700.0,5.21
+thornton-lifestyle-balanced,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0908,345040.0,-2.75
+thornton-lifestyle-balanced,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.092,349600.0,3.01
+thornton-lifestyle-balanced,Q4-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0768,291840.0,5.3
+thornton-lifestyle-balanced,Q4-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0917,348460.0,1.54
+thornton-lifestyle-balanced,Q4-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0478,181640.0,-0.37
+thornton-lifestyle-balanced,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.063,239400.0,-0.34
+thornton-lifestyle-balanced,Q4-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0375,142500.0,-1.63
+thornton-lifestyle-balanced,Q4-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0239,90820.0,2.53
+thornton-lifestyle-balanced,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0263,99940.0,3.16
+thornton-lifestyle-balanced,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0212,80560.0,1.77
+thornton-lifestyle-balanced,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0543,206340.0,-10.41
+thornton-lifestyle-balanced,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0543,206340.0,-10.98
+thornton-lifestyle-balanced,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1062,403560.0,-12.8
+thornton-lifestyle-balanced,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0653,248140.0,-9.91
+thornton-lifestyle-balanced,Q1-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0627,238260.0,-6.48
+thornton-lifestyle-balanced,Q1-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0865,328700.0,-0.68
+thornton-lifestyle-balanced,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0908,345040.0,-13.74
+thornton-lifestyle-balanced,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.092,349600.0,-1.61
+thornton-lifestyle-balanced,Q1-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0768,291840.0,-4.93
+thornton-lifestyle-balanced,Q1-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0917,348460.0,2.2
+thornton-lifestyle-balanced,Q1-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0478,181640.0,2.24
+thornton-lifestyle-balanced,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.063,239400.0,0.02
+thornton-lifestyle-balanced,Q1-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0375,142500.0,4.96
+thornton-lifestyle-balanced,Q1-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0239,90820.0,4.25
+thornton-lifestyle-balanced,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0263,99940.0,-7.58
+thornton-lifestyle-balanced,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0212,80560.0,1.87
+thornton-lifestyle-balanced,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0543,206340.0,8.36
+thornton-lifestyle-balanced,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.0543,206340.0,11.04
+thornton-lifestyle-balanced,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1062,403560.0,8.21
+thornton-lifestyle-balanced,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0653,248140.0,3.35
+thornton-lifestyle-balanced,Q2-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0627,238260.0,4.39
+thornton-lifestyle-balanced,Q2-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.0865,328700.0,0.06
+thornton-lifestyle-balanced,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0908,345040.0,7.5
+thornton-lifestyle-balanced,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.092,349600.0,2.93
+thornton-lifestyle-balanced,Q2-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.0768,291840.0,2.71
+thornton-lifestyle-balanced,Q2-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0917,348460.0,1.72
+thornton-lifestyle-balanced,Q2-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0478,181640.0,1.26
+thornton-lifestyle-balanced,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.063,239400.0,3.82
+thornton-lifestyle-balanced,Q2-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0375,142500.0,0.61
+thornton-lifestyle-balanced,Q2-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0239,90820.0,3.76
+thornton-lifestyle-balanced,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0263,99940.0,1.56
+thornton-lifestyle-balanced,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0212,80560.0,-0.92
+delacroix-global-growth,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1163,11164800.0,11.86
+delacroix-global-growth,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1699,16310400.0,9.59
+delacroix-global-growth,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1628,15628800.0,10.74
+delacroix-global-growth,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1644,15782400.0,7.91
+delacroix-global-growth,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1223,11740800.0,4.58
+delacroix-global-growth,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0945,9072000.0,2.07
+delacroix-global-growth,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.065,6240000.0,2.7
+delacroix-global-growth,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0883,8476800.0,-0.07
+delacroix-global-growth,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0165,1584000.0,1.68
+delacroix-global-growth,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1163,11164800.0,-0.4
+delacroix-global-growth,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1699,16310400.0,-1.75
+delacroix-global-growth,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1628,15628800.0,-0.17
+delacroix-global-growth,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1644,15782400.0,-2.75
+delacroix-global-growth,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1223,11740800.0,3.01
+delacroix-global-growth,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0945,9072000.0,4.43
+delacroix-global-growth,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.065,6240000.0,3.16
+delacroix-global-growth,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0883,8476800.0,-0.34
+delacroix-global-growth,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0165,1584000.0,1.77
+delacroix-global-growth,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1163,11164800.0,-10.41
+delacroix-global-growth,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1699,16310400.0,-10.98
+delacroix-global-growth,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1628,15628800.0,-12.8
+delacroix-global-growth,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1644,15782400.0,-13.74
+delacroix-global-growth,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1223,11740800.0,-1.61
+delacroix-global-growth,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0945,9072000.0,-9.91
+delacroix-global-growth,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.065,6240000.0,-7.58
+delacroix-global-growth,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0883,8476800.0,0.02
+delacroix-global-growth,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0165,1584000.0,1.87
+delacroix-global-growth,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.1163,11164800.0,8.36
+delacroix-global-growth,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.1699,16310400.0,11.04
+delacroix-global-growth,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.1628,15628800.0,8.21
+delacroix-global-growth,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.1644,15782400.0,7.5
+delacroix-global-growth,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.1223,11740800.0,2.93
+delacroix-global-growth,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0945,9072000.0,3.35
+delacroix-global-growth,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.065,6240000.0,1.56
+delacroix-global-growth,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0883,8476800.0,3.82
+delacroix-global-growth,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0165,1584000.0,-0.92
+sableridge-balanced-esg,Q3-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0879,18019500.0,11.86
+sableridge-balanced-esg,Q3-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.084,17220000.0,9.59
+sableridge-balanced-esg,Q3-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0776,15908000.0,10.74
+sableridge-balanced-esg,Q3-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0797,16338500.0,2.07
+sableridge-balanced-esg,Q3-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0983,20151500.0,6.42
+sableridge-balanced-esg,Q3-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.053,10865000.0,3.19
+sableridge-balanced-esg,Q3-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0567,11623500.0,7.91
+sableridge-balanced-esg,Q3-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0692,14186000.0,4.58
+sableridge-balanced-esg,Q3-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.058,11890000.0,2.34
+sableridge-balanced-esg,Q3-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0771,15805500.0,1.51
+sableridge-balanced-esg,Q3-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0558,11439000.0,1.29
+sableridge-balanced-esg,Q3-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0358,7339000.0,-0.07
+sableridge-balanced-esg,Q3-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0624,12792000.0,1.05
+sableridge-balanced-esg,Q3-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0517,10598500.0,2.32
+sableridge-balanced-esg,Q3-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0067,1373500.0,2.7
+sableridge-balanced-esg,Q3-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0461,9450500.0,1.68
+sableridge-balanced-esg,Q4-2025,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0879,18019500.0,-0.4
+sableridge-balanced-esg,Q4-2025,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.084,17220000.0,-1.75
+sableridge-balanced-esg,Q4-2025,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0776,15908000.0,-0.17
+sableridge-balanced-esg,Q4-2025,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0797,16338500.0,4.43
+sableridge-balanced-esg,Q4-2025,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0983,20151500.0,4.64
+sableridge-balanced-esg,Q4-2025,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.053,10865000.0,5.21
+sableridge-balanced-esg,Q4-2025,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0567,11623500.0,-2.75
+sableridge-balanced-esg,Q4-2025,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0692,14186000.0,3.01
+sableridge-balanced-esg,Q4-2025,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.058,11890000.0,5.3
+sableridge-balanced-esg,Q4-2025,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0771,15805500.0,1.54
+sableridge-balanced-esg,Q4-2025,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0558,11439000.0,-0.37
+sableridge-balanced-esg,Q4-2025,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0358,7339000.0,-0.34
+sableridge-balanced-esg,Q4-2025,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0624,12792000.0,-1.63
+sableridge-balanced-esg,Q4-2025,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0517,10598500.0,2.53
+sableridge-balanced-esg,Q4-2025,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0067,1373500.0,3.16
+sableridge-balanced-esg,Q4-2025,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0461,9450500.0,1.77
+sableridge-balanced-esg,Q1-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0879,18019500.0,-10.41
+sableridge-balanced-esg,Q1-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.084,17220000.0,-10.98
+sableridge-balanced-esg,Q1-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0776,15908000.0,-12.8
+sableridge-balanced-esg,Q1-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0797,16338500.0,-9.91
+sableridge-balanced-esg,Q1-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0983,20151500.0,-6.48
+sableridge-balanced-esg,Q1-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.053,10865000.0,-0.68
+sableridge-balanced-esg,Q1-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0567,11623500.0,-13.74
+sableridge-balanced-esg,Q1-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0692,14186000.0,-1.61
+sableridge-balanced-esg,Q1-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.058,11890000.0,-4.93
+sableridge-balanced-esg,Q1-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0771,15805500.0,2.2
+sableridge-balanced-esg,Q1-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0558,11439000.0,2.24
+sableridge-balanced-esg,Q1-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0358,7339000.0,0.02
+sableridge-balanced-esg,Q1-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0624,12792000.0,4.96
+sableridge-balanced-esg,Q1-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0517,10598500.0,4.25
+sableridge-balanced-esg,Q1-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0067,1373500.0,-7.58
+sableridge-balanced-esg,Q1-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0461,9450500.0,1.87
+sableridge-balanced-esg,Q2-2026,MSFT,Microsoft Corp,US5949181045,Equity,Information Technology,US,0.0879,18019500.0,8.36
+sableridge-balanced-esg,Q2-2026,NVDA,NVIDIA Corp,US67066G1040,Equity,Information Technology,US,0.084,17220000.0,11.04
+sableridge-balanced-esg,Q2-2026,AAPL,Apple Inc,US0378331005,Equity,Information Technology,US,0.0776,15908000.0,8.21
+sableridge-balanced-esg,Q2-2026,JPM,JPMorgan Chase,US46625H1005,Equity,Financials,US,0.0797,16338500.0,3.35
+sableridge-balanced-esg,Q2-2026,HSBA,HSBC Holdings,GB0005405286,Equity,Financials,UK,0.0983,20151500.0,4.39
+sableridge-balanced-esg,Q2-2026,NESN,Nestle SA,CH0038863350,Equity,Consumer Staples,Europe,0.053,10865000.0,0.06
+sableridge-balanced-esg,Q2-2026,ASML,ASML Holding,NL0010273215,Equity,Information Technology,Europe,0.0567,11623500.0,7.5
+sableridge-balanced-esg,Q2-2026,UNH,UnitedHealth Group,US91324P1021,Equity,Health Care,US,0.0692,14186000.0,2.93
+sableridge-balanced-esg,Q2-2026,XOM,Exxon Mobil,US30231G1022,Equity,Energy,US,0.058,11890000.0,2.71
+sableridge-balanced-esg,Q2-2026,NEE,NextEra Energy,US65339F1012,Equity,Utilities,US,0.0771,15805500.0,1.72
+sableridge-balanced-esg,Q2-2026,IEF,iShares 7-10 Year Treasury Bond ETF,US4642874402,Fixed Income,Government,US,0.0558,11439000.0,1.26
+sableridge-balanced-esg,Q2-2026,LQD,iShares iBoxx $ IG Corporate Bond ETF,US4642872265,Fixed Income,Credit,US,0.0358,7339000.0,3.82
+sableridge-balanced-esg,Q2-2026,IGLT,iShares Core UK Gilts UCITS ETF,IE00B1FZSB30,Fixed Income,Government,UK,0.0624,12792000.0,0.61
+sableridge-balanced-esg,Q2-2026,GLD,SPDR Gold Shares,US78463V1070,Alternatives,Commodities,Global,0.0517,10598500.0,3.76
+sableridge-balanced-esg,Q2-2026,VNQ,Vanguard Real Estate ETF,US9229085538,Alternatives,Real Estate,US,0.0067,1373500.0,1.56
+sableridge-balanced-esg,Q2-2026,BIL,SPDR Bloomberg 1-3 Month T-Bill ETF,US78468R6633,Cash,Cash,US,0.0461,9450500.0,-0.92

@@ -1,0 +1,124 @@
+# ==========================================================================
+# WealthGen — .gitignore
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# Secrets & local config  (NEVER commit — contains live keys/credentials)
+# --------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+backend/data/oauth/*.json
+!backend/data/oauth/.gitkeep
+*.pem
+*.key
+*.pfx
+*.p12
+
+# --------------------------------------------------------------------------
+# Python
+# --------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Test / coverage / type-checking caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.cache
+nosetests.xml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# uv
+.uv/
+
+# --------------------------------------------------------------------------
+# Node / Frontend (Vite + React)
+# --------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# --------------------------------------------------------------------------
+# Load testing
+# --------------------------------------------------------------------------
+locust_*.csv
+locust_report*.html
+
+# --------------------------------------------------------------------------
+# Editors / IDEs
+# --------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# --------------------------------------------------------------------------
+# OS
+# --------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+.copilot-tracking/
+backend/.env

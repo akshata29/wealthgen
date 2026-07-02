@@ -1,0 +1,49 @@
+# WealthGen — Portfolio Narrative Generator (backend)
+# Python 3.11. Install into a project-local .venv (see start.ps1).
+
+# --- Web framework ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+httpx>=0.27
+python-multipart>=0.0.9
+
+# --- Azure identity / core ---
+azure-identity>=1.17
+azure-core>=1.30
+
+# --- Azure AI Foundry (new-GA Responses agents + Foundry IQ MCP tool) ---
+azure-ai-projects==2.3.0
+
+# --- Document intelligence: Content Understanding (primary), DI layout (fallback) ---
+azure-ai-contentunderstanding==1.1.0
+azure-ai-documentintelligence==1.0.2
+
+# --- Grounding / knowledge sources (PREVIEW: WorkIQ / Fabric IQ knowledge-source classes) ---
+azure-search-documents>=11.7.0b1
+
+# --- Persistence ---
+azure-cosmos>=4.7
+azure-storage-blob>=12.20
+
+# --- Safety ---
+azure-ai-contentsafety>=1.0
+
+# --- LLM client (used by Foundry Responses via get_openai_client) ---
+openai>=1.40
+
+# --- Export (PDF / Word briefs) ---
+reportlab>=4.2
+python-docx>=1.1
+
+# --- Telemetry ---
+azure-monitor-opentelemetry>=1.6
+opentelemetry-instrumentation-fastapi>=0.48b0
+opentelemetry-instrumentation-httpx>=0.48b0
+
+# --- Dev / test ---
+pytest>=8
+pytest-asyncio>=0.23
+ruff>=0.5

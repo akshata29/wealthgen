@@ -1,0 +1,353 @@
+mandate_id,period,segment,portfolio_weight,benchmark_weight,portfolio_return,benchmark_return,allocation_bps,selection_bps,interaction_bps,source_id
+northbridge-global-balanced,Q3-2025,Cash,0.0047,0.05,0.0168,0.0096,9.6,3.6,-3.3,attr:cash
+northbridge-global-balanced,Q3-2025,Commodities,0.005,0.03,0.0232,0.0257,1.3,-0.7,0.6,attr:commodities
+northbridge-global-balanced,Q3-2025,Consumer Staples,0.0922,0.04,0.0319,0.0076,-12.1,9.7,12.7,attr:consumer_staples
+northbridge-global-balanced,Q3-2025,Credit,0.0452,0.19,-0.0007,0.0216,13.2,-42.4,32.3,attr:credit
+northbridge-global-balanced,Q3-2025,Energy,0.0666,0.03,0.0234,0.0228,-2.9,0.2,0.2,attr:energy
+northbridge-global-balanced,Q3-2025,Financials,0.1545,0.09,0.0473,0.0373,4.2,9.0,6.5,attr:financials
+northbridge-global-balanced,Q3-2025,Government,0.1439,0.3,0.0119,0.0064,38.0,16.4,-8.5,attr:government
+northbridge-global-balanced,Q3-2025,Health Care,0.0532,0.07,0.0458,0.0348,-0.7,7.7,-1.8,attr:health_care
+northbridge-global-balanced,Q3-2025,Information Technology,0.3531,0.16,0.099,0.0988,131.4,0.4,0.5,attr:information_technology
+northbridge-global-balanced,Q3-2025,Real Estate,0.0117,0.02,0.027,0.0296,0.1,-0.5,0.2,attr:real_estate
+northbridge-global-balanced,Q3-2025,Utilities,0.07,0.02,0.0151,0.0139,-8.4,0.2,0.6,attr:utilities
+northbridge-global-balanced,Q4-2025,Cash,0.0047,0.05,0.0177,0.0123,-0.8,2.7,-2.4,attr:cash
+northbridge-global-balanced,Q4-2025,Commodities,0.005,0.03,0.0253,0.0418,-7.8,-4.9,4.1,attr:commodities
+northbridge-global-balanced,Q4-2025,Consumer Staples,0.0922,0.04,0.0521,0.0327,11.6,7.8,10.1,attr:consumer_staples
+northbridge-global-balanced,Q4-2025,Credit,0.0452,0.19,-0.0034,0.0126,-2.9,-30.4,23.2,attr:credit
+northbridge-global-balanced,Q4-2025,Energy,0.0666,0.03,0.053,0.0476,13.6,1.6,2.0,attr:energy
+northbridge-global-balanced,Q4-2025,Financials,0.1545,0.09,0.0456,0.0473,23.7,-1.5,-1.1,attr:financials
+northbridge-global-balanced,Q4-2025,Government,0.1439,0.3,-0.0091,-0.0033,21.6,-17.5,9.1,attr:government
+northbridge-global-balanced,Q4-2025,Health Care,0.0532,0.07,0.0301,0.0454,-5.9,-10.7,2.6,attr:health_care
+northbridge-global-balanced,Q4-2025,Information Technology,0.3531,0.16,-0.0138,-0.0219,-62.7,12.9,15.6,attr:information_technology
+northbridge-global-balanced,Q4-2025,Real Estate,0.0117,0.02,0.0316,0.0131,-0.2,3.7,-1.5,attr:real_estate
+northbridge-global-balanced,Q4-2025,Utilities,0.07,0.02,0.0154,0.0182,3.8,-0.6,-1.4,attr:utilities
+northbridge-global-balanced,Q1-2026,Cash,0.0047,0.05,0.0187,0.0103,-12.4,4.2,-3.8,attr:cash
+northbridge-global-balanced,Q1-2026,Commodities,0.005,0.03,0.0425,0.0444,-15.4,-0.6,0.5,attr:commodities
+northbridge-global-balanced,Q1-2026,Consumer Staples,0.0922,0.04,-0.0068,-0.0132,2.1,2.6,3.3,attr:consumer_staples
+northbridge-global-balanced,Q1-2026,Credit,0.0452,0.19,0.0002,0.0036,-30.0,-6.5,4.9,attr:credit
+northbridge-global-balanced,Q1-2026,Energy,0.0666,0.03,-0.0493,-0.057,-14.6,2.3,2.8,attr:energy
+northbridge-global-balanced,Q1-2026,Financials,0.1545,0.09,-0.0781,-0.0746,-37.1,-3.2,-2.3,attr:financials
+northbridge-global-balanced,Q1-2026,Government,0.1439,0.3,0.0341,0.0377,-85.6,-10.8,5.6,attr:government
+northbridge-global-balanced,Q1-2026,Health Care,0.0532,0.07,-0.0161,-0.0274,1.7,7.9,-1.9,attr:health_care
+northbridge-global-balanced,Q1-2026,Information Technology,0.3531,0.16,-0.1201,-0.1182,-195.2,-3.0,-3.7,attr:information_technology
+northbridge-global-balanced,Q1-2026,Real Estate,0.0117,0.02,-0.0758,-0.0767,4.9,0.2,-0.1,attr:real_estate
+northbridge-global-balanced,Q1-2026,Utilities,0.07,0.02,0.022,0.0171,17.1,1.0,2.5,attr:utilities
+northbridge-global-balanced,Q2-2026,Cash,0.0047,0.05,-0.0092,0.0077,10.1,-8.4,7.7,attr:cash
+northbridge-global-balanced,Q2-2026,Commodities,0.005,0.03,0.0376,0.0276,0.6,3.0,-2.5,attr:commodities
+northbridge-global-balanced,Q2-2026,Consumer Staples,0.0922,0.04,0.0006,0.0102,-10.3,-3.8,-5.0,attr:consumer_staples
+northbridge-global-balanced,Q2-2026,Credit,0.0452,0.19,0.0382,0.0157,20.6,42.7,-32.6,attr:credit
+northbridge-global-balanced,Q2-2026,Energy,0.0666,0.03,0.0271,0.0196,-3.8,2.2,2.7,attr:energy
+northbridge-global-balanced,Q2-2026,Financials,0.1545,0.09,0.0399,0.0415,7.4,-1.5,-1.1,attr:financials
+northbridge-global-balanced,Q2-2026,Government,0.1439,0.3,0.0098,0.0112,29.3,-4.2,2.2,attr:government
+northbridge-global-balanced,Q2-2026,Health Care,0.0532,0.07,0.0293,0.0234,1.1,4.1,-1.0,attr:health_care
+northbridge-global-balanced,Q2-2026,Information Technology,0.3531,0.16,0.0876,0.0955,126.6,-12.6,-15.2,attr:information_technology
+northbridge-global-balanced,Q2-2026,Real Estate,0.0117,0.02,0.0156,0.0337,-0.3,-3.6,1.5,attr:real_estate
+northbridge-global-balanced,Q2-2026,Utilities,0.07,0.02,0.0172,0.0036,-13.2,2.7,6.8,attr:utilities
+halvorsen-global-growth,Q3-2025,Cash,0.0685,0.04,0.0168,0.0096,-9.4,2.9,2.1,attr:cash
+halvorsen-global-growth,Q3-2025,Commodities,0.0,0.04,0.0257,0.0257,6.8,0.0,-0.0,attr:commodities
+halvorsen-global-growth,Q3-2025,Consumer Staples,0.0,0.07,0.0076,0.0076,24.5,0.0,-0.0,attr:consumer_staples
+halvorsen-global-growth,Q3-2025,Credit,0.119,0.09,-0.0007,0.0216,-6.1,-20.1,-6.5,attr:credit
+halvorsen-global-growth,Q3-2025,Energy,0.0,0.05,0.0228,0.0228,9.9,0.0,-0.0,attr:energy
+halvorsen-global-growth,Q3-2025,Financials,0.1231,0.16,0.0207,0.0373,2.0,-26.6,6.1,attr:financials
+halvorsen-global-growth,Q3-2025,Government,0.0,0.12,0.0064,0.0064,43.4,0.0,-0.0,attr:government
+halvorsen-global-growth,Q3-2025,Health Care,0.0882,0.11,0.0458,0.0348,1.7,12.1,-2.4,attr:health_care
+halvorsen-global-growth,Q3-2025,Information Technology,0.5821,0.26,0.1013,0.0988,181.1,6.5,8.0,attr:information_technology
+halvorsen-global-growth,Q3-2025,Real Estate,0.0192,0.03,0.027,0.0296,1.4,-0.8,0.3,attr:real_estate
+halvorsen-global-growth,Q3-2025,Utilities,0.0,0.03,0.0139,0.0139,8.6,0.0,-0.0,attr:utilities
+halvorsen-global-growth,Q4-2025,Cash,0.0685,0.04,0.0177,0.0123,-0.9,2.2,1.5,attr:cash
+halvorsen-global-growth,Q4-2025,Commodities,0.0,0.04,0.0418,0.0418,-10.6,0.0,-0.0,attr:commodities
+halvorsen-global-growth,Q4-2025,Consumer Staples,0.0,0.07,0.0327,0.0327,-12.1,0.0,-0.0,attr:consumer_staples
+halvorsen-global-growth,Q4-2025,Credit,0.119,0.09,-0.0034,0.0126,-0.8,-14.4,-4.6,attr:credit
+halvorsen-global-growth,Q4-2025,Energy,0.0,0.05,0.0476,0.0476,-16.1,0.0,-0.0,attr:energy
+halvorsen-global-growth,Q4-2025,Financials,0.1231,0.16,0.0443,0.0473,-11.8,-4.8,1.1,attr:financials
+halvorsen-global-growth,Q4-2025,Government,0.0,0.12,-0.0033,-0.0033,22.4,0.0,-0.0,attr:government
+halvorsen-global-growth,Q4-2025,Health Care,0.0882,0.11,0.0301,0.0454,-6.5,-16.8,3.3,attr:health_care
+halvorsen-global-growth,Q4-2025,Information Technology,0.5821,0.26,-0.0122,-0.0219,-120.1,25.3,31.4,attr:information_technology
+halvorsen-global-growth,Q4-2025,Real Estate,0.0192,0.03,0.0316,0.0131,0.2,5.6,-2.0,attr:real_estate
+halvorsen-global-growth,Q4-2025,Utilities,0.0,0.03,0.0182,0.0182,-0.8,0.0,-0.0,attr:utilities
+halvorsen-global-growth,Q1-2026,Cash,0.0685,0.04,0.0187,0.0103,15.5,3.4,2.4,attr:cash
+halvorsen-global-growth,Q1-2026,Commodities,0.0,0.04,0.0444,0.0444,-35.4,0.0,-0.0,attr:commodities
+halvorsen-global-growth,Q1-2026,Consumer Staples,0.0,0.07,-0.0132,-0.0132,-21.7,0.0,-0.0,attr:consumer_staples
+halvorsen-global-growth,Q1-2026,Credit,0.119,0.09,0.0002,0.0036,13.9,-3.1,-1.0,attr:credit
+halvorsen-global-growth,Q1-2026,Energy,0.0,0.05,-0.057,-0.057,6.4,0.0,-0.0,attr:energy
+halvorsen-global-growth,Q1-2026,Financials,0.1231,0.16,-0.0991,-0.0746,11.2,-39.2,9.0,attr:financials
+halvorsen-global-growth,Q1-2026,Government,0.0,0.12,0.0377,0.0377,-98.3,0.0,-0.0,attr:government
+halvorsen-global-growth,Q1-2026,Health Care,0.0882,0.11,-0.0161,-0.0274,-3.7,12.4,-2.5,attr:health_care
+halvorsen-global-growth,Q1-2026,Information Technology,0.5821,0.26,-0.1189,-0.1182,-238.3,-1.8,-2.2,attr:information_technology
+halvorsen-global-growth,Q1-2026,Real Estate,0.0192,0.03,-0.0758,-0.0767,3.5,0.3,-0.1,attr:real_estate
+halvorsen-global-growth,Q1-2026,Utilities,0.0,0.03,0.0171,0.0171,-18.4,0.0,-0.0,attr:utilities
+halvorsen-global-growth,Q2-2026,Cash,0.0685,0.04,-0.0092,0.0077,-9.5,-6.8,-4.8,attr:cash
+halvorsen-global-growth,Q2-2026,Commodities,0.0,0.04,0.0276,0.0276,5.4,0.0,-0.0,attr:commodities
+halvorsen-global-growth,Q2-2026,Consumer Staples,0.0,0.07,0.0102,0.0102,21.6,0.0,-0.0,attr:consumer_staples
+halvorsen-global-growth,Q2-2026,Credit,0.119,0.09,0.0382,0.0157,-7.3,20.2,6.5,attr:credit
+halvorsen-global-growth,Q2-2026,Energy,0.0,0.05,0.0196,0.0196,10.7,0.0,-0.0,attr:energy
+halvorsen-global-growth,Q2-2026,Financials,0.1231,0.16,0.0335,0.0415,-0.2,-12.8,3.0,attr:financials
+halvorsen-global-growth,Q2-2026,Government,0.0,0.12,0.0112,0.0112,35.8,0.0,-0.0,attr:government
+halvorsen-global-growth,Q2-2026,Health Care,0.0882,0.11,0.0293,0.0234,3.8,6.5,-1.3,attr:health_care
+halvorsen-global-growth,Q2-2026,Information Technology,0.5821,0.26,0.0878,0.0955,175.5,-20.0,-24.8,attr:information_technology
+halvorsen-global-growth,Q2-2026,Real Estate,0.0192,0.03,0.0156,0.0337,0.8,-5.4,2.0,attr:real_estate
+halvorsen-global-growth,Q2-2026,Utilities,0.0,0.03,0.0036,0.0036,11.2,0.0,-0.0,attr:utilities
+meadowlark-core-income,Q3-2025,Cash,0.0235,0.05,0.0168,0.0096,3.7,3.6,-1.9,attr:cash
+meadowlark-core-income,Q3-2025,Commodities,0.0402,0.01,0.0232,0.0257,0.7,-0.2,-0.8,attr:commodities
+meadowlark-core-income,Q3-2025,Consumer Staples,0.2018,0.03,0.0319,0.0076,-27.3,7.3,41.7,attr:consumer_staples
+meadowlark-core-income,Q3-2025,Credit,0.142,0.23,-0.0007,0.0216,1.7,-51.3,19.6,attr:credit
+meadowlark-core-income,Q3-2025,Energy,0.0,0.02,0.0228,0.0228,0.1,0.0,-0.0,attr:energy
+meadowlark-core-income,Q3-2025,Financials,0.0,0.06,0.0373,0.0373,-8.3,0.0,-0.0,attr:financials
+meadowlark-core-income,Q3-2025,Government,0.3422,0.42,0.0117,0.0064,13.3,22.2,-4.1,attr:government
+meadowlark-core-income,Q3-2025,Health Care,0.1447,0.05,0.0458,0.0348,10.7,5.5,10.4,attr:health_care
+meadowlark-core-income,Q3-2025,Information Technology,0.0,0.1,0.0988,0.0988,-75.3,0.0,-0.0,attr:information_technology
+meadowlark-core-income,Q3-2025,Real Estate,0.0,0.01,0.0296,0.0296,-0.6,0.0,-0.0,attr:real_estate
+meadowlark-core-income,Q3-2025,Utilities,0.1056,0.02,0.0151,0.0139,-8.2,0.2,1.0,attr:utilities
+meadowlark-core-income,Q4-2025,Cash,0.0235,0.05,0.0177,0.0123,-1.2,2.7,-1.4,attr:cash
+meadowlark-core-income,Q4-2025,Commodities,0.0402,0.01,0.0253,0.0418,10.2,-1.6,-5.0,attr:commodities
+meadowlark-core-income,Q4-2025,Consumer Staples,0.2018,0.03,0.0521,0.0327,42.6,5.8,33.3,attr:consumer_staples
+meadowlark-core-income,Q4-2025,Credit,0.142,0.23,-0.0034,0.0126,-4.1,-36.8,14.1,attr:credit
+meadowlark-core-income,Q4-2025,Energy,0.0,0.02,0.0476,0.0476,-7.9,0.0,-0.0,attr:energy
+meadowlark-core-income,Q4-2025,Financials,0.0,0.06,0.0473,0.0473,-23.6,0.0,-0.0,attr:financials
+meadowlark-core-income,Q4-2025,Government,0.3422,0.42,-0.01,-0.0033,8.7,-28.2,5.2,attr:government
+meadowlark-core-income,Q4-2025,Health Care,0.1447,0.05,0.0301,0.0454,35.5,-7.7,-14.5,attr:health_care
+meadowlark-core-income,Q4-2025,Information Technology,0.0,0.1,-0.0219,-0.0219,29.8,0.0,-0.0,attr:information_technology
+meadowlark-core-income,Q4-2025,Real Estate,0.0,0.01,0.0131,0.0131,-0.5,0.0,-0.0,attr:real_estate
+meadowlark-core-income,Q4-2025,Utilities,0.1056,0.02,0.0154,0.0182,8.8,-0.6,-2.4,attr:utilities
+meadowlark-core-income,Q1-2026,Cash,0.0235,0.05,0.0187,0.0103,-3.3,4.2,-2.2,attr:cash
+meadowlark-core-income,Q1-2026,Commodities,0.0402,0.01,0.0425,0.0444,14.0,-0.2,-0.6,attr:commodities
+meadowlark-core-income,Q1-2026,Consumer Staples,0.2018,0.03,-0.0068,-0.0132,-19.2,1.9,11.0,attr:consumer_staples
+meadowlark-core-income,Q1-2026,Credit,0.142,0.23,0.0002,0.0036,-4.9,-7.8,3.0,attr:credit
+meadowlark-core-income,Q1-2026,Energy,0.0,0.02,-0.057,-0.057,11.0,0.0,-0.0,attr:energy
+meadowlark-core-income,Q1-2026,Financials,0.0,0.06,-0.0746,-0.0746,43.6,0.0,-0.0,attr:financials
+meadowlark-core-income,Q1-2026,Government,0.3422,0.42,0.036,0.0377,-30.9,-6.9,1.3,attr:government
+meadowlark-core-income,Q1-2026,Health Care,0.1447,0.05,-0.0161,-0.0274,-24.0,5.7,10.7,attr:health_care
+meadowlark-core-income,Q1-2026,Information Technology,0.0,0.1,-0.1182,-0.1182,116.2,0.0,-0.0,attr:information_technology
+meadowlark-core-income,Q1-2026,Real Estate,0.0,0.01,-0.0767,-0.0767,7.5,0.0,-0.0,attr:real_estate
+meadowlark-core-income,Q1-2026,Utilities,0.1056,0.02,0.022,0.0171,16.4,1.0,4.2,attr:utilities
+meadowlark-core-income,Q2-2026,Cash,0.0235,0.05,-0.0092,0.0077,4.1,-8.4,4.5,attr:cash
+meadowlark-core-income,Q2-2026,Commodities,0.0402,0.01,0.0376,0.0276,1.3,1.0,3.0,attr:commodities
+meadowlark-core-income,Q2-2026,Consumer Staples,0.2018,0.03,0.0006,0.0102,-22.5,-2.9,-16.5,attr:consumer_staples
+meadowlark-core-income,Q2-2026,Credit,0.142,0.23,0.0382,0.0157,6.7,51.7,-19.8,attr:credit
+meadowlark-core-income,Q2-2026,Energy,0.0,0.02,0.0196,0.0196,0.7,0.0,-0.0,attr:energy
+meadowlark-core-income,Q2-2026,Financials,0.0,0.06,0.0415,0.0415,-10.9,0.0,-0.0,attr:financials
+meadowlark-core-income,Q2-2026,Government,0.3422,0.42,0.0093,0.0112,9.4,-7.8,1.4,attr:government
+meadowlark-core-income,Q2-2026,Health Care,0.1447,0.05,0.0293,0.0234,0.1,3.0,5.6,attr:health_care
+meadowlark-core-income,Q2-2026,Information Technology,0.0,0.1,0.0955,0.0955,-72.2,0.0,-0.0,attr:information_technology
+meadowlark-core-income,Q2-2026,Real Estate,0.0,0.01,0.0337,0.0337,-1.0,0.0,-0.0,attr:real_estate
+meadowlark-core-income,Q2-2026,Utilities,0.1056,0.02,0.0172,0.0036,-16.9,2.7,11.6,attr:utilities
+rivera-opportunistic-equity,Q3-2025,Cash,0.0789,0.04,0.0168,0.0096,-12.8,2.9,2.8,attr:cash
+rivera-opportunistic-equity,Q3-2025,Commodities,0.0,0.04,0.0257,0.0257,6.8,0.0,-0.0,attr:commodities
+rivera-opportunistic-equity,Q3-2025,Consumer Staples,0.0,0.07,0.0076,0.0076,24.5,0.0,-0.0,attr:consumer_staples
+rivera-opportunistic-equity,Q3-2025,Credit,0.0996,0.09,-0.0007,0.0216,-2.0,-20.1,-2.1,attr:credit
+rivera-opportunistic-equity,Q3-2025,Energy,0.0,0.05,0.0228,0.0228,9.9,0.0,-0.0,attr:energy
+rivera-opportunistic-equity,Q3-2025,Financials,0.1585,0.16,0.0207,0.0373,0.1,-26.6,0.2,attr:financials
+rivera-opportunistic-equity,Q3-2025,Government,0.0,0.12,0.0064,0.0064,43.4,0.0,-0.0,attr:government
+rivera-opportunistic-equity,Q3-2025,Health Care,0.1114,0.11,0.0458,0.0348,-0.1,12.1,0.2,attr:health_care
+rivera-opportunistic-equity,Q3-2025,Information Technology,0.5358,0.26,0.0982,0.0988,155.0,-1.5,-1.6,attr:information_technology
+rivera-opportunistic-equity,Q3-2025,Real Estate,0.0159,0.03,0.027,0.0296,1.8,-0.8,0.4,attr:real_estate
+rivera-opportunistic-equity,Q3-2025,Utilities,0.0,0.03,0.0139,0.0139,8.6,0.0,-0.0,attr:utilities
+rivera-opportunistic-equity,Q4-2025,Cash,0.0789,0.04,0.0177,0.0123,-1.2,2.2,2.1,attr:cash
+rivera-opportunistic-equity,Q4-2025,Commodities,0.0,0.04,0.0418,0.0418,-10.6,0.0,-0.0,attr:commodities
+rivera-opportunistic-equity,Q4-2025,Consumer Staples,0.0,0.07,0.0327,0.0327,-12.1,0.0,-0.0,attr:consumer_staples
+rivera-opportunistic-equity,Q4-2025,Credit,0.0996,0.09,-0.0034,0.0126,-0.3,-14.4,-1.5,attr:credit
+rivera-opportunistic-equity,Q4-2025,Energy,0.0,0.05,0.0476,0.0476,-16.1,0.0,-0.0,attr:energy
+rivera-opportunistic-equity,Q4-2025,Financials,0.1585,0.16,0.0443,0.0473,-0.5,-4.8,0.0,attr:financials
+rivera-opportunistic-equity,Q4-2025,Government,0.0,0.12,-0.0033,-0.0033,22.4,0.0,-0.0,attr:government
+rivera-opportunistic-equity,Q4-2025,Health Care,0.1114,0.11,0.0301,0.0454,0.4,-16.8,-0.2,attr:health_care
+rivera-opportunistic-equity,Q4-2025,Information Technology,0.5358,0.26,-0.0138,-0.0219,-102.8,21.1,22.4,attr:information_technology
+rivera-opportunistic-equity,Q4-2025,Real Estate,0.0159,0.03,0.0316,0.0131,0.3,5.6,-2.6,attr:real_estate
+rivera-opportunistic-equity,Q4-2025,Utilities,0.0,0.03,0.0182,0.0182,-0.8,0.0,-0.0,attr:utilities
+rivera-opportunistic-equity,Q1-2026,Cash,0.0789,0.04,0.0187,0.0103,21.2,3.4,3.3,attr:cash
+rivera-opportunistic-equity,Q1-2026,Commodities,0.0,0.04,0.0444,0.0444,-35.4,0.0,-0.0,attr:commodities
+rivera-opportunistic-equity,Q1-2026,Consumer Staples,0.0,0.07,-0.0132,-0.0132,-21.7,0.0,-0.0,attr:consumer_staples
+rivera-opportunistic-equity,Q1-2026,Credit,0.0996,0.09,0.0002,0.0036,4.6,-3.1,-0.3,attr:credit
+rivera-opportunistic-equity,Q1-2026,Energy,0.0,0.05,-0.057,-0.057,6.4,0.0,-0.0,attr:energy
+rivera-opportunistic-equity,Q1-2026,Financials,0.1585,0.16,-0.0991,-0.0746,0.5,-39.2,0.4,attr:financials
+rivera-opportunistic-equity,Q1-2026,Government,0.0,0.12,0.0377,0.0377,-98.3,0.0,-0.0,attr:government
+rivera-opportunistic-equity,Q1-2026,Health Care,0.1114,0.11,-0.0161,-0.0274,0.2,12.4,0.2,attr:health_care
+rivera-opportunistic-equity,Q1-2026,Information Technology,0.5358,0.26,-0.1219,-0.1182,-204.1,-9.5,-10.1,attr:information_technology
+rivera-opportunistic-equity,Q1-2026,Real Estate,0.0159,0.03,-0.0758,-0.0767,4.6,0.3,-0.1,attr:real_estate
+rivera-opportunistic-equity,Q1-2026,Utilities,0.0,0.03,0.0171,0.0171,-18.4,0.0,-0.0,attr:utilities
+rivera-opportunistic-equity,Q2-2026,Cash,0.0789,0.04,-0.0092,0.0077,-13.0,-6.8,-6.6,attr:cash
+rivera-opportunistic-equity,Q2-2026,Commodities,0.0,0.04,0.0276,0.0276,5.4,0.0,-0.0,attr:commodities
+rivera-opportunistic-equity,Q2-2026,Consumer Staples,0.0,0.07,0.0102,0.0102,21.6,0.0,-0.0,attr:consumer_staples
+rivera-opportunistic-equity,Q2-2026,Credit,0.0996,0.09,0.0382,0.0157,-2.4,20.2,2.2,attr:credit
+rivera-opportunistic-equity,Q2-2026,Energy,0.0,0.05,0.0196,0.0196,10.7,0.0,-0.0,attr:energy
+rivera-opportunistic-equity,Q2-2026,Financials,0.1585,0.16,0.0335,0.0415,-0.0,-12.8,0.1,attr:financials
+rivera-opportunistic-equity,Q2-2026,Government,0.0,0.12,0.0112,0.0112,35.8,0.0,-0.0,attr:government
+rivera-opportunistic-equity,Q2-2026,Health Care,0.1114,0.11,0.0293,0.0234,-0.2,6.5,0.1,attr:health_care
+rivera-opportunistic-equity,Q2-2026,Information Technology,0.5358,0.26,0.087,0.0955,150.2,-22.2,-23.6,attr:information_technology
+rivera-opportunistic-equity,Q2-2026,Real Estate,0.0159,0.03,0.0156,0.0337,1.0,-5.4,2.6,attr:real_estate
+rivera-opportunistic-equity,Q2-2026,Utilities,0.0,0.03,0.0036,0.0036,11.2,0.0,-0.0,attr:utilities
+ashcombe-ldi-core,Q3-2025,Cash,0.0693,0.05,0.0168,0.0096,-2.7,3.6,1.4,attr:cash
+ashcombe-ldi-core,Q3-2025,Commodities,0.059,0.01,0.0232,0.0257,1.1,-0.2,-1.2,attr:commodities
+ashcombe-ldi-core,Q3-2025,Consumer Staples,0.1602,0.03,0.0319,0.0076,-20.7,7.3,31.6,attr:consumer_staples
+ashcombe-ldi-core,Q3-2025,Credit,0.1552,0.23,-0.0007,0.0216,1.4,-51.3,16.7,attr:credit
+ashcombe-ldi-core,Q3-2025,Energy,0.0,0.02,0.0228,0.0228,0.1,0.0,-0.0,attr:energy
+ashcombe-ldi-core,Q3-2025,Financials,0.0,0.06,0.0373,0.0373,-8.3,0.0,-0.0,attr:financials
+ashcombe-ldi-core,Q3-2025,Government,0.1766,0.42,0.0114,0.0064,41.6,21.0,-12.2,attr:government
+ashcombe-ldi-core,Q3-2025,Health Care,0.1981,0.05,0.0458,0.0348,16.7,5.5,16.3,attr:health_care
+ashcombe-ldi-core,Q3-2025,Information Technology,0.0,0.1,0.0988,0.0988,-75.3,0.0,-0.0,attr:information_technology
+ashcombe-ldi-core,Q3-2025,Real Estate,0.0,0.01,0.0296,0.0296,-0.6,0.0,-0.0,attr:real_estate
+ashcombe-ldi-core,Q3-2025,Utilities,0.1815,0.02,0.0151,0.0139,-15.5,0.2,1.9,attr:utilities
+ashcombe-ldi-core,Q4-2025,Cash,0.0693,0.05,0.0177,0.0123,0.9,2.7,1.0,attr:cash
+ashcombe-ldi-core,Q4-2025,Commodities,0.059,0.01,0.0253,0.0418,16.6,-1.6,-8.1,attr:commodities
+ashcombe-ldi-core,Q4-2025,Consumer Staples,0.1602,0.03,0.0521,0.0327,32.3,5.8,25.3,attr:consumer_staples
+ashcombe-ldi-core,Q4-2025,Credit,0.1552,0.23,-0.0034,0.0126,-3.5,-36.8,12.0,attr:credit
+ashcombe-ldi-core,Q4-2025,Energy,0.0,0.02,0.0476,0.0476,-7.9,0.0,-0.0,attr:energy
+ashcombe-ldi-core,Q4-2025,Financials,0.0,0.06,0.0473,0.0473,-23.6,0.0,-0.0,attr:financials
+ashcombe-ldi-core,Q4-2025,Government,0.1766,0.42,-0.0116,-0.0033,27.2,-34.8,20.1,attr:government
+ashcombe-ldi-core,Q4-2025,Health Care,0.1981,0.05,0.0301,0.0454,55.6,-7.7,-22.7,attr:health_care
+ashcombe-ldi-core,Q4-2025,Information Technology,0.0,0.1,-0.0219,-0.0219,29.8,0.0,-0.0,attr:information_technology
+ashcombe-ldi-core,Q4-2025,Real Estate,0.0,0.01,0.0131,0.0131,-0.5,0.0,-0.0,attr:real_estate
+ashcombe-ldi-core,Q4-2025,Utilities,0.1815,0.02,0.0154,0.0182,16.6,-0.6,-4.5,attr:utilities
+ashcombe-ldi-core,Q1-2026,Cash,0.0693,0.05,0.0187,0.0103,2.4,4.2,1.6,attr:cash
+ashcombe-ldi-core,Q1-2026,Commodities,0.059,0.01,0.0425,0.0444,22.7,-0.2,-0.9,attr:commodities
+ashcombe-ldi-core,Q1-2026,Consumer Staples,0.1602,0.03,-0.0068,-0.0132,-14.6,1.9,8.3,attr:consumer_staples
+ashcombe-ldi-core,Q1-2026,Credit,0.1552,0.23,0.0002,0.0036,-4.2,-7.8,2.5,attr:credit
+ashcombe-ldi-core,Q1-2026,Energy,0.0,0.02,-0.057,-0.057,11.0,0.0,-0.0,attr:energy
+ashcombe-ldi-core,Q1-2026,Financials,0.0,0.06,-0.0746,-0.0746,43.6,0.0,-0.0,attr:financials
+ashcombe-ldi-core,Q1-2026,Government,0.1766,0.42,0.0394,0.0377,-96.6,7.2,-4.1,attr:government
+ashcombe-ldi-core,Q1-2026,Health Care,0.1981,0.05,-0.0161,-0.0274,-37.6,5.7,16.7,attr:health_care
+ashcombe-ldi-core,Q1-2026,Information Technology,0.0,0.1,-0.1182,-0.1182,116.2,0.0,-0.0,attr:information_technology
+ashcombe-ldi-core,Q1-2026,Real Estate,0.0,0.01,-0.0767,-0.0767,7.5,0.0,-0.0,attr:real_estate
+ashcombe-ldi-core,Q1-2026,Utilities,0.1815,0.02,0.022,0.0171,30.9,1.0,7.9,attr:utilities
+ashcombe-ldi-core,Q2-2026,Cash,0.0693,0.05,-0.0092,0.0077,-3.0,-8.4,-3.3,attr:cash
+ashcombe-ldi-core,Q2-2026,Commodities,0.059,0.01,0.0376,0.0276,2.1,1.0,4.9,attr:commodities
+ashcombe-ldi-core,Q2-2026,Consumer Staples,0.1602,0.03,0.0006,0.0102,-17.0,-2.9,-12.5,attr:consumer_staples
+ashcombe-ldi-core,Q2-2026,Credit,0.1552,0.23,0.0382,0.0157,5.7,51.7,-16.8,attr:credit
+ashcombe-ldi-core,Q2-2026,Energy,0.0,0.02,0.0196,0.0196,0.7,0.0,-0.0,attr:energy
+ashcombe-ldi-core,Q2-2026,Financials,0.0,0.06,0.0415,0.0415,-10.9,0.0,-0.0,attr:financials
+ashcombe-ldi-core,Q2-2026,Government,0.1766,0.42,0.0085,0.0112,29.4,-11.2,6.5,attr:government
+ashcombe-ldi-core,Q2-2026,Health Care,0.1981,0.05,0.0293,0.0234,0.2,3.0,8.7,attr:health_care
+ashcombe-ldi-core,Q2-2026,Information Technology,0.0,0.1,0.0955,0.0955,-72.2,0.0,-0.0,attr:information_technology
+ashcombe-ldi-core,Q2-2026,Real Estate,0.0,0.01,0.0337,0.0337,-1.0,0.0,-0.0,attr:real_estate
+ashcombe-ldi-core,Q2-2026,Utilities,0.1815,0.02,0.0172,0.0036,-31.8,2.7,22.0,attr:utilities
+thornton-lifestyle-balanced,Q3-2025,Cash,0.0212,0.05,0.0168,0.0096,6.1,3.6,-2.1,attr:cash
+thornton-lifestyle-balanced,Q3-2025,Commodities,0.0239,0.03,0.0232,0.0257,0.3,-0.7,0.2,attr:commodities
+thornton-lifestyle-balanced,Q3-2025,Consumer Staples,0.0865,0.04,0.0319,0.0076,-10.8,9.7,11.3,attr:consumer_staples
+thornton-lifestyle-balanced,Q3-2025,Credit,0.063,0.19,-0.0007,0.0216,11.6,-42.4,28.3,attr:credit
+thornton-lifestyle-balanced,Q3-2025,Energy,0.0768,0.03,0.0234,0.0228,-3.7,0.2,0.3,attr:energy
+thornton-lifestyle-balanced,Q3-2025,Financials,0.128,0.09,0.042,0.0373,2.5,4.2,1.8,attr:financials
+thornton-lifestyle-balanced,Q3-2025,Government,0.0853,0.3,0.0118,0.0064,52.2,16.3,-11.7,attr:government
+thornton-lifestyle-balanced,Q3-2025,Health Care,0.092,0.07,0.0458,0.0348,0.9,7.7,2.4,attr:health_care
+thornton-lifestyle-balanced,Q3-2025,Information Technology,0.3056,0.16,0.0989,0.0988,99.1,0.2,0.2,attr:information_technology
+thornton-lifestyle-balanced,Q3-2025,Real Estate,0.0263,0.02,0.027,0.0296,-0.1,-0.5,-0.2,attr:real_estate
+thornton-lifestyle-balanced,Q3-2025,Utilities,0.0917,0.02,0.0151,0.0139,-12.1,0.2,0.9,attr:utilities
+thornton-lifestyle-balanced,Q4-2025,Cash,0.0212,0.05,0.0177,0.0123,-0.5,2.7,-1.6,attr:cash
+thornton-lifestyle-balanced,Q4-2025,Commodities,0.0239,0.03,0.0253,0.0418,-1.9,-5.0,1.0,attr:commodities
+thornton-lifestyle-balanced,Q4-2025,Consumer Staples,0.0865,0.04,0.0521,0.0327,10.3,7.8,9.0,attr:consumer_staples
+thornton-lifestyle-balanced,Q4-2025,Credit,0.063,0.19,-0.0034,0.0126,-2.6,-30.4,20.3,attr:credit
+thornton-lifestyle-balanced,Q4-2025,Energy,0.0768,0.03,0.053,0.0476,17.3,1.6,2.5,attr:energy
+thornton-lifestyle-balanced,Q4-2025,Financials,0.128,0.09,0.0453,0.0473,14.0,-1.8,-0.7,attr:financials
+thornton-lifestyle-balanced,Q4-2025,Government,0.0853,0.3,-0.0092,-0.0033,29.8,-17.8,12.8,attr:government
+thornton-lifestyle-balanced,Q4-2025,Health Care,0.092,0.07,0.0301,0.0454,7.7,-10.7,-3.4,attr:health_care
+thornton-lifestyle-balanced,Q4-2025,Information Technology,0.3056,0.16,-0.0126,-0.0219,-47.3,14.9,13.6,attr:information_technology
+thornton-lifestyle-balanced,Q4-2025,Real Estate,0.0263,0.02,0.0316,0.0131,0.2,3.7,1.2,attr:real_estate
+thornton-lifestyle-balanced,Q4-2025,Utilities,0.0917,0.02,0.0154,0.0182,5.5,-0.6,-2.0,attr:utilities
+thornton-lifestyle-balanced,Q1-2026,Cash,0.0212,0.05,0.0187,0.0103,-7.9,4.2,-2.4,attr:cash
+thornton-lifestyle-balanced,Q1-2026,Commodities,0.0239,0.03,0.0425,0.0444,-3.8,-0.6,0.1,attr:commodities
+thornton-lifestyle-balanced,Q1-2026,Consumer Staples,0.0865,0.04,-0.0068,-0.0132,1.8,2.6,3.0,attr:consumer_staples
+thornton-lifestyle-balanced,Q1-2026,Credit,0.063,0.19,0.0002,0.0036,-26.3,-6.5,4.3,attr:credit
+thornton-lifestyle-balanced,Q1-2026,Energy,0.0768,0.03,-0.0493,-0.057,-18.7,2.3,3.6,attr:energy
+thornton-lifestyle-balanced,Q1-2026,Financials,0.128,0.09,-0.0823,-0.0746,-21.8,-6.9,-2.9,attr:financials
+thornton-lifestyle-balanced,Q1-2026,Government,0.0853,0.3,0.0344,0.0377,-117.7,-10.0,7.2,attr:government
+thornton-lifestyle-balanced,Q1-2026,Health Care,0.092,0.07,-0.0161,-0.0274,-2.3,7.9,2.5,attr:health_care
+thornton-lifestyle-balanced,Q1-2026,Information Technology,0.3056,0.16,-0.1233,-0.1182,-147.2,-8.2,-7.4,attr:information_technology
+thornton-lifestyle-balanced,Q1-2026,Real Estate,0.0263,0.02,-0.0758,-0.0767,-3.8,0.2,0.1,attr:real_estate
+thornton-lifestyle-balanced,Q1-2026,Utilities,0.0917,0.02,0.022,0.0171,24.5,1.0,3.5,attr:utilities
+thornton-lifestyle-balanced,Q2-2026,Cash,0.0212,0.05,-0.0092,0.0077,6.4,-8.4,4.9,attr:cash
+thornton-lifestyle-balanced,Q2-2026,Commodities,0.0239,0.03,0.0376,0.0276,0.1,3.0,-0.6,attr:commodities
+thornton-lifestyle-balanced,Q2-2026,Consumer Staples,0.0865,0.04,0.0006,0.0102,-9.2,-3.8,-4.5,attr:consumer_staples
+thornton-lifestyle-balanced,Q2-2026,Credit,0.063,0.19,0.0382,0.0157,18.1,42.7,-28.6,attr:credit
+thornton-lifestyle-balanced,Q2-2026,Energy,0.0768,0.03,0.0271,0.0196,-4.8,2.2,3.5,attr:energy
+thornton-lifestyle-balanced,Q2-2026,Financials,0.128,0.09,0.0386,0.0415,4.4,-2.6,-1.1,attr:financials
+thornton-lifestyle-balanced,Q2-2026,Government,0.0853,0.3,0.0097,0.0112,40.3,-4.4,3.1,attr:government
+thornton-lifestyle-balanced,Q2-2026,Health Care,0.092,0.07,0.0293,0.0234,-1.4,4.1,1.3,attr:health_care
+thornton-lifestyle-balanced,Q2-2026,Information Technology,0.3056,0.16,0.0853,0.0955,95.4,-16.3,-14.9,attr:information_technology
+thornton-lifestyle-balanced,Q2-2026,Real Estate,0.0263,0.02,0.0156,0.0337,0.2,-3.6,-1.1,attr:real_estate
+thornton-lifestyle-balanced,Q2-2026,Utilities,0.0917,0.02,0.0172,0.0036,-18.9,2.7,9.8,attr:utilities
+delacroix-global-growth,Q3-2025,Cash,0.0165,0.04,0.0168,0.0096,7.8,2.9,-1.7,attr:cash
+delacroix-global-growth,Q3-2025,Commodities,0.0,0.04,0.0257,0.0257,6.8,0.0,-0.0,attr:commodities
+delacroix-global-growth,Q3-2025,Consumer Staples,0.0,0.07,0.0076,0.0076,24.5,0.0,-0.0,attr:consumer_staples
+delacroix-global-growth,Q3-2025,Credit,0.0883,0.09,-0.0007,0.0216,0.4,-20.1,0.4,attr:credit
+delacroix-global-growth,Q3-2025,Energy,0.0,0.05,0.0228,0.0228,9.9,0.0,-0.0,attr:energy
+delacroix-global-growth,Q3-2025,Financials,0.0945,0.16,0.0207,0.0373,3.5,-26.6,10.9,attr:financials
+delacroix-global-growth,Q3-2025,Government,0.0,0.12,0.0064,0.0064,43.4,0.0,-0.0,attr:government
+delacroix-global-growth,Q3-2025,Health Care,0.1223,0.11,0.0458,0.0348,-1.0,12.1,1.4,attr:health_care
+delacroix-global-growth,Q3-2025,Information Technology,0.6134,0.26,0.0988,0.0988,198.7,-0.1,-0.2,attr:information_technology
+delacroix-global-growth,Q3-2025,Real Estate,0.065,0.03,0.027,0.0296,-4.5,-0.8,-0.9,attr:real_estate
+delacroix-global-growth,Q3-2025,Utilities,0.0,0.03,0.0139,0.0139,8.6,0.0,-0.0,attr:utilities
+delacroix-global-growth,Q4-2025,Cash,0.0165,0.04,0.0177,0.0123,0.7,2.2,-1.3,attr:cash
+delacroix-global-growth,Q4-2025,Commodities,0.0,0.04,0.0418,0.0418,-10.6,0.0,-0.0,attr:commodities
+delacroix-global-growth,Q4-2025,Consumer Staples,0.0,0.07,0.0327,0.0327,-12.1,0.0,-0.0,attr:consumer_staples
+delacroix-global-growth,Q4-2025,Credit,0.0883,0.09,-0.0034,0.0126,0.0,-14.4,0.3,attr:credit
+delacroix-global-growth,Q4-2025,Energy,0.0,0.05,0.0476,0.0476,-16.1,0.0,-0.0,attr:energy
+delacroix-global-growth,Q4-2025,Financials,0.0945,0.16,0.0443,0.0473,-20.9,-4.8,2.0,attr:financials
+delacroix-global-growth,Q4-2025,Government,0.0,0.12,-0.0033,-0.0033,22.4,0.0,-0.0,attr:government
+delacroix-global-growth,Q4-2025,Health Care,0.1223,0.11,0.0301,0.0454,3.7,-16.8,-1.9,attr:health_care
+delacroix-global-growth,Q4-2025,Information Technology,0.6134,0.26,-0.0134,-0.0219,-131.7,22.0,29.9,attr:information_technology
+delacroix-global-growth,Q4-2025,Real Estate,0.065,0.03,0.0316,0.0131,-0.8,5.6,6.5,attr:real_estate
+delacroix-global-growth,Q4-2025,Utilities,0.0,0.03,0.0182,0.0182,-0.8,0.0,-0.0,attr:utilities
+delacroix-global-growth,Q1-2026,Cash,0.0165,0.04,0.0187,0.0103,-12.8,3.4,-2.0,attr:cash
+delacroix-global-growth,Q1-2026,Commodities,0.0,0.04,0.0444,0.0444,-35.4,0.0,-0.0,attr:commodities
+delacroix-global-growth,Q1-2026,Consumer Staples,0.0,0.07,-0.0132,-0.0132,-21.7,0.0,-0.0,attr:consumer_staples
+delacroix-global-growth,Q1-2026,Credit,0.0883,0.09,0.0002,0.0036,-0.8,-3.1,0.1,attr:credit
+delacroix-global-growth,Q1-2026,Energy,0.0,0.05,-0.057,-0.057,6.4,0.0,-0.0,attr:energy
+delacroix-global-growth,Q1-2026,Financials,0.0945,0.16,-0.0991,-0.0746,19.9,-39.2,16.0,attr:financials
+delacroix-global-growth,Q1-2026,Government,0.0,0.12,0.0377,0.0377,-98.3,0.0,-0.0,attr:government
+delacroix-global-growth,Q1-2026,Health Care,0.1223,0.11,-0.0161,-0.0274,2.1,12.4,1.4,attr:health_care
+delacroix-global-growth,Q1-2026,Information Technology,0.6134,0.26,-0.1209,-0.1182,-261.5,-7.1,-9.7,attr:information_technology
+delacroix-global-growth,Q1-2026,Real Estate,0.065,0.03,-0.0758,-0.0767,-11.4,0.3,0.3,attr:real_estate
+delacroix-global-growth,Q1-2026,Utilities,0.0,0.03,0.0171,0.0171,-18.4,0.0,-0.0,attr:utilities
+delacroix-global-growth,Q2-2026,Cash,0.0165,0.04,-0.0092,0.0077,7.8,-6.8,4.0,attr:cash
+delacroix-global-growth,Q2-2026,Commodities,0.0,0.04,0.0276,0.0276,5.4,0.0,-0.0,attr:commodities
+delacroix-global-growth,Q2-2026,Consumer Staples,0.0,0.07,0.0102,0.0102,21.6,0.0,-0.0,attr:consumer_staples
+delacroix-global-growth,Q2-2026,Credit,0.0883,0.09,0.0382,0.0157,0.4,20.2,-0.4,attr:credit
+delacroix-global-growth,Q2-2026,Energy,0.0,0.05,0.0196,0.0196,10.7,0.0,-0.0,attr:energy
+delacroix-global-growth,Q2-2026,Financials,0.0945,0.16,0.0335,0.0415,-0.3,-12.8,5.2,attr:financials
+delacroix-global-growth,Q2-2026,Government,0.0,0.12,0.0112,0.0112,35.8,0.0,-0.0,attr:government
+delacroix-global-growth,Q2-2026,Health Care,0.1223,0.11,0.0293,0.0234,-2.2,6.5,0.7,attr:health_care
+delacroix-global-growth,Q2-2026,Information Technology,0.6134,0.26,0.0883,0.0955,192.5,-18.7,-25.4,attr:information_technology
+delacroix-global-growth,Q2-2026,Real Estate,0.065,0.03,0.0156,0.0337,-2.6,-5.4,-6.3,attr:real_estate
+delacroix-global-growth,Q2-2026,Utilities,0.0,0.03,0.0036,0.0036,11.2,0.0,-0.0,attr:utilities
+sableridge-balanced-esg,Q3-2025,Cash,0.0461,0.05,0.0168,0.0096,0.8,3.6,-0.3,attr:cash
+sableridge-balanced-esg,Q3-2025,Commodities,0.0517,0.03,0.0232,0.0257,-1.1,-0.7,-0.5,attr:commodities
+sableridge-balanced-esg,Q3-2025,Consumer Staples,0.053,0.04,0.0319,0.0076,-3.0,9.7,3.2,attr:consumer_staples
+sableridge-balanced-esg,Q3-2025,Credit,0.0358,0.19,-0.0007,0.0216,14.1,-42.4,34.4,attr:credit
+sableridge-balanced-esg,Q3-2025,Energy,0.058,0.03,0.0234,0.0228,-2.2,0.2,0.2,attr:energy
+sableridge-balanced-esg,Q3-2025,Financials,0.178,0.09,0.0447,0.0373,5.8,6.7,6.5,attr:financials
+sableridge-balanced-esg,Q3-2025,Government,0.1182,0.3,0.0116,0.0064,44.2,15.7,-9.5,attr:government
+sableridge-balanced-esg,Q3-2025,Health Care,0.0692,0.07,0.0458,0.0348,-0.0,7.7,-0.1,attr:health_care
+sableridge-balanced-esg,Q3-2025,Information Technology,0.3062,0.16,0.1022,0.0988,99.5,5.5,5.0,attr:information_technology
+sableridge-balanced-esg,Q3-2025,Real Estate,0.0067,0.02,0.027,0.0296,0.2,-0.5,0.3,attr:real_estate
+sableridge-balanced-esg,Q3-2025,Utilities,0.0771,0.02,0.0151,0.0139,-9.6,0.2,0.7,attr:utilities
+sableridge-balanced-esg,Q4-2025,Cash,0.0461,0.05,0.0177,0.0123,-0.1,2.7,-0.2,attr:cash
+sableridge-balanced-esg,Q4-2025,Commodities,0.0517,0.03,0.0253,0.0418,6.8,-4.9,-3.6,attr:commodities
+sableridge-balanced-esg,Q4-2025,Consumer Staples,0.053,0.04,0.0521,0.0327,2.9,7.8,2.5,attr:consumer_staples
+sableridge-balanced-esg,Q4-2025,Credit,0.0358,0.19,-0.0034,0.0126,-3.1,-30.4,24.7,attr:credit
+sableridge-balanced-esg,Q4-2025,Energy,0.058,0.03,0.053,0.0476,10.4,1.6,1.5,attr:energy
+sableridge-balanced-esg,Q4-2025,Financials,0.178,0.09,0.0455,0.0473,32.3,-1.7,-1.6,attr:financials
+sableridge-balanced-esg,Q4-2025,Government,0.1182,0.3,-0.0104,-0.0033,25.2,-21.2,12.8,attr:government
+sableridge-balanced-esg,Q4-2025,Health Care,0.0692,0.07,0.0301,0.0454,-0.3,-10.7,0.1,attr:health_care
+sableridge-balanced-esg,Q4-2025,Information Technology,0.3062,0.16,-0.0115,-0.0219,-47.5,16.7,15.2,attr:information_technology
+sableridge-balanced-esg,Q4-2025,Real Estate,0.0067,0.02,0.0316,0.0131,-0.3,3.7,-2.5,attr:real_estate
+sableridge-balanced-esg,Q4-2025,Utilities,0.0771,0.02,0.0154,0.0182,4.4,-0.6,-1.6,attr:utilities
+sableridge-balanced-esg,Q1-2026,Cash,0.0461,0.05,0.0187,0.0103,-1.1,4.2,-0.3,attr:cash
+sableridge-balanced-esg,Q1-2026,Commodities,0.0517,0.03,0.0425,0.0444,13.4,-0.6,-0.4,attr:commodities
+sableridge-balanced-esg,Q1-2026,Consumer Staples,0.053,0.04,-0.0068,-0.0132,0.5,2.6,0.8,attr:consumer_staples
+sableridge-balanced-esg,Q1-2026,Credit,0.0358,0.19,0.0002,0.0036,-32.0,-6.5,5.2,attr:credit
+sableridge-balanced-esg,Q1-2026,Energy,0.058,0.03,-0.0493,-0.057,-11.2,2.3,2.2,attr:energy
+sableridge-balanced-esg,Q1-2026,Financials,0.178,0.09,-0.0802,-0.0746,-50.6,-5.0,-4.9,attr:financials
+sableridge-balanced-esg,Q1-2026,Government,0.1182,0.3,0.0368,0.0377,-99.7,-2.8,1.7,attr:government
+sableridge-balanced-esg,Q1-2026,Health Care,0.0692,0.07,-0.0161,-0.0274,0.1,7.9,-0.1,attr:health_care
+sableridge-balanced-esg,Q1-2026,Information Technology,0.3062,0.16,-0.1179,-0.1182,-147.8,0.5,0.5,attr:information_technology
+sableridge-balanced-esg,Q1-2026,Real Estate,0.0067,0.02,-0.0758,-0.0767,7.9,0.2,-0.1,attr:real_estate
+sableridge-balanced-esg,Q1-2026,Utilities,0.0771,0.02,0.022,0.0171,19.5,1.0,2.8,attr:utilities
+sableridge-balanced-esg,Q2-2026,Cash,0.0461,0.05,-0.0092,0.0077,0.9,-8.4,0.7,attr:cash
+sableridge-balanced-esg,Q2-2026,Commodities,0.0517,0.03,0.0376,0.0276,-0.5,3.0,2.2,attr:commodities
+sableridge-balanced-esg,Q2-2026,Consumer Staples,0.053,0.04,0.0006,0.0102,-2.6,-3.8,-1.2,attr:consumer_staples
+sableridge-balanced-esg,Q2-2026,Credit,0.0358,0.19,0.0382,0.0157,22.0,42.7,-34.7,attr:credit
+sableridge-balanced-esg,Q2-2026,Energy,0.058,0.03,0.0271,0.0196,-2.9,2.2,2.1,attr:energy
+sableridge-balanced-esg,Q2-2026,Financials,0.178,0.09,0.0392,0.0415,10.2,-2.0,-2.0,attr:financials
+sableridge-balanced-esg,Q2-2026,Government,0.1182,0.3,0.0092,0.0112,34.1,-6.1,3.7,attr:government
+sableridge-balanced-esg,Q2-2026,Health Care,0.0692,0.07,0.0293,0.0234,0.1,4.1,-0.0,attr:health_care
+sableridge-balanced-esg,Q2-2026,Information Technology,0.3062,0.16,0.089,0.0955,95.8,-10.4,-9.5,attr:information_technology
+sableridge-balanced-esg,Q2-2026,Real Estate,0.0067,0.02,0.0156,0.0337,-0.5,-3.6,2.4,attr:real_estate
+sableridge-balanced-esg,Q2-2026,Utilities,0.0771,0.02,0.0172,0.0036,-15.0,2.7,7.8,attr:utilities
