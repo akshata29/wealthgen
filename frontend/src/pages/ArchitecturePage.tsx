@@ -10,7 +10,8 @@ interface ServiceCard {
 const SERVICES: ServiceCard[] = [
   { name: 'Foundry IQ', role: 'Grounding hub — knowledge base + agentic retrieval (MCP)', sdk: 'azure-ai-projects 2.3.0', status: 'GA' },
   { name: 'Foundry Agent Service', role: 'Responses-based agents (create_version)', sdk: 'azure-ai-projects 2.3.0', status: 'GA' },
-  { name: 'Fabric IQ', role: 'Holdings, weights, Brinson attribution (Data Agent + Ontology)', sdk: 'azure-search-documents (preview)', status: 'Preview' },
+  { name: 'Fabric IQ', role: 'Grounding KB source — holdings, weights, Brinson attribution (Data Agent + Ontology)', sdk: 'azure-search-documents (preview)', status: 'Preview' },
+  { name: 'Microsoft Fabric Warehouse', role: 'Reference dataset — clients, mandates, holdings, attribution, performance (Warehouse via SQL endpoint / OneLake)', sdk: 'pyodbc + ODBC Driver 18', status: 'GA' },
   { name: 'Work IQ', role: 'House view, style guide, disclosure library (M365)', sdk: 'azure-search-documents (preview)', status: 'Preview' },
   { name: 'Web IQ', role: 'Live market/macro context', sdk: 'azure-search-documents (preview)', status: 'Preview' },
   { name: 'Azure AI Content Understanding', role: 'Primary PDF path — tables + chart values + fields', sdk: 'azure-ai-contentunderstanding 1.1.0', status: 'GA' },

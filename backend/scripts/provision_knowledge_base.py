@@ -10,6 +10,8 @@ Run ONCE per environment (idempotent create-or-update). Steps:
 Prerequisites (out of band):
   - Work IQ: 'EnableFoundryIQWithWorkIQ' feature flag + M365 Copilot licences (same tenant).
   - Fabric IQ: Fabric workspace + Data Agent / Ontology in the same Entra tenant.
+  - Reference data: if DATA_SOURCE_MODE=fabric, load the advisory tables into the Fabric
+    Warehouse first via 'python -m scripts.load_fabric_tables' (see scripts/fabric/README.md).
 
 Usage:
     python -m backend.scripts.provision_knowledge_base

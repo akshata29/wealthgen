@@ -21,6 +21,7 @@ async def settings_info() -> dict:
     return {
         "jurisdictions": s.jurisdictions,
         "default_audience": s.default_audience,
+        "data_source_mode": s.data_source_mode,
         "endpoints": {
             "foundry": bool(s.foundry_endpoint),
             "search": bool(s.search_endpoint),
@@ -29,5 +30,6 @@ async def settings_info() -> dict:
             "content_safety": bool(s.content_safety_endpoint),
             "lseg": bool(s.lseg_mcp_url),
             "fabric": bool(s.fabric_workspace_id),
+            "fabric_warehouse": bool(s.fabric_sql_endpoint),
         },
     }

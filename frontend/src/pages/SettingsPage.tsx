@@ -35,6 +35,18 @@ export default function SettingsPage() {
       </div>
 
       <div className="card">
+        <div className="section-title">Reference data source</div>
+        <div className="flex items-center gap-2">
+          <span className="badge-accent uppercase">{info?.data_source_mode ?? 'csv'}</span>
+          <span className="text-xs text-gray-400">
+            {info?.data_source_mode === 'fabric'
+              ? 'Microsoft Fabric Warehouse (OneLake via SQL endpoint)'
+              : 'Local synthetic CSVs (data/synthetic)'}
+          </span>
+        </div>
+      </div>
+
+      <div className="card">
         <div className="section-title">Azure endpoint status</div>
         <div className="grid grid-cols-2 gap-2">
           {info &&

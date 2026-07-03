@@ -22,6 +22,7 @@ settings = get_settings()
 async def lifespan(app: FastAPI):
     setup_telemetry()
     logger.info("WealthGen backend starting (env=%s)", settings.app_env)
+    logger.info("Reference data source mode: %s", settings.data_source_mode)
     yield
 
 
