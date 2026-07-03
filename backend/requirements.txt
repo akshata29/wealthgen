@@ -28,6 +28,10 @@ azure-search-documents>=11.7.0b1
 azure-cosmos>=4.7
 azure-storage-blob>=12.20
 
+# --- Fabric SQL (reference data over OneLake via Warehouse SQL endpoint) ---
+# Requires the Microsoft ODBC Driver 18 for SQL Server installed on the host.
+pyodbc>=5.1
+
 # --- Safety ---
 azure-ai-contentsafety>=1.0
 

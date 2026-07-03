@@ -39,6 +39,7 @@ async function handle<T>(res: Response): Promise<T> {
 export interface SettingsInfo {
   jurisdictions: string[]
   default_audience: string
+  data_source_mode?: string
   endpoints: Record<string, boolean>
 }
 

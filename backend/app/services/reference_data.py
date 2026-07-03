@@ -1,12 +1,16 @@
-"""Reference data service — reads the synthetic advisory dataset from disk.
+"""Reference data service — the advisory dataset, from CSV or Microsoft Fabric.
 
-Loads `data/synthetic/catalog.json` and the `fabric_iq/*.csv` fact tables produced
-by `scripts.synthetic.generate`, and exposes typed query helpers that back the
-/clients, /mandates, /performance, and /events endpoints.
+Exposes typed query helpers that back the /clients, /mandates, /performance, and
+/events endpoints. Two interchangeable providers are selected by the
+``DATA_SOURCE_MODE`` setting:
 
-The dataset is a local demo corpus (no secrets, demo-safe display names). In a
-production build these reads would target Fabric IQ / OneLake instead; the query
-surface here is intentionally the same shape so that swap is mechanical.
+* ``csv``    — reads ``data/synthetic/catalog.json`` + ``fabric_iq/*.csv`` from disk
+               (the local demo corpus; no secrets, demo-safe display names).
+* ``fabric`` — reads the same tables from a Microsoft Fabric **Warehouse** over
+               OneLake via its SQL analytics endpoint (see ``fabric_data``).
+
+The query surface and return shapes are identical for both providers, so the
+clients router and local-mode agents need no changes when the source is swapped.
 """
 
 from __future__ import annotations
@@ -17,6 +21,7 @@ import logging
 from functools import lru_cache
 from pathlib import Path
 
+from app.infra.settings import get_settings
 from app.models.portfolio import (
     AttributionSegment,
     Client,
@@ -51,7 +56,24 @@ def _require(path: Path) -> Path:
     return path
 
 
+def _fabric_mode() -> bool:
+    return get_settings().data_source_mode == "fabric"
+
+
 def _read_csv(name: str) -> list[dict]:
+    """Read a fact table by CSV file name from the active provider.
+
+    In ``fabric`` mode the ``.csv`` suffix is stripped and the matching Fabric
+    Warehouse table is read; a ``FabricDataError`` is surfaced as the same
+    ``DatasetNotFoundError`` used by the CSV path so callers stay unchanged.
+    """
+    if _fabric_mode():
+        from app.services import fabric_data
+
+        try:
+            return fabric_data.read_table(name.removesuffix(".csv"))
+        except fabric_data.FabricDataError as exc:
+            raise DatasetNotFoundError(str(exc)) from exc
     with _require(_FABRIC / name).open(encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
 
@@ -61,12 +83,45 @@ def _f(value: str | None) -> float:
 
 
 # --------------------------------------------------------------------------- #
-# Catalog (clients + mandates + periods)
+# Catalog (clients + mandates + periods) — csv: catalog.json, fabric: tables
 # --------------------------------------------------------------------------- #
 @lru_cache(maxsize=1)
 def _catalog() -> dict:
     with _require(_DATA_ROOT / "catalog.json").open(encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def _catalog_periods() -> list[str]:
+    if _fabric_mode():
+        from app.services import fabric_data
+
+        try:
+            return fabric_data.read_periods()
+        except fabric_data.FabricDataError as exc:
+            raise DatasetNotFoundError(str(exc)) from exc
+    return [p["period"] for p in _catalog()["periods"]]
+
+
+def _catalog_mandates() -> list[dict]:
+    if _fabric_mode():
+        from app.services import fabric_data
+
+        try:
+            return fabric_data.read_mandates()
+        except fabric_data.FabricDataError as exc:
+            raise DatasetNotFoundError(str(exc)) from exc
+    return _catalog()["mandates"]
+
+
+def _catalog_clients() -> list[dict]:
+    if _fabric_mode():
+        from app.services import fabric_data
+
+        try:
+            return fabric_data.read_clients()
+        except fabric_data.FabricDataError as exc:
+            raise DatasetNotFoundError(str(exc)) from exc
+    return _catalog()["clients"]
 
 
 @lru_cache(maxsize=1)
@@ -92,7 +147,7 @@ def _to_mandate(raw: dict) -> Mandate:
 
 
 def list_periods() -> list[str]:
-    return [p["period"] for p in _catalog()["periods"]]
+    return _catalog_periods()
 
 
 def latest_period() -> str:
@@ -100,14 +155,14 @@ def latest_period() -> str:
 
 
 def list_mandates(client_id: str | None = None) -> list[Mandate]:
-    mandates = [_to_mandate(m) for m in _catalog()["mandates"]]
+    mandates = [_to_mandate(m) for m in _catalog_mandates()]
     if client_id:
         mandates = [m for m in mandates if m.client_id == client_id]
     return mandates
 
 
 def get_mandate(mandate_id: str) -> Mandate | None:
-    for m in _catalog()["mandates"]:
+    for m in _catalog_mandates():
         if m["mandate_id"] == mandate_id:
             return _to_mandate(m)
     return None
@@ -115,7 +170,7 @@ def get_mandate(mandate_id: str) -> Mandate | None:
 
 def list_clients() -> list[ClientSummary]:
     summaries: list[ClientSummary] = []
-    for raw in _catalog()["clients"]:
+    for raw in _catalog_clients():
         client = Client.model_validate(raw)
         mandates = list_mandates(client.client_id)
         summaries.append(

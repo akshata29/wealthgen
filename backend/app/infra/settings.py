@@ -9,7 +9,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Annotated
 
-from pydantic import field_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
@@ -55,6 +55,14 @@ class Settings(BaseSettings):
     fabric_data_agent_id: str | None = None
     fabric_ontology_id: str | None = None
 
+    # --- Fabric Warehouse (reference dataset over OneLake, via SQL endpoint) ---
+    #   csv    -> local synthetic CSVs (data/synthetic/fabric_iq) — offline/dev path
+    #   fabric -> Microsoft Fabric Warehouse T-SQL tables via the SQL analytics endpoint
+    data_source_mode: str = "csv"
+    fabric_sql_endpoint: str | None = None  # e.g. <id>.datawarehouse.fabric.microsoft.com
+    fabric_database: str | None = None  # Fabric Warehouse name
+    fabric_sql_schema: str = "dbo"
+
     # --- Cosmos DB ---
     cosmos_endpoint: str
     cosmos_database: str = "wealthgen"
@@ -92,6 +100,26 @@ class Settings(BaseSettings):
         if isinstance(v, str):
             return [item.strip() for item in v.split(",") if item.strip()]
         return v
+
+    @field_validator("data_source_mode")
+    @classmethod
+    def _validate_data_source_mode(cls, v: str) -> str:
+        allowed = {"csv", "fabric"}
+        if v not in allowed:
+            raise ValueError(f"DATA_SOURCE_MODE must be one of {sorted(allowed)}, got '{v}'")
+        return v
+
+    @model_validator(mode="after")
+    def _require_fabric_config(self) -> Settings:
+        # Real services only — fail loudly rather than fall back to placeholders.
+        if self.data_source_mode == "fabric" and not (
+            self.fabric_sql_endpoint and self.fabric_database
+        ):
+            raise ValueError(
+                "DATA_SOURCE_MODE=fabric requires FABRIC_SQL_ENDPOINT and FABRIC_DATABASE "
+                "to be set (Fabric Warehouse SQL endpoint + Warehouse name)."
+            )
+        return self
 
     @property
     def is_local(self) -> bool:

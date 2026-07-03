@@ -69,7 +69,7 @@ export const workflowTabs: WorkflowTab[] = [
           technologies: ['Fabric IQ', 'Foundry IQ', 'azure-ai-projects 2.x'],
           keyFacts: [
             'Consumes attribution; never recomputes it',
-            'GROUNDING_MODE=local: reads the reference dataset directly + surfaces top holdings',
+            'GROUNDING_MODE=local: reads the reference dataset (Microsoft Fabric) directly + surfaces top holdings',
           ],
         },
       },
@@ -94,7 +94,7 @@ export const workflowTabs: WorkflowTab[] = [
           dataFlow: ['Web IQ + LSEG MCP → agent', 'MarketContextFacts'],
           technologies: ['Web IQ', 'LSEG MCP', 'Foundry IQ'],
           keyFacts: [
-            'GROUNDING_MODE=local: index/FX/themes come from the reference dataset',
+            'GROUNDING_MODE=local: index/FX/themes come from the reference dataset (Microsoft Fabric)',
           ],
         },
       },
@@ -131,15 +131,16 @@ export const workflowTabs: WorkflowTab[] = [
         subtitle: 'datastore · reference_data.py',
         position: { x: 560, y: 250 },
         detail: {
-          title: 'Reference Dataset (Fabric IQ / LSEG stand-in)',
+          title: 'Reference Dataset (Microsoft Fabric / OneLake)',
           subtitle: 'datastore · reference_data.py',
           description:
-            'Deterministic synthetic dataset of clients, mandates, holdings, Brinson-Fachler ' +
-            'attribution, performance, and market context. In GROUNDING_MODE=local this is the ' +
-            'validated source the analysis and market agents read directly (in production this is ' +
-            'Fabric IQ / OneLake).',
+            'Clients, mandates, holdings, Brinson-Fachler attribution, performance, and market ' +
+            'context served from a Microsoft Fabric Warehouse (Delta tables over OneLake) via the ' +
+            'SQL analytics endpoint. In GROUNDING_MODE=local this is the validated source the ' +
+            'analysis and market agents read directly; DATA_SOURCE_MODE=csv keeps a local-dev fallback.',
           sourceFiles: [
             'backend/app/services/reference_data.py',
+            'backend/app/services/fabric_data.py',
             'backend/scripts/synthetic/generate.py',
           ],
           responsibilities: [
@@ -148,10 +149,16 @@ export const workflowTabs: WorkflowTab[] = [
             'Back the Clients & Portfolios workspace and performance widgets',
           ],
           dataFlow: [
-            'CSV/JSON (data/synthetic) → typed models',
+            'Fabric Warehouse (OneLake) → SQL endpoint → typed models',
             'AnalysisFindings + MarketContextFacts (local mode)',
           ],
-          technologies: ['Reconciled Brinson-Fachler', 'Deterministic seed'],
+          technologies: [
+            'Microsoft Fabric Warehouse',
+            'OneLake',
+            'Fabric SQL endpoint',
+            'Reconciled Brinson-Fachler',
+            'Deterministic seed',
+          ],
           keyFacts: ['Attribution reconciles to active return within 1bp'],
         },
       },
