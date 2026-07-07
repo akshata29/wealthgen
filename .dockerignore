@@ -1,0 +1,18 @@
+# Keep the build context small and secrets out of the image.
+**/.venv
+**/venv
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+frontend/dist
+.git
+.github
+**/.env
+backend/.env
+# NOTE: backend/data/oauth/*.json (provider refresh tokens) ARE included so the
+# research providers work in the container. Exclude synthetic PDFs to slim the
+# image (not needed at runtime in fabric mode).
+backend/data/synthetic/**/*.pdf
