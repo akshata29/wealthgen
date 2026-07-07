@@ -18,8 +18,15 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import sys
 from collections import defaultdict
 from pathlib import Path
+
+# Ensure the backend package root is importable when this file is run directly
+# (e.g. `py .\load_synthetic_facts.py`) and not only as `python -m scripts.load_synthetic_facts`.
+_BACKEND_ROOT = Path(__file__).resolve().parents[1]
+if str(_BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(_BACKEND_ROOT))
 
 from app.models.sources import SourceFact
 from app.services.search_index import ensure_pdf_index, upsert_facts

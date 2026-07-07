@@ -17,7 +17,7 @@ from app.services import mcp_oauth, reference_data, research_direct
 
 logger = logging.getLogger(__name__)
 
-PROVIDERS = ["morningstar", "lseg"]
+PROVIDERS = ["morningstar", "lseg", "moody"]
 
 
 class ResearchNotConfiguredError(RuntimeError):
@@ -92,4 +92,23 @@ async def lseg_market_context(mandate_id: str, period: str | None = None) -> tup
         f"{sectors}. Attribute all figures to LSEG."
     )
     return await research_direct.run("lseg", prompt)
+
+
+async def moody_credit_context(mandate_id: str, period: str | None = None) -> tuple[str, list[Citation]]:
+    """Assemble credit-rating / credit-risk context via Moody's tools."""
+    _require_login("moody")
+    period = period or reference_data.latest_period()
+    mandate = reference_data.get_mandate(mandate_id)
+    benchmark = mandate.benchmark_name if mandate else ""
+    holdings = reference_data.get_holdings(mandate_id, period)
+    names = ", ".join(sorted({h.instrument for h in holdings})[:20]) or "the portfolio holdings"
+
+    prompt = (
+        "Using the Moody's tools, give a concise credit-risk context for the reporting period "
+        f"'{period}' relevant to a mandate benchmarked to {benchmark}. Cover: issuer credit "
+        "ratings and any recent rating actions or outlook changes, sector credit trends, and "
+        "notable credit events relevant to these holdings: "
+        f"{names}. Attribute all ratings and figures to Moody's."
+    )
+    return await research_direct.run("moody", prompt)
 

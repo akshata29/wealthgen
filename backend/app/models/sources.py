@@ -13,6 +13,7 @@ from pydantic import BaseModel, Field
 
 class SourceOrigin(str, Enum):
     CONTENT_UNDERSTANDING = "content_understanding"
+    DOCUMENT_INTELLIGENCE = "document_intelligence"
     FABRIC_IQ = "fabric_iq"
     WORK_IQ = "work_iq"
     WEB_IQ = "web_iq"

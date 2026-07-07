@@ -24,6 +24,7 @@ async def ingest(
     files: list[UploadFile] = File(...),
 ) -> dict:
     all_facts = 0
+    all_chunks = 0
     needs_review: list[str] = []
     for upload in files:
         data = await upload.read()
@@ -37,9 +38,12 @@ async def ingest(
                 detail={"code": "CONTENT_SAFETY", "message": str(exc)},
             ) from exc
 
-        sas_url = upload_pdf(mandate_id, upload.filename or "factsheet.pdf", data)
-        result = document_intelligence_agent.ingest_factsheet(mandate_id, sas_url)
-        all_facts += result.indexed
+        filename = upload.filename or "factsheet.pdf"
+        # Persist the source PDF for audit/storage; ingestion runs on the bytes.
+        upload_pdf(mandate_id, filename, data)
+        result = document_intelligence_agent.ingest_factsheet(mandate_id, filename, data)
+        all_chunks += result.chunks_indexed
+        all_facts += result.facts_indexed
         needs_review.extend(result.needs_review)
 
     audit.write_audit(
@@ -50,7 +54,16 @@ async def ingest(
             session_id=session_id,
             mandate_id=mandate_id,
             action="documents_ingested",
-            metadata={"facts_indexed": all_facts, "files": len(files)},
+            metadata={
+                "facts_indexed": all_facts,
+                "chunks_indexed": all_chunks,
+                "files": len(files),
+            },
         )
     )
-    return {"mandate_id": mandate_id, "facts_indexed": all_facts, "needs_review": needs_review}
+    return {
+        "mandate_id": mandate_id,
+        "facts_indexed": all_facts,
+        "chunks_indexed": all_chunks,
+        "needs_review": needs_review,
+    }

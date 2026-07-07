@@ -1,4 +1,5 @@
 // Typed API client for the WealthGen backend. Vite proxies /api to FastAPI.
+import { getSearchToken } from '@/auth/authToken'
 import type { ApprovalState } from '@/types/approvals'
 import type {
   CommentarySection,
@@ -72,10 +73,15 @@ export async function ingestPdfs(
 export async function generateCommentary(
   req: GenerateCommentaryRequest,
 ): Promise<CompliantCommentary> {
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' }
+  // Attach the signed-in advisor's delegated Search token for OBO grounding
+  // (required by the Fabric Data Agent knowledge source).
+  const token = await getSearchToken()
+  if (token) headers['X-User-Search-Token'] = token
   return handle(
     await fetch(`${BASE}/commentary/generate`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify(req),
     }),
   )

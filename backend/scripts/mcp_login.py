@@ -63,6 +63,7 @@ def _default_mcp_url(provider: str) -> str | None:
     return {
         "morningstar": settings.morningstar_mcp_url,
         "lseg": settings.lseg_mcp_url,
+        "moody": settings.moody_mcp_url,
     }.get(provider)
 
 

@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, Header, HTTPException, Query, status
 from pydantic import BaseModel
 
+from app.infra import auth
 from app.infra.settings import get_settings
 from app.models.approvals import AuditEventType, AuditRecord
 from app.models.commentary import (
@@ -42,7 +43,13 @@ class CommentarySummary(BaseModel):
     response_model=CompliantCommentary,
     status_code=status.HTTP_201_CREATED,
 )
-async def generate(request: GenerateCommentaryRequest) -> CompliantCommentary:
+async def generate(
+    request: GenerateCommentaryRequest,
+    x_user_search_token: str | None = Header(default=None),
+) -> CompliantCommentary:
+    # Carry the signed-in advisor's delegated Search token for OBO grounding
+    # (Fabric Data Agent knowledge source requires a user token, not the app SP).
+    auth.set_user_search_token(x_user_search_token)
     settings = get_settings()
     try:
         commentary = await generate_commentary(

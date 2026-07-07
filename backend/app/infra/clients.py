@@ -56,12 +56,55 @@ def get_content_understanding_client():
 
 
 @lru_cache
+def get_document_intelligence_client():
+    from azure.ai.documentintelligence import DocumentIntelligenceClient
+
+    settings = get_settings()
+    if not settings.di_endpoint:
+        raise RuntimeError("DI_ENDPOINT is not configured; required for layout markdown.")
+    return DocumentIntelligenceClient(
+        endpoint=settings.di_endpoint, credential=get_credential()
+    )
+
+
+@lru_cache
+def get_embeddings_client():
+    """Azure OpenAI client for the embedding deployment (AAD token auth)."""
+    from azure.identity import get_bearer_token_provider
+    from openai import AzureOpenAI
+
+    settings = get_settings()
+    if not settings.azure_openai_endpoint:
+        raise RuntimeError(
+            "AZURE_OPENAI_ENDPOINT is not configured; required for embeddings."
+        )
+    token_provider = get_bearer_token_provider(
+        get_credential(), "https://cognitiveservices.azure.com/.default"
+    )
+    return AzureOpenAI(
+        azure_endpoint=settings.azure_openai_endpoint,
+        azure_ad_token_provider=token_provider,
+        api_version=settings.embedding_api_version,
+    )
+
+
+def _search_credential():
+    """Prefer the admin key when configured (provisioning path), else AAD."""
+    settings = get_settings()
+    if settings.search_admin_key:
+        from azure.core.credentials import AzureKeyCredential
+
+        return AzureKeyCredential(settings.search_admin_key)
+    return get_credential()
+
+
+@lru_cache
 def get_search_index_client():
     from azure.search.documents.indexes import SearchIndexClient
 
     settings = get_settings()
     return SearchIndexClient(
-        endpoint=settings.search_endpoint, credential=get_credential()
+        endpoint=settings.search_endpoint, credential=_search_credential()
     )
 
 
@@ -73,7 +116,20 @@ def get_search_client():
     return SearchClient(
         endpoint=settings.search_endpoint,
         index_name=settings.pdf_index_name,
-        credential=get_credential(),
+        credential=_search_credential(),
+    )
+
+
+@lru_cache
+def get_kb_retrieval_client():
+    """Foundry IQ knowledge base retrieval client (direct, filterable retrieval)."""
+    from azure.search.documents.knowledgebases import KnowledgeBaseRetrievalClient
+
+    settings = get_settings()
+    return KnowledgeBaseRetrievalClient(
+        endpoint=settings.search_endpoint,
+        credential=_search_credential(),
+        knowledge_base_name=settings.kb_name,
     )
 
 

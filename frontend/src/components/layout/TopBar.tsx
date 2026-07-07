@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import AuthButton from '@/auth/AuthButton'
 
 const TITLES: Record<string, string> = {
   '/': 'Generate Commentary',
@@ -25,6 +26,7 @@ export default function TopBar() {
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
           <span className="text-xs text-gray-400">Agents online</span>
         </div>
+        <AuthButton />
       </div>
     </header>
   )

@@ -105,13 +105,21 @@ def _direction(value: str) -> PositioningDirection:
 
 
 def _analyze_foundry_iq(mandate_id: str, period: str) -> AnalysisFindings:
-    agent = foundry_iq.ensure_agent(AGENT_NAME, ANALYSIS_SYSTEM)
-    prompt = (
+    task = (
         f"Summarise attribution for mandate '{mandate_id}', period '{period}'. "
-        "Use the knowledge base (Fabric IQ) for holdings, weights, and Brinson-Fachler "
-        "attribution. Return AnalysisFindings JSON only."
+        "Use holdings, weights, and Brinson-Fachler attribution from the grounding. "
+        "Return AnalysisFindings JSON only."
     )
-    text, _ = foundry_iq.run_agent(agent, prompt)
+    text, _ = foundry_iq.run_agent_scoped(
+        AGENT_NAME,
+        ANALYSIS_SYSTEM,
+        task,
+        mandate_id=mandate_id,
+        period=period,
+        retrieval_query=(
+            f"performance, attribution, holdings, and positioning for {mandate_id} {period}"
+        ),
+    )
     payload = _slice_json(text)
     return AnalysisFindings.model_validate(payload)
 

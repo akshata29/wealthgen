@@ -122,3 +122,4 @@ $RECYCLE.BIN/
 
 .copilot-tracking/
 backend/.env
+backend/.env copy

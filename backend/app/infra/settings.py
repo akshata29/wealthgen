@@ -27,17 +27,27 @@ class Settings(BaseSettings):
     # Grounding source for analysis/market facts:
     #   local      -> synthetic dataset (data/synthetic) + Foundry LLM narration (no KB needed)
     #   foundry_iq -> retrieve from the provisioned Foundry IQ knowledge base (requires KB + RemoteTool connection)
-    grounding_mode: str = "local"
+    grounding_mode: str = "foundry_iq"
 
     # --- Azure AI Foundry ---
     foundry_endpoint: str
     agent_model: str = "gpt-4.1"
+
+    # --- Azure OpenAI embeddings (vectorization for the PDF facts index) ---
+    azure_openai_endpoint: str | None = None
+    embedding_deployment: str = "embedding"
+    embedding_model: str = "text-embedding-ada-002"
+    embedding_api_version: str = "2024-10-21"
 
     # --- Foundry IQ knowledge base (MCP hub) ---
     search_endpoint: str
     kb_name: str = "wealthgen-kb"
     kb_connection_name: str
     kb_mcp_api_version: str = "2026-05-01-preview"
+    # Chat model the KB uses for query planning / answer synthesis (Azure OpenAI deployment).
+    kb_completion_deployment: str = "chat4o"
+    kb_completion_model: str = "gpt-4o"
+    kb_pdf_source_name: str = "wealthgen-pdf"
 
     # --- Azure AI Search (PDF source index) ---
     search_admin_key: str | None = None
@@ -45,7 +55,8 @@ class Settings(BaseSettings):
 
     # --- Content Understanding (primary) ---
     cu_endpoint: str
-    cu_analyzer_id: str = "wealthgen-factsheet-analyzer"
+    cu_analyzer_id: str = "wealthgen_factsheet_analyzer"
+    cu_completion_model: str = "gpt-4.1"
 
     # --- Document Intelligence (fallback) ---
     di_endpoint: str | None = None
@@ -58,7 +69,7 @@ class Settings(BaseSettings):
     # --- Fabric Warehouse (reference dataset over OneLake, via SQL endpoint) ---
     #   csv    -> local synthetic CSVs (data/synthetic/fabric_iq) — offline/dev path
     #   fabric -> Microsoft Fabric Warehouse T-SQL tables via the SQL analytics endpoint
-    data_source_mode: str = "csv"
+    data_source_mode: str = "fabric"
     fabric_sql_endpoint: str | None = None  # e.g. <id>.datawarehouse.fabric.microsoft.com
     fabric_database: str | None = None  # Fabric Warehouse name
     fabric_sql_schema: str = "dbo"
@@ -71,6 +82,10 @@ class Settings(BaseSettings):
     # --- LSEG market data ---
     lseg_mcp_url: str | None = None
     lseg_connection_name: str | None = None
+
+    # --- Moody's credit research (via MCP) ---
+    moody_mcp_url: str | None = None
+    moody_connection_name: str | None = None
 
     # --- Research MCP tools (Foundry project connections) ---
     # Create the connection in the Foundry portal (Tools -> add -> authenticate),

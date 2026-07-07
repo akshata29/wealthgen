@@ -28,7 +28,7 @@ class FactSheetExtraction:
 
 
 def analyze_factsheet(pdf_sas_url: str) -> FactSheetExtraction:
-    """Run the custom fact-sheet analyzer and map fields to SourceFacts."""
+    """Run the custom fact-sheet analyzer on a URL source and map fields to SourceFacts."""
     from azure.ai.contentunderstanding.models import AnalysisInput
 
     settings = get_settings()
@@ -41,28 +41,47 @@ def analyze_factsheet(pdf_sas_url: str) -> FactSheetExtraction:
     return _map_result(result)
 
 
+def analyze_factsheet_bytes(data: bytes) -> FactSheetExtraction:
+    """Run the custom fact-sheet analyzer on raw PDF bytes (no blob/SAS needed)."""
+    settings = get_settings()
+    client = get_content_understanding_client()
+    poller = client.begin_analyze_binary(settings.cu_analyzer_id, data)
+    result = poller.result()
+    return _map_result(result)
+
+
 def _map_result(result) -> FactSheetExtraction:
     facts: list[SourceFact] = []
     needs_review: list[str] = []
 
-    fields = getattr(result, "fields", {}) or {}
-    for name, field in fields.items():
-        value = _field_value(field)
-        confidence = getattr(field, "confidence", None)
-        region = _field_region(field)
-        source_id = f"cu:{name}"
-        facts.append(
-            SourceFact(
-                source_id=source_id,
-                origin=SourceOrigin.CONTENT_UNDERSTANDING,
-                label=name,
-                value=None if value is None else str(value),
-                confidence=confidence,
-                region=region,
+    # New CU SDK returns `contents: [{ fields: {...} }]`; older shape exposed `fields`.
+    contents = getattr(result, "contents", None)
+    field_maps = (
+        [getattr(c, "fields", {}) or {} for c in contents]
+        if contents
+        else [getattr(result, "fields", {}) or {}]
+    )
+
+    for fields in field_maps:
+        for name, field in fields.items():
+            value = _field_value(field)
+            if value is None:
+                continue
+            confidence = getattr(field, "confidence", None)
+            region = _field_region(field)
+            source_id = f"cu:{name}"
+            facts.append(
+                SourceFact(
+                    source_id=source_id,
+                    origin=SourceOrigin.CONTENT_UNDERSTANDING,
+                    label=name,
+                    value=str(value),
+                    confidence=confidence,
+                    region=region,
+                )
             )
-        )
-        if confidence is not None and confidence < CONFIDENCE_THRESHOLD:
-            needs_review.append(source_id)
+            if confidence is not None and confidence < CONFIDENCE_THRESHOLD:
+                needs_review.append(source_id)
 
     logger.info(
         "Content Understanding extracted %d fields (%d need review).",
@@ -73,7 +92,7 @@ def _map_result(result) -> FactSheetExtraction:
 
 
 def _field_value(field) -> object | None:
-    for attr in ("value_string", "value_number", "value", "content"):
+    for attr in ("value_string", "value_number", "value_integer", "value", "content"):
         v = getattr(field, attr, None)
         if v is not None:
             return v
