@@ -40,7 +40,7 @@ export default function SettingsPage() {
           <span className="badge-accent uppercase">{info?.data_source_mode ?? 'csv'}</span>
           <span className="text-xs text-gray-400">
             {info?.data_source_mode === 'fabric'
-              ? 'Microsoft Fabric Warehouse (OneLake via SQL endpoint)'
+              ? 'Microsoft Fabric Lakehouse (OneLake via SQL endpoint)'
               : 'Local synthetic CSVs (data/synthetic)'}
           </span>
         </div>

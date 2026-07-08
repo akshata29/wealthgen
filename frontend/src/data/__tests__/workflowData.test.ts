@@ -14,15 +14,15 @@ describe('workflowData — reference dataset (Fabric)', () => {
     const refdata = findNode('refdata')
     expect(refdata).toBeDefined()
     const tech = refdata!.detail.technologies ?? []
-    expect(tech).toContain('Microsoft Fabric Warehouse')
+    expect(tech).toContain('Microsoft Fabric Lakehouse')
     expect(tech).toContain('OneLake')
     expect(tech).toContain('Fabric SQL endpoint')
   })
 
-  it('describes the Fabric Warehouse → SQL endpoint data flow', () => {
+  it('describes the Fabric Lakehouse → SQL endpoint data flow', () => {
     const refdata = findNode('refdata')
     const flow = (refdata!.detail.dataFlow ?? []).join(' ')
-    expect(flow).toContain('Fabric Warehouse')
+    expect(flow).toContain('Fabric Lakehouse')
     expect(flow).toContain('SQL endpoint')
   })
 })

@@ -12,12 +12,12 @@
 
 | Metric | Value |
 | --- | --- |
-| Total return (net) | +6.71% |
-| Benchmark return | +4.26% |
-| Active return | +246 bps |
+| Total return (net) | +5.93% |
+| Benchmark return | +6.77% |
+| Active return | -84 bps |
 | Tracking error | 2.24% |
-| Information ratio | 1.10 |
-| Sharpe ratio | 0.23 |
+| Information ratio | -0.37 |
+| Sharpe ratio | 0.16 |
 | Max drawdown | -2.51% |
 
 ## Fund facts

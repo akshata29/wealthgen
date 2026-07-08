@@ -1,0 +1,126 @@
+{
+  "_note": "Real, publicly available fund fact sheets (iShares by BlackRock / public literature). PDFs are downloaded by scripts/download_real_factsheets.py and ingested by scripts/ingest_real_factsheets.py through the same Document Intelligence -> chunk -> Search pipeline as synthetic sheets. `mandates` links each building-block fund to the demo mandates that hold it; `period` tags the ingest for period-scoped retrieval.",
+  "default_period": "Q1-2026",
+  "funds": [
+    {
+      "ticker": "IVV",
+      "name": "iShares Core S&P 500 ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "US Large Cap",
+      "region": "US",
+      "isin": "US4642872000",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/ivv-ishares-core-s-p-500-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IVV.pdf",
+      "mandates": ["halvorsen-global-growth"]
+    },
+    {
+      "ticker": "IEFA",
+      "name": "iShares Core MSCI EAFE ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "International Developed",
+      "region": "Global ex-US",
+      "isin": "US46432F3391",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/iefa-ishares-core-msci-eafe-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IEFA.pdf",
+      "mandates": ["delacroix-global-growth"]
+    },
+    {
+      "ticker": "IEMG",
+      "name": "iShares Core MSCI Emerging Markets ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "Emerging Markets",
+      "region": "Emerging Markets",
+      "isin": "US46434G1031",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/iemg-ishares-core-msci-emerging-markets-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IEMG.pdf",
+      "mandates": ["rivera-opportunistic-equity"]
+    },
+    {
+      "ticker": "AGG",
+      "name": "iShares Core U.S. Aggregate Bond ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Fixed Income",
+      "sector": "US Aggregate Bond",
+      "region": "US",
+      "isin": "US4642872265",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "AGG.pdf",
+      "mandates": ["meadowlark-core-income"]
+    },
+    {
+      "ticker": "LQD",
+      "name": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Fixed Income",
+      "sector": "Investment Grade Credit",
+      "region": "US",
+      "isin": "US4642872265",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/lqd-ishares-iboxx-investment-grade-corporate-bond-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "LQD.pdf",
+      "mandates": ["ashcombe-ldi-core"]
+    },
+    {
+      "ticker": "IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Fixed Income",
+      "sector": "Government",
+      "region": "US",
+      "isin": "US4642874402",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/ief-ishares-7-10-year-treasury-bond-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IEF.pdf",
+      "mandates": ["ashcombe-ldi-core"]
+    },
+    {
+      "ticker": "ESGU",
+      "name": "iShares ESG Aware MSCI USA ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "US Large Cap (ESG)",
+      "region": "US",
+      "isin": "US46435G4128",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/esgu-ishares-esg-aware-msci-usa-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "ESGU.pdf",
+      "mandates": ["sableridge-balanced-esg"]
+    },
+    {
+      "ticker": "IAU",
+      "name": "iShares Gold Trust",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Alternatives",
+      "sector": "Commodities",
+      "region": "Global",
+      "isin": "US4642851053",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+      "pdf": "IAU.pdf",
+      "mandates": ["northbridge-global-balanced"]
+    },
+    {
+      "ticker": "IJR",
+      "name": "iShares Core S&P Small-Cap ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "US Small Cap",
+      "region": "US",
+      "isin": "US4642878049",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/ijr-ishares-core-s-p-small-cap-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IJR.pdf",
+      "mandates": ["halvorsen-global-growth"]
+    },
+    {
+      "ticker": "IXC",
+      "name": "iShares Global Energy ETF",
+      "issuer": "iShares by BlackRock",
+      "asset_class": "Equity",
+      "sector": "Global Energy Equity",
+      "region": "Global",
+      "isin": "US4642871689",
+      "factsheet_url": "https://www.ishares.com/us/literature/fact-sheet/ixc-ishares-global-energy-etf-fund-fact-sheet-en-us.pdf",
+      "pdf": "IXC.pdf",
+      "mandates": ["delacroix-global-growth", "halvorsen-global-growth"]
+    }
+  ]
+}

@@ -92,7 +92,9 @@ def _load_table(cursor, schema: str, table: str, truncate: bool) -> int:
         rows = [tuple(_coerce(col, row[col]) for col in columns) for row in reader]
 
     if truncate:
-        cursor.execute(f"TRUNCATE TABLE {schema}.{table}")
+        # Fabric SQL endpoints reject TRUNCATE TABLE; DELETE FROM is supported
+        # and equivalent for a full reload.
+        cursor.execute(f"DELETE FROM {schema}.{table}")
 
     if rows:
         placeholders = ", ".join("?" for _ in columns)

@@ -13,7 +13,13 @@ import logging
 from app.agents.prompts import build_narrative_instructions
 from app.infra.settings import get_settings
 from app.models.analysis import AnalysisFindings
-from app.models.commentary import Audience, CommentaryDraft, NarrativeStyle, SectionHeading
+from app.models.commentary import (
+    Audience,
+    CommentaryDraft,
+    CommentaryType,
+    NarrativeStyle,
+    SectionHeading,
+)
 from app.models.market import MarketContextFacts
 from app.models.sources import SourceFact
 from app.services import foundry_iq
@@ -37,6 +43,7 @@ def generate(
     source_facts: list[SourceFact],
     style: NarrativeStyle | None = None,
     event_driven: bool = False,
+    commentary_type: CommentaryType = CommentaryType.QUARTERLY_REVIEW,
 ) -> CommentaryDraft:
     source_map = {f.source_id: f.label + (f": {f.value}" if f.value else "") for f in source_facts}
     style = style or NarrativeStyle()
@@ -46,6 +53,7 @@ def generate(
         literacy=style.literacy.value,
         non_financial_language=style.non_financial_language,
         event_driven=event_driven,
+        commentary_type=commentary_type.value,
     )
     # In local grounding mode the narrative is written purely from the supplied
     # (already-grounded) facts, so the KB retrieval tool is omitted.

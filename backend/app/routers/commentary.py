@@ -13,12 +13,15 @@ from app.models.approvals import AuditEventType, AuditRecord
 from app.models.commentary import (
     Audience,
     BriefTrigger,
+    CommentaryDraft,
+    CommentaryType,
     ComplianceStatus,
     CompliantCommentary,
     GenerateCommentaryRequest,
 )
+from app.agents import compliance_guard_agent
 from app.orchestration.commentary_workflow import SubstantiationError, generate_commentary
-from app.services import audit, commentary_store, content_safety
+from app.services import audit, commentary_store, content_safety, substantiation
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -31,6 +34,7 @@ class CommentarySummary(BaseModel):
     mandate_id: str
     period: str
     audience: Audience
+    commentary_type: CommentaryType = CommentaryType.QUARTERLY_REVIEW
     compliance_status: ComplianceStatus
     pm_status: str = "pending"
     compliance_approval: str = "pending"
@@ -58,7 +62,8 @@ async def generate(
             audience=request.audience,
             jurisdictions=settings.jurisdictions,
             style=request.style,
-            event_driven=request.trigger == BriefTrigger.EVENT,
+            event_driven=request.resolved_trigger == BriefTrigger.EVENT,
+            commentary_type=request.commentary_type,
         )
     except SubstantiationError as exc:
         # No fabricated numbers: any unresolved source_id blocks delivery.
@@ -91,7 +96,8 @@ async def generate(
             metadata={
                 "period": request.period,
                 "audience": request.audience.value,
-                "trigger": request.trigger.value,
+                "trigger": request.resolved_trigger.value,
+                "commentary_type": request.commentary_type.value,
                 "compliance_status": saved.compliance_status.value,
             },
         )
@@ -120,6 +126,7 @@ def _summarize(item: dict) -> CommentarySummary:
         mandate_id=item.get("mandate_id", ""),
         period=item.get("period", ""),
         audience=item.get("audience", "client"),
+        commentary_type=item.get("commentary_type", "quarterly_review"),
         compliance_status=item.get("compliance_status", "passed"),
         pm_status=approval.get("pm_status", "pending"),
         compliance_approval=approval.get("compliance_status", "pending"),
@@ -137,3 +144,79 @@ async def get(commentary_id: str, mandate_id: str) -> CompliantCommentary:
             detail={"code": "NOT_FOUND", "message": f"Commentary {commentary_id} not found"},
         )
     return CompliantCommentary.model_validate(item)
+
+
+@router.delete("/commentary/{commentary_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete(commentary_id: str, mandate_id: str = Query(...)) -> None:
+    deleted = commentary_store.delete_commentary(commentary_id, mandate_id)
+    if not deleted:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "NOT_FOUND", "message": f"Commentary {commentary_id} not found"},
+        )
+    audit.write_audit(
+        AuditRecord(
+            event_type=AuditEventType.DELETED,
+            advisor_id="system",
+            client_id=mandate_id,
+            session_id=commentary_id,
+            mandate_id=mandate_id,
+            action="commentary_deleted",
+            metadata={},
+        )
+    )
+
+
+@router.post("/commentary/{commentary_id}/recompliance", response_model=CompliantCommentary)
+async def rerun_compliance(commentary_id: str, mandate_id: str = Query(...)) -> CompliantCommentary:
+    """Re-run the compliance gate on a (possibly edited) commentary.
+
+    Lets a PM/advisor edit the draft then re-check compliance. Resets the approval
+    state (content changed) and returns the updated status (passed / rewritten /
+    rejected) with any remaining violations.
+    """
+    item = commentary_store.get_commentary(commentary_id, mandate_id)
+    if item is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "NOT_FOUND", "message": f"Commentary {commentary_id} not found"},
+        )
+
+    draft = CommentaryDraft.model_validate(item)
+    settings = get_settings()
+
+    # Edited claims must still cite valid sources.
+    unresolved = substantiation.substantiate(draft)
+    if unresolved:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "UNSUBSTANTIATED", "unresolved": unresolved},
+        )
+
+    compliant = compliance_guard_agent.enforce(draft, settings.jurisdictions)
+    compliant.id = commentary_id
+
+    rendered = " ".join(c.text for s in compliant.sections for c in s.claims)
+    try:
+        content_safety.check_text(rendered)
+    except content_safety.ContentSafetyError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={"code": "CONTENT_SAFETY", "message": str(exc)},
+        ) from exc
+
+    # Persist the re-checked commentary; save_commentary resets approval to pending
+    # (edits invalidate any prior sign-off).
+    saved = commentary_store.save_commentary(compliant)
+    audit.write_audit(
+        AuditRecord(
+            event_type=AuditEventType.EDITED,
+            advisor_id="system",
+            client_id=mandate_id,
+            session_id=commentary_id,
+            mandate_id=mandate_id,
+            action="compliance_rechecked",
+            metadata={"compliance_status": saved.compliance_status.value},
+        )
+    )
+    return saved

@@ -63,7 +63,14 @@ def retrieve_grounding(
     qsa = auth.get_user_search_token()
     if not qsa:
         qsa = get_credential().get_token("https://search.azure.com/.default").token
-    response = get_kb_retrieval_client().retrieve(request, query_source_authorization=qsa)
+    try:
+        response = get_kb_retrieval_client().retrieve(request, query_source_authorization=qsa)
+    except Exception as exc:  # noqa: BLE001 — KB answer-synthesis can fail (e.g. reasoning-model incompat)
+        # The KB's query-planning/answer-synthesis step depends on the completion
+        # model; when that errors, fall back to a direct hybrid search over the
+        # same index (proven path) so grounding stays available.
+        logger.warning("KB retrieve failed (%s); falling back to direct index search.", exc)
+        return _direct_search_grounding(query, filter_add_on)
     text = ""
     for item in response.response or []:
         for content in getattr(item, "content", []) or []:
@@ -78,6 +85,45 @@ def _extract_reference_citations(response) -> list[Citation]:
         source_id = str(getattr(ref, "source_data", None) or getattr(ref, "id", "source"))
         citations.append(Citation(source_id=source_id, display=source_id, url=None))
     return citations
+
+
+def _direct_search_grounding(
+    query: str, odata_filter: str | None, top: int = 8
+) -> tuple[str, list[Citation]]:
+    """Hybrid (semantic + vector) search over the PDF index as a KB fallback.
+
+    Assembles grounding text from the top chunk/fact docs and returns per-doc
+    citations. Uses the same index the KB wraps, so results stay scoped and cited
+    without depending on the KB's completion-model synthesis step.
+    """
+    from azure.search.documents.models import VectorizableTextQuery
+
+    from app.infra.clients import get_search_client
+
+    client = get_search_client()
+    vector_query = VectorizableTextQuery(
+        text=query, k_nearest_neighbors=top, fields="content_vector"
+    )
+    results = client.search(
+        search_text=query,
+        vector_queries=[vector_query],
+        filter=odata_filter,
+        top=top,
+        select=["id", "content", "label", "section", "source_file", "page", "doc_type"],
+    )
+
+    lines: list[str] = []
+    citations: list[Citation] = []
+    for doc in results:
+        content = (doc.get("content") or "").strip()
+        if not content:
+            continue
+        label = doc.get("section") or doc.get("label") or doc.get("source_file") or "source"
+        lines.append(f"[{label}] {content}")
+        citations.append(
+            Citation(source_id=str(doc.get("id", "source")), display=str(label), url=None)
+        )
+    return "\n\n".join(lines), citations
 
 
 def run_agent_scoped(

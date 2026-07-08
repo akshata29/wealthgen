@@ -11,6 +11,8 @@ from enum import Enum
 
 from pydantic import BaseModel, Field
 
+from app.models.context import ContextSource
+
 
 class Audience(str, Enum):
     CLIENT = "client"
@@ -52,6 +54,27 @@ class BriefTrigger(str, Enum):
     EVENT = "event"
 
 
+class CommentaryType(str, Enum):
+    """What kind of commentary the advisor is producing.
+
+    Mirrors how large asset managers publish: routine periodic reviews plus
+    ad-hoc and market-event driven updates.
+    """
+
+    AD_HOC = "ad_hoc"
+    QUARTERLY_REVIEW = "quarterly_review"
+    ANNUAL_REVIEW = "annual_review"
+    EVENT_DRIVEN = "event_driven"
+
+    @property
+    def trigger(self) -> "BriefTrigger":
+        if self is CommentaryType.EVENT_DRIVEN:
+            return BriefTrigger.EVENT
+        if self is CommentaryType.AD_HOC:
+            return BriefTrigger.AD_HOC
+        return BriefTrigger.SCHEDULED
+
+
 class NarrativeStyle(BaseModel):
     """The tone/ease dials read by the narrative generator (see tone_playbook)."""
 
@@ -81,6 +104,11 @@ class CommentaryDraft(BaseModel):
     source_map: dict[str, str] = Field(
         default_factory=dict, description="source_id -> human-readable citation"
     )
+    commentary_type: CommentaryType = CommentaryType.QUARTERLY_REVIEW
+    context_sources: list[ContextSource] = Field(
+        default_factory=list,
+        description="Real-world market context artefacts surfaced for this brief",
+    )
 
 
 class CompliantCommentary(CommentaryDraft):
@@ -97,8 +125,12 @@ class GenerateCommentaryRequest(BaseModel):
     style: NarrativeStyle | None = Field(
         None, description="Tone / ease dials; defaults to audience-appropriate values"
     )
-    trigger: BriefTrigger = Field(
-        BriefTrigger.SCHEDULED, description="What prompted the brief (scheduled | ad_hoc | event)"
+    commentary_type: CommentaryType = Field(
+        CommentaryType.QUARTERLY_REVIEW,
+        description="ad_hoc | quarterly_review | annual_review | event_driven",
+    )
+    trigger: BriefTrigger | None = Field(
+        None, description="Deprecated; derived from commentary_type when omitted"
     )
     event_period: str | None = Field(
         None, description="For event-driven briefs, the period of the triggering market event"
@@ -106,6 +138,11 @@ class GenerateCommentaryRequest(BaseModel):
     end_user_token: str | None = Field(
         None, description="OBO token for Work IQ / Fabric IQ query-time auth"
     )
+
+    @property
+    def resolved_trigger(self) -> BriefTrigger:
+        """Effective trigger: explicit `trigger` wins, else derived from type."""
+        return self.trigger or self.commentary_type.trigger
 
 
 class ReviewCommentaryRequest(BaseModel):

@@ -5,6 +5,7 @@ import PageHeader from '@/components/ui/PageHeader'
 import StatGrid from '@/components/performance/StatGrid'
 import BenchmarkCompare from '@/components/performance/BenchmarkCompare'
 import SectorAttribution from '@/components/performance/SectorAttribution'
+import HoldingsTable from '@/components/performance/HoldingsTable'
 import IndexCompare from '@/components/performance/IndexCompare'
 import NextBestActions from '@/components/NextBestActions'
 import EventBanner from '@/components/EventBanner'
@@ -12,7 +13,7 @@ import MorningstarXray from '@/components/research/MorningstarXray'
 import LsegMarketContext from '@/components/research/LsegMarketContext'
 import CommentaryHistory from '@/components/CommentaryHistory'
 import * as api from '@/utils/apiClient'
-import type { NextBestAction, PerformanceReport, VixEvent } from '@/types/portfolio'
+import type { Holding, NextBestAction, PerformanceReport, VixEvent } from '@/types/portfolio'
 
 export default function PortfolioDetail() {
   const { mandateId = '' } = useParams()
@@ -21,6 +22,7 @@ export default function PortfolioDetail() {
   const [periods, setPeriods] = useState<string[]>([])
   const [period, setPeriod] = useState<string>('')
   const [report, setReport] = useState<PerformanceReport | null>(null)
+  const [holdings, setHoldings] = useState<Holding[]>([])
   const [actions, setActions] = useState<NextBestAction[]>([])
   const [event, setEvent] = useState<VixEvent | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -44,12 +46,14 @@ export default function PortfolioDetail() {
     setLoading(true)
     Promise.all([
       api.getPerformance(mandateId, period),
+      api.getHoldings(mandateId, period),
       api.getNextBestActions(mandateId, period),
       api.getVixEvents(false),
     ])
-      .then(([rep, nba, events]) => {
+      .then(([rep, hold, nba, events]) => {
         if (!active) return
         setReport(rep)
+        setHoldings(hold)
         setActions(nba)
         setEvent(events.find((e) => e.period === period && e.event_trigger) ?? null)
         setError(null)
@@ -114,6 +118,8 @@ export default function PortfolioDetail() {
             contributors={report.top_contributors}
             detractors={report.top_detractors}
           />
+
+          <HoldingsTable holdings={holdings} />
 
           {report.positioning_changes.length > 0 && (
             <div className="card space-y-3">

@@ -55,6 +55,37 @@ EVENT_BRIEF_HINT = (
     "diversification before discussing performance. Never imply the event guarantees any outcome."
 )
 
+COMMENTARY_TYPE_VARIANTS = {
+    "ad_hoc": (
+        "Brief type: AD-HOC. Keep it short and targeted to the specific question or trigger. Lead "
+        "with the single most relevant point; keep supporting sections concise."
+    ),
+    "quarterly_review": (
+        "Brief type: QUARTERLY REVIEW. Cover the full quarter with balanced attention to "
+        "performance, attribution, positioning, and outlook for the period just ended."
+    ),
+    "annual_review": (
+        "Brief type: ANNUAL REVIEW. Take a full-year, strategic perspective: summarise the year's "
+        "journey, the biggest drivers and detractors over the year, how positioning evolved, and a "
+        "forward-looking outlook for the year ahead. Emphasise progress against long-term goals."
+    ),
+    "event_driven": EVENT_BRIEF_HINT,
+}
+
+CONTEXT_SOURCES_HINT = (
+    "You are given real-world market-context sources (advisor portals, fund webpages, market "
+    "commentary, portfolio-manager notes, webcasts, email alerts, wholesaler notes) under "
+    "market.context_sources. Where relevant, reflect their themes in the Market Context and House "
+    "View & Outlook sections and cite them by their source_id. Attribute views to the publisher; "
+    "never present them as guarantees or as the firm's own performance. CRITICAL: when a source "
+    "lists affected_holdings, make the commentary specific to THIS portfolio — name the affected "
+    "holding(s) and their weight and cite the matching hold:<ticker> source_id (e.g. 'your IXC "
+    "position at 14.2%'). Never leave event context generic when the portfolio actually holds an "
+    "affected fund. If an independent provider research source is present (e.g. Morningstar X-Ray, "
+    "source id ctx:morningstar:xray), use it to support the Performance Attribution and Market "
+    "Context sections and attribute it to the provider by name."
+)
+
 
 def build_narrative_instructions(
     audience: str,
@@ -62,6 +93,7 @@ def build_narrative_instructions(
     literacy: str | None = None,
     non_financial_language: bool = False,
     event_driven: bool = False,
+    commentary_type: str | None = None,
 ) -> str:
     """Compose the full narrative-generator system prompt from the selected dials."""
     parts = [HOUSE_VOICE_SYSTEM, AUDIENCE_VARIANTS.get(audience, AUDIENCE_VARIANTS["client"])]
@@ -71,8 +103,11 @@ def build_narrative_instructions(
         parts.append(LITERACY_VARIANTS.get(literacy, ""))
     if non_financial_language:
         parts.append(NON_FINANCIAL_LANGUAGE)
-    if event_driven:
+    if commentary_type and commentary_type in COMMENTARY_TYPE_VARIANTS:
+        parts.append(COMMENTARY_TYPE_VARIANTS[commentary_type])
+    elif event_driven:
         parts.append(EVENT_BRIEF_HINT)
+    parts.append(CONTEXT_SOURCES_HINT)
     parts.append(JSON_ONLY_SUFFIX)
     return "\n".join(p for p in parts if p)
 

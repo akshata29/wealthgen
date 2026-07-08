@@ -105,3 +105,28 @@ async def next_best_actions(mandate_id: str, period: str | None = Query(None)) -
 @router.get("/events/vix", response_model=list[VixEvent])
 async def vix_events(triggers_only: bool = Query(False)) -> list[VixEvent]:
     return _guard(lambda: reference_data.get_vix_events(only_triggers=triggers_only))
+
+
+@router.get("/events/scan")
+async def scan_events(period: str = Query(...)) -> list[dict]:
+    """Scan for market events in the period and the mandates whose holdings they affect.
+
+    Powers event-driven testing: each result lists the event and the client
+    portfolios holding an affected fund (with weights), ready to generate an
+    event-driven brief for.
+    """
+    from app.services import market_events
+
+    return _guard(lambda: market_events.scan(period))
+
+
+@router.get("/events/live")
+async def live_events(limit: int = Query(3)):
+    """Detect CURRENT market events from the live web (Web IQ).
+
+    The autonomous watcher’s live feed. Returns citeable context sources; an empty
+    list means Web IQ is unconfigured or rate-limited (fall back to the scenario).
+    """
+    from app.services import market_events
+
+    return await market_events.scan_live(limit=limit)

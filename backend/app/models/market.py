@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from pydantic import BaseModel, Field
 
+from app.models.context import ContextSource
+
 
 class IndexReturn(BaseModel):
     name: str = Field(..., description="e.g. 'Developed market equities'")
@@ -26,3 +28,6 @@ class MarketContextFacts(BaseModel):
     themes: list[str] = Field(default_factory=list)
     index_returns: list[IndexReturn] = Field(default_factory=list)
     fx_moves: list[FxMove] = Field(default_factory=list)
+    context_sources: list[ContextSource] = Field(
+        default_factory=list, description="Real-world market context (portals, commentary, alerts)"
+    )

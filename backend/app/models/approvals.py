@@ -37,6 +37,7 @@ class AuditEventType(str, Enum):
     EDITED = "commentary_edited"
     APPROVED = "commentary_approved"
     DELIVERED = "commentary_delivered"
+    DELETED = "commentary_deleted"
     INGESTED = "documents_ingested"
 
 

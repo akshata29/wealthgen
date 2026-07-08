@@ -135,7 +135,7 @@ export const workflowTabs: WorkflowTab[] = [
           subtitle: 'datastore · reference_data.py',
           description:
             'Clients, mandates, holdings, Brinson-Fachler attribution, performance, and market ' +
-            'context served from a Microsoft Fabric Warehouse (Delta tables over OneLake) via the ' +
+            'context served from a Microsoft Fabric Lakehouse (Delta tables over OneLake) via the ' +
             'SQL analytics endpoint. In GROUNDING_MODE=local this is the validated source the ' +
             'analysis and market agents read directly; DATA_SOURCE_MODE=csv keeps a local-dev fallback.',
           sourceFiles: [
@@ -149,11 +149,11 @@ export const workflowTabs: WorkflowTab[] = [
             'Back the Clients & Portfolios workspace and performance widgets',
           ],
           dataFlow: [
-            'Fabric Warehouse (OneLake) → SQL endpoint → typed models',
+            'Fabric Lakehouse (OneLake) → SQL endpoint → typed models',
             'AnalysisFindings + MarketContextFacts (local mode)',
           ],
           technologies: [
-            'Microsoft Fabric Warehouse',
+            'Microsoft Fabric Lakehouse',
             'OneLake',
             'Fabric SQL endpoint',
             'Reconciled Brinson-Fachler',

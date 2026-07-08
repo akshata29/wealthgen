@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Trash2 } from 'lucide-react'
 import PageHeader from '@/components/ui/PageHeader'
 import * as api from '@/utils/apiClient'
 import { deriveCommentaryStatus, isActionable } from '@/utils/commentaryStatus'
@@ -68,6 +68,23 @@ export default function ReviewQueue() {
 
   const pendingCount = items.filter(isActionable).length
 
+  async function handleDelete(
+    e: React.MouseEvent,
+    id: string | undefined,
+    mandateId: string,
+  ) {
+    e.preventDefault()
+    e.stopPropagation()
+    if (!id) return
+    if (!window.confirm('Delete this commentary? This cannot be undone.')) return
+    try {
+      await api.deleteCommentary(id, mandateId)
+      setItems((prev) => prev.filter((c) => c.id !== id))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to delete commentary')
+    }
+  }
+
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <PageHeader
@@ -122,6 +139,14 @@ export default function ReviewQueue() {
                 <span className="badge-accent">{c.compliance_status}</span>
               )}
               <span className={s.badge}>{s.label}</span>
+              <button
+                type="button"
+                title="Delete commentary"
+                onClick={(e) => handleDelete(e, c.id, c.mandate_id)}
+                className="p-1 rounded-md text-gray-600 hover:text-red-400 hover:bg-red-900/20 transition-colors"
+              >
+                <Trash2 size={14} />
+              </button>
               <ChevronRight size={14} className="text-gray-600 group-hover:text-gray-300" />
             </Link>
           )

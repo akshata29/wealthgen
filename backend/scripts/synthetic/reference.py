@@ -100,81 +100,69 @@ ADVISORS: list[Advisor] = [
 
 
 # --------------------------------------------------------------------------- #
-# Instrument universe (realistic identifiers, GICS sectors)
+# Instrument universe — REAL iShares ETF building blocks (one per sleeve).
+#
+# Portfolios are constructed from these publicly-traded funds; the `sector`
+# field carries the fund *sleeve* (US Large Cap Equity, US Treasuries, ...), so
+# Brinson-Fachler attribution runs per-fund. Real fact sheets for these funds
+# live in data/real_funds/pdfs (see scripts/download_real_factsheets.py).
 # --------------------------------------------------------------------------- #
 INSTRUMENTS: list[Instrument] = [
-    Instrument("MSFT", "Microsoft Corp", "US5949181045", "Equity", "Information Technology", "US"),
-    Instrument("NVDA", "NVIDIA Corp", "US67066G1040", "Equity", "Information Technology", "US"),
-    Instrument("AAPL", "Apple Inc", "US0378331005", "Equity", "Information Technology", "US"),
-    Instrument("JPM", "JPMorgan Chase", "US46625H1005", "Equity", "Financials", "US"),
-    Instrument("HSBA", "HSBC Holdings", "GB0005405286", "Equity", "Financials", "UK"),
-    Instrument("NESN", "Nestle SA", "CH0038863350", "Equity", "Consumer Staples", "Europe"),
-    Instrument("ASML", "ASML Holding", "NL0010273215", "Equity", "Information Technology", "Europe"),
-    Instrument("UNH", "UnitedHealth Group", "US91324P1021", "Equity", "Health Care", "US"),
-    Instrument("XOM", "Exxon Mobil", "US30231G1022", "Equity", "Energy", "US"),
-    Instrument("NEE", "NextEra Energy", "US65339F1012", "Equity", "Utilities", "US"),
-    Instrument("IEF", "iShares 7-10 Year Treasury Bond ETF", "US4642874402", "Fixed Income", "Government", "US"),
-    Instrument("LQD", "iShares iBoxx $ IG Corporate Bond ETF", "US4642872265", "Fixed Income", "Credit", "US"),
-    Instrument("IGLT", "iShares Core UK Gilts UCITS ETF", "IE00B1FZSB30", "Fixed Income", "Government", "UK"),
-    Instrument("GLD", "SPDR Gold Shares", "US78463V1070", "Alternatives", "Commodities", "Global"),
-    Instrument("VNQ", "Vanguard Real Estate ETF", "US9229085538", "Alternatives", "Real Estate", "US"),
-    Instrument("BIL", "SPDR Bloomberg 1-3 Month T-Bill ETF", "US78468R6633", "Cash", "Cash", "US"),
+    Instrument("IVV", "iShares Core S&P 500 ETF", "US4642872000", "Equity", "US Large Cap Equity", "US"),
+    Instrument("IJR", "iShares Core S&P Small-Cap ETF", "US4642878049", "Equity", "US Small Cap Equity", "US"),
+    Instrument("IEFA", "iShares Core MSCI EAFE ETF", "US46432F3391", "Equity", "International Developed Equity", "Global ex-US"),
+    Instrument("IEMG", "iShares Core MSCI Emerging Markets ETF", "US46434G1031", "Equity", "Emerging Market Equity", "Emerging Markets"),
+    Instrument("ESGU", "iShares ESG Aware MSCI USA ETF", "US46435G4128", "Equity", "US Equity ESG", "US"),
+    Instrument("IXC", "iShares Global Energy ETF", "US4642871689", "Equity", "Global Energy Equity", "Global"),
+    Instrument("AGG", "iShares Core U.S. Aggregate Bond ETF", "US4642872265", "Fixed Income", "US Aggregate Bonds", "US"),
+    Instrument("LQD", "iShares iBoxx $ IG Corporate Bond ETF", "US4642872273", "Fixed Income", "Investment Grade Credit", "US"),
+    Instrument("IEF", "iShares 7-10 Year Treasury Bond ETF", "US4642874402", "Fixed Income", "US Treasuries", "US"),
+    Instrument("IAU", "iShares Gold Trust", "US4642851053", "Alternatives", "Gold", "Global"),
 ]
 
 
 # --------------------------------------------------------------------------- #
-# Benchmarks (sector weights are illustrative and sum to ~1.0)
+# Benchmarks — model-portfolio sleeve weights (fund sleeves, sum ~1.0)
 # --------------------------------------------------------------------------- #
 BENCHMARKS: list[Benchmark] = [
     Benchmark(
         "BM-GBL-6040",
         "60/40 Global Balanced (MSCI ACWI / Bloomberg Global Agg)",
         {
-            "Information Technology": 0.16,
-            "Financials": 0.09,
-            "Consumer Staples": 0.04,
-            "Health Care": 0.07,
-            "Energy": 0.03,
-            "Utilities": 0.02,
-            "Real Estate": 0.02,
-            "Commodities": 0.03,
-            "Government": 0.30,
-            "Credit": 0.19,
-            "Cash": 0.05,
+            "US Large Cap Equity": 0.28,
+            "International Developed Equity": 0.12,
+            "Emerging Market Equity": 0.06,
+            "US Small Cap Equity": 0.05,
+            "Global Energy Equity": 0.04,
+            "US Aggregate Bonds": 0.18,
+            "Investment Grade Credit": 0.12,
+            "US Treasuries": 0.10,
+            "Gold": 0.05,
         },
     ),
     Benchmark(
         "BM-GBL-EQ",
         "MSCI ACWI (Global Equity)",
         {
-            "Information Technology": 0.26,
-            "Financials": 0.16,
-            "Consumer Staples": 0.07,
-            "Health Care": 0.11,
-            "Energy": 0.05,
-            "Utilities": 0.03,
-            "Real Estate": 0.03,
-            "Commodities": 0.04,
-            "Government": 0.12,
-            "Credit": 0.09,
-            "Cash": 0.04,
+            "US Large Cap Equity": 0.45,
+            "International Developed Equity": 0.22,
+            "Emerging Market Equity": 0.13,
+            "US Small Cap Equity": 0.10,
+            "Global Energy Equity": 0.07,
+            "Gold": 0.03,
         },
     ),
     Benchmark(
         "BM-US-CONS",
         "US Conservative (30/70 S&P 500 / US Agg)",
         {
-            "Information Technology": 0.10,
-            "Financials": 0.06,
-            "Consumer Staples": 0.03,
-            "Health Care": 0.05,
-            "Energy": 0.02,
-            "Utilities": 0.02,
-            "Real Estate": 0.01,
-            "Commodities": 0.01,
-            "Government": 0.42,
-            "Credit": 0.23,
-            "Cash": 0.05,
+            "US Large Cap Equity": 0.18,
+            "International Developed Equity": 0.06,
+            "Emerging Market Equity": 0.02,
+            "US Aggregate Bonds": 0.34,
+            "Investment Grade Credit": 0.20,
+            "US Treasuries": 0.15,
+            "Gold": 0.05,
         },
     ),
 ]
@@ -228,14 +216,12 @@ CLIENTS: list[Client] = [
 
 
 # --------------------------------------------------------------------------- #
-# Mandates (portfolios) — one or more per client
+# Mandates (portfolios) — one or more per client, built from real ETF sleeves
 # --------------------------------------------------------------------------- #
-_CORE_BALANCED = [
-    "MSFT", "NVDA", "AAPL", "JPM", "HSBA", "NESN", "ASML", "UNH",
-    "XOM", "NEE", "IEF", "LQD", "IGLT", "GLD", "VNQ", "BIL",
-]
-_GROWTH_TILT = ["MSFT", "NVDA", "AAPL", "ASML", "UNH", "JPM", "VNQ", "LQD", "BIL"]
-_CONSERVATIVE = ["IEF", "LQD", "IGLT", "NESN", "UNH", "NEE", "GLD", "BIL"]
+_CORE_BALANCED = ["IVV", "IEFA", "IEMG", "IJR", "IXC", "AGG", "LQD", "IEF", "IAU"]
+_GROWTH_TILT = ["IVV", "IEFA", "IEMG", "IJR", "IXC", "LQD", "IAU"]
+_CONSERVATIVE = ["IVV", "IEFA", "AGG", "LQD", "IEF", "IAU"]
+_ESG_BALANCED = ["ESGU", "IEFA", "IEMG", "IXC", "AGG", "LQD", "IEF", "IAU"]
 
 MANDATES: list[Mandate] = [
     Mandate(
@@ -276,7 +262,7 @@ MANDATES: list[Mandate] = [
     Mandate(
         "sableridge-balanced-esg", "Sable Ridge Balanced ESG", "cli-008",
         "Mission-aligned balanced (Article 8)", "BM-GBL-6040", "USD",
-        "2018-07-01", 205.0, _CORE_BALANCED,
+        "2018-07-01", 205.0, _ESG_BALANCED,
     ),
 ]
 

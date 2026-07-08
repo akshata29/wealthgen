@@ -7,14 +7,14 @@ interface SectorAttributionProps {
   detractors: SectorComparison[]
 }
 
-/** Sector compare — top contributors and detractors by Brinson total effect. */
+/** Attribution by fund sleeve — top contributors and detractors by Brinson total effect. */
 export default function SectorAttribution({ contributors, detractors }: SectorAttributionProps) {
   const all = [...contributors, ...detractors]
   const max = Math.max(...all.map((s) => Math.abs(s.total_effect_bps)), 1)
 
   return (
     <div className="card space-y-4">
-      <h3 className="text-sm font-semibold text-gray-100">Sector compare (attribution)</h3>
+      <h3 className="text-sm font-semibold text-gray-100">Attribution by fund sleeve</h3>
 
       <div>
         <div className="section-title !mb-2">Top contributors</div>

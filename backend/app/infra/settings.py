@@ -83,6 +83,12 @@ class Settings(BaseSettings):
     lseg_mcp_url: str | None = None
     lseg_connection_name: str | None = None
 
+    # --- Web IQ (Microsoft AI web search) ---
+    # REST v3 web search (POST {origin}/v3/search/web, x-apikey header). The env
+    # var may point at the MCP path; the service normalises it to the search URL.
+    webiq_mcp_url: str | None = None
+    webiq_mcp_key: str | None = None
+
     # --- Moody's credit research (via MCP) ---
     moody_mcp_url: str | None = None
     moody_connection_name: str | None = None
@@ -92,6 +98,9 @@ class Settings(BaseSettings):
     # then set the connection name here. See research_agent for usage.
     morningstar_mcp_url: str = "https://mcp.morningstar.com/mcp"
     morningstar_connection_name: str | None = None
+
+    # Include provider research (Morningstar X-Ray via MCP) as commentary grounding.
+    include_research_grounding: bool = True
 
     # --- Content Safety ---
     content_safety_endpoint: str

@@ -1,10 +1,10 @@
-import type { BriefTrigger, Literacy, NarrativeStyle, Tone } from '@/types/commentary'
+import type { CommentaryType, Literacy, NarrativeStyle, Tone } from '@/types/commentary'
 
 interface ToneControlsProps {
   style: NarrativeStyle
   onStyleChange: (style: NarrativeStyle) => void
-  trigger: BriefTrigger
-  onTriggerChange: (trigger: BriefTrigger) => void
+  commentaryType: CommentaryType
+  onCommentaryTypeChange: (t: CommentaryType) => void
 }
 
 const TONES: { value: Tone; label: string }[] = [
@@ -19,10 +19,11 @@ const LITERACIES: { value: Literacy; label: string }[] = [
   { value: 'expert', label: 'Expert' },
 ]
 
-const TRIGGERS: { value: BriefTrigger; label: string }[] = [
-  { value: 'scheduled', label: 'Scheduled' },
+const COMMENTARY_TYPES: { value: CommentaryType; label: string }[] = [
   { value: 'ad_hoc', label: 'Ad-hoc' },
-  { value: 'event', label: 'Event' },
+  { value: 'quarterly_review', label: 'Quarterly' },
+  { value: 'annual_review', label: 'Yearly' },
+  { value: 'event_driven', label: 'Event' },
 ]
 
 function Segmented<T extends string>({
@@ -59,12 +60,12 @@ function Segmented<T extends string>({
   )
 }
 
-/** Tone / ease / trigger dials that shape the generated narrative. */
+/** Tone / ease / commentary-type dials that shape the generated narrative. */
 export default function ToneControls({
   style,
   onStyleChange,
-  trigger,
-  onTriggerChange,
+  commentaryType,
+  onCommentaryTypeChange,
 }: ToneControlsProps) {
   return (
     <div className="card space-y-4">
@@ -82,7 +83,12 @@ export default function ToneControls({
           options={LITERACIES}
           onChange={(literacy) => onStyleChange({ ...style, literacy })}
         />
-        <Segmented label="Trigger" value={trigger} options={TRIGGERS} onChange={onTriggerChange} />
+        <Segmented
+          label="Commentary type"
+          value={commentaryType}
+          options={COMMENTARY_TYPES}
+          onChange={onCommentaryTypeChange}
+        />
       </div>
       <label className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer">
         <input

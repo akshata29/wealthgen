@@ -114,29 +114,41 @@ def _normalize(value: object) -> str | None:
 
 
 def query(sql: str, params: tuple = ()) -> list[dict]:
-    """Run a read query and return rows as column-keyed string dicts."""
+    """Run a read query and return rows as column-keyed string dicts.
+
+    Retries once on a pyodbc error: the module-scoped connection can be dropped by
+    the Fabric endpoint after idle (TCP 10053 / communication link failure), so we
+    reconnect and re-run before surfacing the failure.
+    """
     import pyodbc  # local import so module loads without the driver present
 
-    try:
-        conn = _connect()
-        cursor = conn.cursor()
-        cursor.execute(sql, params)
-        columns = [col[0] for col in cursor.description]
-        rows = [
-            {col: _normalize(val) for col, val in zip(columns, record)}
-            for record in cursor.fetchall()
-        ]
-        cursor.close()
-        return rows
-    except pyodbc.Error as exc:
-        # Drop the cached connection so the next call reconnects cleanly.
-        global _conn
-        _conn = None
-        raise FabricDataError(
-            "Fabric Warehouse query failed. Check that the reference tables have "
-            "been loaded (backend/scripts/load_fabric_tables.py) and the endpoint "
-            "is reachable."
-        ) from exc
+    global _conn
+    for attempt in (1, 2):
+        try:
+            conn = _connect()
+            cursor = conn.cursor()
+            cursor.execute(sql, params)
+            columns = [col[0] for col in cursor.description]
+            rows = [
+                {col: _normalize(val) for col, val in zip(columns, record)}
+                for record in cursor.fetchall()
+            ]
+            cursor.close()
+            return rows
+        except pyodbc.Error as exc:
+            # Drop the cached connection so the next attempt reconnects cleanly.
+            _conn = None
+            if attempt == 1:
+                logger.warning(
+                    "Fabric query failed (%s); reconnecting and retrying once.",
+                    exc.args[0] if exc.args else exc,
+                )
+                continue
+            raise FabricDataError(
+                "Fabric Warehouse query failed. Check that the reference tables have "
+                "been loaded (backend/scripts/load_fabric_tables.py) and the endpoint "
+                "is reachable."
+            ) from exc
 
 
 def read_table(name: str) -> list[dict]:

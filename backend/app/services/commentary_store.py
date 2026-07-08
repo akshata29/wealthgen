@@ -55,6 +55,16 @@ def list_commentary(mandate_id: str) -> list[dict]:
     return items
 
 
+def delete_commentary(commentary_id: str, mandate_id: str) -> bool:
+    """Delete a commentary item. Returns True if deleted, False if not found."""
+    try:
+        _container().delete_item(item=commentary_id, partition_key=mandate_id)
+        logger.info("Deleted commentary %s (mandate %s).", commentary_id, mandate_id)
+        return True
+    except exceptions.CosmosResourceNotFoundError:
+        return False
+
+
 def list_all_commentary() -> list[dict]:
     """List commentary across all mandates (cross-partition; newest first).
 

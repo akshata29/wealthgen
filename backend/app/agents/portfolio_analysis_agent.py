@@ -10,11 +10,8 @@ Two grounding modes (see Settings.grounding_mode):
 
 from __future__ import annotations
 
-import json
 import logging
 
-from app.agents.prompts import ANALYSIS_SYSTEM
-from app.infra.settings import get_settings
 from app.models.analysis import (
     AnalysisFindings,
     HoldingRef,
@@ -22,7 +19,7 @@ from app.models.analysis import (
     PositioningDirection,
     SegmentAttribution,
 )
-from app.services import foundry_iq, reference_data
+from app.services import reference_data
 
 logger = logging.getLogger(__name__)
 
@@ -30,9 +27,12 @@ AGENT_NAME = "PortfolioAnalysisAgent"
 
 
 def analyze(mandate_id: str, period: str) -> AnalysisFindings:
-    if get_settings().grounding_mode == "local":
-        return _analyze_local(mandate_id, period)
-    return _analyze_foundry_iq(mandate_id, period)
+    # Structured findings always come from the authoritative reference_data
+    # (Fabric in DATA_SOURCE_MODE=fabric): the figures must be exact for the
+    # substantiation gate. KB/agent grounding is applied during narrative
+    # generation (and Morningstar X-Ray as a source), so we skip a slow, fragile
+    # LLM extraction here whose output we would only discard.
+    return _analyze_local(mandate_id, period)
 
 
 def _analyze_local(mandate_id: str, period: str) -> AnalysisFindings:
@@ -102,31 +102,3 @@ def _direction(value: str) -> PositioningDirection:
         return PositioningDirection(value)
     except ValueError:
         return PositioningDirection.ADD
-
-
-def _analyze_foundry_iq(mandate_id: str, period: str) -> AnalysisFindings:
-    task = (
-        f"Summarise attribution for mandate '{mandate_id}', period '{period}'. "
-        "Use holdings, weights, and Brinson-Fachler attribution from the grounding. "
-        "Return AnalysisFindings JSON only."
-    )
-    text, _ = foundry_iq.run_agent_scoped(
-        AGENT_NAME,
-        ANALYSIS_SYSTEM,
-        task,
-        mandate_id=mandate_id,
-        period=period,
-        retrieval_query=(
-            f"performance, attribution, holdings, and positioning for {mandate_id} {period}"
-        ),
-    )
-    payload = _slice_json(text)
-    return AnalysisFindings.model_validate(payload)
-
-
-def _slice_json(text: str) -> dict:
-    start = text.find("{")
-    end = text.rfind("}")
-    if start == -1 or end == -1:
-        raise ValueError("PortfolioAnalysisAgent did not return JSON.")
-    return json.loads(text[start : end + 1])

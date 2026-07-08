@@ -1,30 +1,45 @@
-"""MarketIntelligenceAgent — assembles market context (Web IQ + LSEG grounded).
+"""MarketIntelligenceAgent — assembles market context (Web IQ grounded).
 
 Uses no client data. In `local` grounding mode it builds MarketContextFacts from
 the synthetic dataset (index returns, FX, and VIX-derived themes); in `foundry_iq`
-mode it combines LSEG index/FX facts with web-grounded themes.
+mode it takes index/FX numbers from the reference_data (Fabric) baseline and adds
+live web themes from Web IQ. (LSEG MCP is disabled — placeholder credentials 401.)
 """
 
 from __future__ import annotations
 
-import json
 import logging
 
-from app.agents.prompts import MARKET_SYSTEM
 from app.infra.settings import get_settings
 from app.models.market import FxMove, IndexReturn, MarketContextFacts
-from app.services import foundry_iq, lseg_mcp, reference_data
+from app.services import market_context_sources, reference_data
 
 logger = logging.getLogger(__name__)
 
 AGENT_NAME = "MarketIntelligenceAgent"
-DEFAULT_FX_PAIRS = ["GBP/USD", "EUR/USD"]
 
 
-async def build_context(period: str) -> MarketContextFacts:
+async def build_context(period: str, commentary_type: str = "quarterly_review") -> MarketContextFacts:
     if get_settings().grounding_mode == "local":
-        return _build_context_local(period)
-    return await _build_context_foundry_iq(period)
+        facts = _build_context_local(period)
+    else:
+        facts = await _build_context_foundry_iq(period)
+    # Surface the real-world context an advisor reads — live web (Web IQ) blended
+    # with the curated library. For event-driven briefs, anchor the live search on
+    # the period's market event so the pulled commentary is about that event.
+    event_topic = None
+    if commentary_type == "event_driven":
+        event = reference_data.get_vix_event(period)
+        event_topic = event.headline if event else (facts.themes[0] if facts.themes else None)
+    facts.context_sources = await market_context_sources.select_sources(
+        period, commentary_type, themes=facts.themes, event_topic=event_topic
+    )
+    # Derive live themes from the SAME Web IQ search (no extra call) so the
+    # 'Market Context' section reflects current web headlines when available.
+    live_titles = [s.title for s in facts.context_sources if s.live and s.title][:5]
+    if live_titles:
+        facts.themes = live_titles
+    return facts
 
 
 def _build_context_local(period: str) -> MarketContextFacts:
@@ -50,34 +65,19 @@ def _build_context_local(period: str) -> MarketContextFacts:
 
 
 async def _build_context_foundry_iq(period: str) -> MarketContextFacts:
-    index_returns = await lseg_mcp.get_index_returns(period)
-    fx_moves = await lseg_mcp.get_fx_moves(DEFAULT_FX_PAIRS)
+    # Baseline from the authoritative reference data (Fabric): index/FX/themes are
+    # present there, so the brief still grounds if LSEG or Web IQ are unavailable.
+    # Web themes are derived from the single context-source search in build_context
+    # (no separate Web IQ call here) to stay well under the API rate limit.
+    baseline = _build_context_local(period)
 
-    agent = foundry_iq.ensure_agent(AGENT_NAME, MARKET_SYSTEM)
-    prompt = (
-        f"For the reporting period '{period}', list the dominant market themes from the "
-        "web (Web IQ). Return a JSON object with a 'themes' string array only."
-    )
-    text, _ = foundry_iq.run_agent(agent, prompt)
-    themes = _slice_themes(text)
-
+    # LSEG MCP is disabled: the configured endpoint returns 401 (placeholder
+    # credentials). Index/FX numbers come from the authoritative reference_data
+    # (Fabric) baseline above. To re-enable, set real LSEG creds in .env and
+    # restore the lseg_mcp.get_index_returns/get_fx_moves calls here.
     return MarketContextFacts(
         period=period,
-        themes=themes,
-        index_returns=index_returns,
-        fx_moves=fx_moves,
+        themes=baseline.themes,
+        index_returns=baseline.index_returns,
+        fx_moves=baseline.fx_moves,
     )
-
-
-def _slice_themes(text: str) -> list[str]:
-    start = text.find("{")
-    end = text.rfind("}")
-    if start == -1 or end == -1:
-        return []
-    try:
-        payload = json.loads(text[start : end + 1])
-        themes = payload.get("themes", [])
-        return [str(t) for t in themes if t]
-    except json.JSONDecodeError:
-        logger.warning("MarketIntelligenceAgent returned unparseable themes.")
-        return []

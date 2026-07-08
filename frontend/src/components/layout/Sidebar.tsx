@@ -5,6 +5,7 @@ import {
   CheckSquare,
   GitBranch,
   Network,
+  Presentation,
   Settings,
   ChevronRight,
   Users,
@@ -41,6 +42,7 @@ const NAV_GROUPS: NavGroup[] = [
     items: [
       { to: '/workflow', icon: GitBranch, label: 'Workflow' },
       { to: '/architecture', icon: Network, label: 'Architecture' },
+      { to: '/demo', icon: Presentation, label: 'Demo Flow' },
     ],
   },
   {

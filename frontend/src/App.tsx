@@ -4,6 +4,7 @@ import GenerateCommentary from '@/pages/GenerateCommentary'
 import ReviewApproval from '@/pages/ReviewApproval'
 import WorkflowPage from '@/pages/WorkflowPage'
 import ArchitecturePage from '@/pages/ArchitecturePage'
+import DemoFlowPage from '@/pages/DemoFlowPage'
 import SettingsPage from '@/pages/SettingsPage'
 import ClientsPage from '@/pages/ClientsPage'
 import PortfolioDetail from '@/pages/PortfolioDetail'
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="review" element={<ReviewApproval />} />
         <Route path="workflow" element={<WorkflowPage />} />
         <Route path="architecture" element={<ArchitecturePage />} />
+        <Route path="demo" element={<DemoFlowPage />} />
         <Route path="settings" element={<SettingsPage />} />
       </Route>
     </Routes>

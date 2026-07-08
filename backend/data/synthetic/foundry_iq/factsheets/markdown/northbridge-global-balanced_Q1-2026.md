@@ -25,15 +25,15 @@
 </tr>
 <tr>
 <td>Total return (net)</td>
-<td>-5.34%</td>
+<td>-3.69%</td>
 </tr>
 <tr>
 <td>Benchmark return</td>
-<td>-1.71%</td>
+<td>-3.13%</td>
 </tr>
 <tr>
 <td>Active return</td>
-<td>-362 bps</td>
+<td>-56 bps</td>
 </tr>
 <tr>
 <td>Tracking error</td>
@@ -41,11 +41,11 @@
 </tr>
 <tr>
 <td>Information ratio</td>
-<td>-0.96</td>
+<td>-0.15</td>
 </tr>
 <tr>
 <td>Sharpe ratio</td>
-<td>-1.12</td>
+<td>-0.92</td>
 </tr>
 <tr>
 <td>Max drawdown</td>

@@ -1,0 +1,209 @@
+{
+  "_note": "Curated real-world market-context artefacts modelled on how large asset managers (BlackRock, J.P. Morgan AM, PIMCO, Fidelity, State Street) publish ad-hoc updates alongside fund facts. URLs point to public landing pages; summaries are curated demo excerpts, not verbatim quotes. Live fetch can replace these at runtime (see market_context_sources.fetch_live).",
+  "sources": [
+    {
+      "source_id": "ctx:blackrock:weekly-2026q1",
+      "channel": "market_commentary",
+      "publisher": "BlackRock Investment Institute",
+      "title": "Weekly market commentary: staying selective as volatility returns",
+      "summary": "We stay modestly pro-risk but selective as a growth scare and repricing of the rate path lift volatility. We favour quality equities and AI beneficiaries, and lean into investment-grade credit over high yield.",
+      "url": "https://www.blackrock.com/us/individual/insights/blackrock-investment-institute/weekly-commentary",
+      "published": "2026-01-19",
+      "periods": ["Q1-2026"],
+      "themes": ["volatility", "rates", "ai", "quality", "growth-scare"],
+      "commentary_types": ["quarterly_review", "event_driven", "ad_hoc"]
+    },
+    {
+      "source_id": "ctx:jpmam:gtm-2026q1",
+      "channel": "advisor_portal",
+      "publisher": "J.P. Morgan Asset Management",
+      "title": "Guide to the Markets — Q1 2026 edition",
+      "summary": "Equity valuations remain above long-run averages while the rate path stays data-dependent. Diversification and duration are highlighted as ballast against equity drawdowns.",
+      "url": "https://am.jpmorgan.com/us/en/asset-management/adv/insights/market-insights/guide-to-the-markets/",
+      "published": "2026-01-05",
+      "periods": ["Q1-2026"],
+      "themes": ["valuations", "rates", "duration", "diversification"],
+      "commentary_types": ["quarterly_review", "annual_review"]
+    },
+    {
+      "source_id": "ctx:pimco:cyclical-2026",
+      "channel": "webcast",
+      "publisher": "PIMCO",
+      "title": "Cyclical Outlook webcast: the case for high-quality bonds",
+      "summary": "PIMCO argues that starting yields make high-quality fixed income attractive, with duration offering resilience if growth slows. Credit selection matters as spreads are tight.",
+      "url": "https://www.pimco.com/en-us/insights/economic-and-market-commentary/cyclical-outlook",
+      "published": "2026-01-12",
+      "periods": ["Q1-2026", "Q2-2026"],
+      "themes": ["rates", "duration", "credit", "yields"],
+      "commentary_types": ["quarterly_review", "annual_review"]
+    },
+    {
+      "source_id": "ctx:fidelity:viewpoints-vol-2026q1",
+      "channel": "email_alert",
+      "publisher": "Fidelity Viewpoints",
+      "title": "Market alert: what a volatility spike means for long-term plans",
+      "summary": "A reminder that short-term volatility is normal and that staying invested through drawdowns has historically rewarded diversified, long-horizon investors.",
+      "url": "https://www.fidelity.com/viewpoints/market-and-economic-insights",
+      "published": "2026-01-16",
+      "periods": ["Q1-2026"],
+      "themes": ["volatility", "behaviour", "diversification"],
+      "commentary_types": ["event_driven", "ad_hoc"]
+    },
+    {
+      "source_id": "ctx:ishares:ivv-fund-page",
+      "channel": "fund_webpage",
+      "publisher": "iShares by BlackRock",
+      "title": "iShares Core S&P 500 ETF (IVV) — fund overview",
+      "summary": "Low-cost core exposure to large-cap U.S. equities. Positioned as a portfolio building block for the equity growth sleeve.",
+      "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+      "published": "2026-01-31",
+      "periods": ["Q1-2026", "Q2-2026", "Q4-2025", "Q3-2025"],
+      "themes": ["equity", "core", "us-large-cap"],
+      "commentary_types": ["quarterly_review", "annual_review", "ad_hoc"]
+    },
+    {
+      "source_id": "ctx:statestreet:wholesaler-2026q1",
+      "channel": "wholesaler",
+      "publisher": "State Street Global Advisors",
+      "title": "Wholesaler note: positioning conversations for the quarter",
+      "summary": "Talking points for advisors: reaffirm strategic asset allocation, use volatility to rebalance toward target weights, and revisit fixed-income duration given the rate outlook.",
+      "url": "https://www.ssga.com/us/en/individual/insights",
+      "published": "2026-01-20",
+      "periods": ["Q1-2026"],
+      "themes": ["rebalancing", "allocation", "duration"],
+      "commentary_types": ["quarterly_review", "ad_hoc"]
+    },
+    {
+      "source_id": "ctx:blackrock:2026-outlook",
+      "channel": "market_commentary",
+      "publisher": "BlackRock Investment Institute",
+      "title": "2026 Global Outlook: investing in a transformed world",
+      "summary": "Structural forces — AI build-out, shifting supply chains, and higher-for-longer rates — reshape return drivers. Favours being selective within equities and up-in-quality in credit.",
+      "url": "https://www.blackrock.com/us/individual/insights/blackrock-investment-institute/outlook",
+      "published": "2025-12-08",
+      "periods": ["Q4-2025", "Q1-2026"],
+      "themes": ["ai", "rates", "structural", "quality"],
+      "commentary_types": ["annual_review", "quarterly_review"]
+    },
+    {
+      "source_id": "ctx:jpmam:earnings-2025q4",
+      "channel": "advisor_portal",
+      "publisher": "J.P. Morgan Asset Management",
+      "title": "Earnings season recap: resilient margins, cautious guidance",
+      "summary": "Corporate margins held up better than feared while forward guidance turned cautious, supporting a quality bias in equity selection.",
+      "url": "https://am.jpmorgan.com/us/en/asset-management/adv/insights/market-insights/",
+      "published": "2025-11-10",
+      "periods": ["Q4-2025"],
+      "themes": ["earnings", "margins", "quality"],
+      "commentary_types": ["quarterly_review"]
+    },
+    {
+      "source_id": "ctx:pimco:rates-2025q3",
+      "channel": "market_commentary",
+      "publisher": "PIMCO",
+      "title": "Rates commentary: the path lower is bumpy",
+      "summary": "Disinflation progress is uneven; the rate-cut path is likely gradual. Favours locking in yields and extending duration selectively.",
+      "url": "https://www.pimco.com/en-us/insights/economic-and-market-commentary",
+      "published": "2025-08-14",
+      "periods": ["Q3-2025"],
+      "themes": ["rates", "inflation", "duration"],
+      "commentary_types": ["quarterly_review"]
+    },
+    {
+      "source_id": "ctx:fidelity:esg-2026",
+      "channel": "fund_webpage",
+      "publisher": "Fidelity Viewpoints",
+      "title": "Sustainable investing: integrating ESG into core allocations",
+      "summary": "How ESG-aware building blocks can sit alongside conventional core exposures without sacrificing diversification, relevant for values-aligned mandates.",
+      "url": "https://www.fidelity.com/viewpoints/investing-ideas/esg-investing",
+      "published": "2026-02-02",
+      "periods": ["Q1-2026", "Q2-2026"],
+      "themes": ["esg", "sustainable", "core"],
+      "commentary_types": ["quarterly_review", "annual_review"]
+    },
+    {
+      "source_id": "ctx:blackrock:webcast-2026q2",
+      "channel": "webcast",
+      "publisher": "BlackRock Investment Institute",
+      "title": "Mid-year webcast: recalibrating risk after the volatility spike",
+      "summary": "Following the Q1 volatility episode, the discussion focuses on re-risking selectively, the durability of the AI theme, and the role of bonds as ballast.",
+      "url": "https://www.blackrock.com/us/individual/insights/blackrock-investment-institute",
+      "published": "2026-04-14",
+      "periods": ["Q2-2026"],
+      "themes": ["volatility", "ai", "duration", "re-risking"],
+      "commentary_types": ["quarterly_review", "event_driven"]
+    },
+    {
+      "source_id": "ctx:statestreet:email-2026q2",
+      "channel": "email_alert",
+      "publisher": "State Street Global Advisors",
+      "title": "Monthly chart pack alert: sector leadership broadens",
+      "summary": "Market breadth improved as leadership broadened beyond mega-cap technology, supporting diversified equity positioning.",
+      "url": "https://www.ssga.com/us/en/individual/insights/market-updates",
+      "published": "2026-04-03",
+      "periods": ["Q2-2026"],
+      "themes": ["breadth", "sectors", "diversification"],
+      "commentary_types": ["quarterly_review", "ad_hoc"]
+    },
+    {
+      "source_id": "ctx:fidelity:energy-supply-2026q1",
+      "channel": "market_commentary",
+      "publisher": "Fidelity Institutional",
+      "title": "Market Update: Energy sector implications of a Middle East supply disruption",
+      "summary": "A geopolitical supply disruption in the Middle East pushed oil prices higher and lifted energy equities relative to the broader market. Portfolio energy exposure is via diversified global producers; positioning aligns with the long-term thesis and no fund mandate changes are warranted.",
+      "url": "https://institutional.fidelity.com/advisors/insights/topics/market-commentary",
+      "published": "2026-01-17",
+      "periods": ["Q1-2026"],
+      "themes": ["energy", "oil", "geopolitical", "commodities", "volatility"],
+      "commentary_types": ["event_driven", "ad_hoc"],
+      "key_points": [
+        "Oil prices rose sharply on Middle East supply-disruption risk.",
+        "Energy equities outperformed the broader market during the episode.",
+        "Portfolio exposure is via diversified global energy producers (IXC).",
+        "Refiners may face margin pressure from higher crude input costs.",
+        "Current positioning aligns with the long-term investment thesis; no mandate changes."
+      ],
+      "affected_tickers": ["IXC"],
+      "advisor_talking_point": "While short-term volatility may increase, the portfolio remains positioned to benefit from higher commodity pricing through its exposure to global energy producers. This is context, not a recommendation to trade."
+    },
+    {
+      "source_id": "ctx:jpmam:energy-webcast-2026q1",
+      "channel": "webcast",
+      "publisher": "J.P. Morgan Asset Management",
+      "title": "Special market bulletin webcast: oil, geopolitics, and portfolio ballast",
+      "summary": "An advisor-facing call covering the oil-price move, the role of energy and gold as diversifiers during geopolitical stress, and how to frame the episode for clients without overreacting.",
+      "url": "https://am.jpmorgan.com/us/en/asset-management/adv/resources/events/",
+      "published": "2026-01-18",
+      "periods": ["Q1-2026"],
+      "themes": ["energy", "oil", "geopolitical", "gold", "diversification"],
+      "commentary_types": ["event_driven", "ad_hoc"],
+      "key_points": [
+        "Energy and gold historically provide ballast during geopolitical stress.",
+        "Reaffirm the plan; avoid reactive trading into a volatility spike.",
+        "Revisit rebalancing only if allocations drift beyond target bands."
+      ],
+      "affected_tickers": ["IXC", "IAU"],
+      "advisor_talking_point": "Diversification across energy and gold is doing its job as ballast; our base case is unchanged and we are watching, not reacting."
+    },
+    {
+      "source_id": "ctx:fidelity:pm-energy-note-2026q1",
+      "channel": "portfolio_manager",
+      "publisher": "Fidelity Institutional",
+      "title": "Portfolio manager note: energy exposure and the supply-shock thesis",
+      "summary": "The fund's energy sleeve is concentrated in diversified global integrated producers that benefit from higher crude pricing; refiners face margin pressure. The manager is not changing positioning — the exposure aligns with the long-term thesis and the fund mandate is unchanged.",
+      "url": "https://institutional.fidelity.com/advisors/insights/topics/market-commentary",
+      "published": "2026-01-17",
+      "periods": ["Q1-2026"],
+      "themes": ["energy", "oil", "geopolitical", "positioning"],
+      "commentary_types": ["event_driven", "ad_hoc"],
+      "key_points": [
+        "Energy exposure is via diversified global integrated producers (IXC).",
+        "Higher crude pricing supports producer earnings; refiners may see margin pressure.",
+        "No change to positioning; exposure aligns with the long-term thesis.",
+        "No material change to the fund mandate."
+      ],
+      "affected_tickers": ["IXC"],
+      "advisor_talking_point": "The manager views the current energy positioning as consistent with the long-term thesis and is not making changes in response to the event."
+    }
+  ]
+}

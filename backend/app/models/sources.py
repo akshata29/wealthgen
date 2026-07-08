@@ -18,6 +18,7 @@ class SourceOrigin(str, Enum):
     WORK_IQ = "work_iq"
     WEB_IQ = "web_iq"
     LSEG = "lseg"
+    MORNINGSTAR = "morningstar"
 
 
 class SourceFact(BaseModel):

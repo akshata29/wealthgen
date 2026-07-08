@@ -8,7 +8,6 @@ interface AudienceSelectorProps {
 const OPTIONS: { value: Audience; label: string }[] = [
   { value: 'client', label: 'Client' },
   { value: 'institutional', label: 'Institutional' },
-  { value: 'ic', label: 'Investment Committee' },
 ]
 
 export default function AudienceSelector({ value, onChange }: AudienceSelectorProps) {

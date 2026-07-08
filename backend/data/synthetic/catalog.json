@@ -128,22 +128,15 @@
       "inception": "2019-03-01",
       "aum_musd": 42.5,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "JPM",
-        "HSBA",
-        "NESN",
-        "ASML",
-        "UNH",
-        "XOM",
-        "NEE",
-        "IEF",
+        "IVV",
+        "IEFA",
+        "IEMG",
+        "IJR",
+        "IXC",
+        "AGG",
         "LQD",
-        "IGLT",
-        "GLD",
-        "VNQ",
-        "BIL"
+        "IEF",
+        "IAU"
       ]
     },
     {
@@ -156,15 +149,13 @@
       "inception": "2017-06-15",
       "aum_musd": 128.0,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "ASML",
-        "UNH",
-        "JPM",
-        "VNQ",
+        "IVV",
+        "IEFA",
+        "IEMG",
+        "IJR",
+        "IXC",
         "LQD",
-        "BIL"
+        "IAU"
       ]
     },
     {
@@ -177,14 +168,12 @@
       "inception": "2015-01-10",
       "aum_musd": 310.0,
       "target_holdings": [
-        "IEF",
+        "IVV",
+        "IEFA",
+        "AGG",
         "LQD",
-        "IGLT",
-        "NESN",
-        "UNH",
-        "NEE",
-        "GLD",
-        "BIL"
+        "IEF",
+        "IAU"
       ]
     },
     {
@@ -197,15 +186,13 @@
       "inception": "2021-09-01",
       "aum_musd": 26.0,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "ASML",
-        "UNH",
-        "JPM",
-        "VNQ",
+        "IVV",
+        "IEFA",
+        "IEMG",
+        "IJR",
+        "IXC",
         "LQD",
-        "BIL"
+        "IAU"
       ]
     },
     {
@@ -218,14 +205,12 @@
       "inception": "2014-04-01",
       "aum_musd": 540.0,
       "target_holdings": [
-        "IEF",
+        "IVV",
+        "IEFA",
+        "AGG",
         "LQD",
-        "IGLT",
-        "NESN",
-        "UNH",
-        "NEE",
-        "GLD",
-        "BIL"
+        "IEF",
+        "IAU"
       ]
     },
     {
@@ -238,22 +223,15 @@
       "inception": "2020-11-01",
       "aum_musd": 3.8,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "JPM",
-        "HSBA",
-        "NESN",
-        "ASML",
-        "UNH",
-        "XOM",
-        "NEE",
-        "IEF",
+        "IVV",
+        "IEFA",
+        "IEMG",
+        "IJR",
+        "IXC",
+        "AGG",
         "LQD",
-        "IGLT",
-        "GLD",
-        "VNQ",
-        "BIL"
+        "IEF",
+        "IAU"
       ]
     },
     {
@@ -266,15 +244,13 @@
       "inception": "2016-02-01",
       "aum_musd": 96.0,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "ASML",
-        "UNH",
-        "JPM",
-        "VNQ",
+        "IVV",
+        "IEFA",
+        "IEMG",
+        "IJR",
+        "IXC",
         "LQD",
-        "BIL"
+        "IAU"
       ]
     },
     {
@@ -287,22 +263,14 @@
       "inception": "2018-07-01",
       "aum_musd": 205.0,
       "target_holdings": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "JPM",
-        "HSBA",
-        "NESN",
-        "ASML",
-        "UNH",
-        "XOM",
-        "NEE",
-        "IEF",
+        "ESGU",
+        "IEFA",
+        "IEMG",
+        "IXC",
+        "AGG",
         "LQD",
-        "IGLT",
-        "GLD",
-        "VNQ",
-        "BIL"
+        "IEF",
+        "IAU"
       ]
     }
   ],

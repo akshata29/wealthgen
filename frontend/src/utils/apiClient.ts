@@ -6,6 +6,7 @@ import type {
   CommentarySummary,
   CompliantCommentary,
   GenerateCommentaryRequest,
+  LiveEvent,
 } from '@/types/commentary'
 import type {
   ClientSummary,
@@ -104,6 +105,16 @@ export async function listAllCommentary(): Promise<CommentarySummary[]> {
   return handle(await fetch(`${BASE}/commentary/all`))
 }
 
+export async function deleteCommentary(id: string, mandateId: string): Promise<void> {
+  const res = await fetch(
+    `${BASE}/commentary/${encodeURIComponent(id)}?mandate_id=${encodeURIComponent(mandateId)}`,
+    { method: 'DELETE' },
+  )
+  if (!res.ok && res.status !== 204) {
+    await handle(res)
+  }
+}
+
 export async function reviewCommentary(
   id: string,
   mandateId: string,
@@ -137,6 +148,18 @@ export async function approveCommentary(
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role, approver_id: approverId }),
       },
+    ),
+  )
+}
+
+export async function rerunCompliance(
+  id: string,
+  mandateId: string,
+): Promise<CompliantCommentary> {
+  return handle(
+    await fetch(
+      `${BASE}/commentary/${id}/recompliance?mandate_id=${encodeURIComponent(mandateId)}`,
+      { method: 'POST' },
     ),
   )
 }
@@ -203,6 +226,10 @@ export async function getNextBestActions(
 
 export async function getVixEvents(triggersOnly = false): Promise<VixEvent[]> {
   return handle(await fetch(`${BASE}/events/vix?triggers_only=${triggersOnly}`))
+}
+
+export async function getLiveEvents(limit = 3): Promise<LiveEvent[]> {
+  return handle(await fetch(`${BASE}/events/live?limit=${limit}`))
 }
 
 // --- Research (MCP: Morningstar / LSEG) ---

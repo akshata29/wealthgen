@@ -8,10 +8,11 @@ import CommentaryViewer from '@/components/CommentaryViewer'
 import ComplianceBanner from '@/components/ComplianceBanner'
 import ToneControls from '@/components/ToneControls'
 import ExportMenu from '@/components/ExportMenu'
+import ContextSourcesPanel from '@/components/ContextSourcesPanel'
 import * as api from '@/utils/apiClient'
 import type {
   Audience,
-  BriefTrigger,
+  CommentaryType,
   CompliantCommentary,
   NarrativeStyle,
 } from '@/types/commentary'
@@ -29,8 +30,8 @@ export default function GenerateCommentary() {
     literacy: 'informed',
     non_financial_language: false,
   })
-  const [trigger, setTrigger] = useState<BriefTrigger>(
-    (params.get('trigger') as BriefTrigger) ?? 'scheduled',
+  const [trigger, setTrigger] = useState<CommentaryType>(
+    (params.get('commentary_type') as CommentaryType) ?? 'quarterly_review',
   )
   const [files, setFiles] = useState<File[]>([])
   const [needsReview, setNeedsReview] = useState<string[]>([])
@@ -57,8 +58,8 @@ export default function GenerateCommentary() {
         period,
         audience,
         style,
-        trigger,
-        event_period: trigger === 'event' ? period : null,
+        commentary_type: trigger,
+        event_period: trigger === 'event_driven' ? period : null,
       })
       setCommentary(result)
     } catch (e) {
@@ -100,13 +101,16 @@ export default function GenerateCommentary() {
       <ToneControls
         style={style}
         onStyleChange={setStyle}
-        trigger={trigger}
-        onTriggerChange={setTrigger}
+        commentaryType={trigger}
+        onCommentaryTypeChange={setTrigger}
       />
 
       {commentary && (
         <div className="space-y-4">
           <ComplianceBanner commentary={commentary} />
+          {commentary.context_sources && commentary.context_sources.length > 0 && (
+            <ContextSourcesPanel sources={commentary.context_sources} />
+          )}
           <CommentaryViewer commentary={commentary} />
           {commentary.id && <ExportMenu commentaryId={commentary.id} mandateId={mandateId} />}
           {commentary.id && (

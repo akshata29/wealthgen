@@ -56,24 +56,32 @@ def _rng(*parts: str | int) -> random.Random:
 
 
 # --------------------------------------------------------------------------- #
-# Per-instrument returns and portfolio weights
+# Per-sleeve returns and portfolio weights
 # --------------------------------------------------------------------------- #
-# Base period return (%) per sector under each regime; idiosyncratic noise added.
+# Base period return (%) per fund sleeve under each regime; idiosyncratic noise
+# is layered on top. Energy is deliberately resilient in risk-off regimes so a
+# geopolitical oil-supply shock reads coherently in the event-driven brief.
 _SECTOR_BASE_RETURN: dict[str, dict[str, float]] = {
     "risk-on": {
-        "Information Technology": 9.5, "Financials": 4.0, "Consumer Staples": 1.5,
-        "Health Care": 3.0, "Energy": 2.0, "Utilities": 1.0, "Real Estate": 3.5,
-        "Commodities": 2.5, "Government": 0.6, "Credit": 1.4, "Cash": 1.0,
+        "US Large Cap Equity": 8.5, "US Small Cap Equity": 7.0,
+        "International Developed Equity": 6.0, "Emerging Market Equity": 7.5,
+        "US Equity ESG": 8.0, "Global Energy Equity": 4.0,
+        "US Aggregate Bonds": 1.0, "Investment Grade Credit": 1.4,
+        "US Treasuries": 0.6, "Gold": 2.0,
     },
     "rotation": {
-        "Information Technology": -1.5, "Financials": 5.5, "Consumer Staples": 3.0,
-        "Health Care": 4.0, "Energy": 4.5, "Utilities": 2.5, "Real Estate": 2.0,
-        "Commodities": 3.5, "Government": -0.4, "Credit": 0.9, "Cash": 1.0,
+        "US Large Cap Equity": 1.0, "US Small Cap Equity": 5.5,
+        "International Developed Equity": 4.5, "Emerging Market Equity": 3.0,
+        "US Equity ESG": 1.5, "Global Energy Equity": 5.0,
+        "US Aggregate Bonds": 0.4, "Investment Grade Credit": 0.9,
+        "US Treasuries": -0.3, "Gold": 3.0,
     },
     "risk-off": {
-        "Information Technology": -12.0, "Financials": -8.0, "Consumer Staples": -1.0,
-        "Health Care": -3.0, "Energy": -6.0, "Utilities": 1.5, "Real Estate": -7.0,
-        "Commodities": 4.0, "Government": 3.2, "Credit": 1.1, "Cash": 1.0,
+        "US Large Cap Equity": -9.0, "US Small Cap Equity": -12.0,
+        "International Developed Equity": -7.5, "Emerging Market Equity": -10.0,
+        "US Equity ESG": -8.5, "Global Energy Equity": 6.5,
+        "US Aggregate Bonds": 2.4, "Investment Grade Credit": 1.6,
+        "US Treasuries": 3.2, "Gold": 4.5,
     },
 }
 
@@ -218,12 +226,12 @@ def _attribution_rows(mandate: Mandate, scenario: MarketScenario) -> tuple[list[
 
 
 _POSITIONING_TEMPLATES = [
-    ("Trimmed Information Technology into strength", "trim", "-150 bps", "Lock in gains after outsized AI-led rally; manage concentration risk."),
-    ("Added to Health Care on defensive quality", "add", "+120 bps", "Rotate toward earnings resilience amid growth-scare."),
-    ("Initiated Utilities for downside ballast", "initiate", "+80 bps", "Increase low-beta exposure ahead of expected volatility."),
-    ("Extended duration in Government bonds", "duration", "+0.4y", "Position for a lower forward rate path."),
-    ("Reduced Energy on demand concerns", "trim", "-60 bps", "Fade cyclical exposure as leading indicators soften."),
-    ("Exited a low-conviction Real Estate sleeve", "exit", "-90 bps", "Recycle capital into higher-conviction ideas."),
+    ("Trimmed US large-cap equity into strength", "trim", "-150 bps", "Lock in gains after an outsized mega-cap rally; manage concentration risk."),
+    ("Added to international developed equity", "add", "+120 bps", "Diversify away from US concentration as valuations broaden."),
+    ("Initiated a gold allocation for ballast", "initiate", "+80 bps", "Increase diversification and tail-hedge ahead of expected volatility."),
+    ("Extended duration via US Treasuries", "duration", "+0.4y", "Position for a lower forward rate path."),
+    ("Reduced emerging-market equity on growth concerns", "trim", "-60 bps", "Fade cyclical exposure as leading indicators soften."),
+    ("Added global energy exposure on supply risk", "add", "+90 bps", "Hedge geopolitical oil-supply risk with real-asset producers."),
 ]
 
 

@@ -7,6 +7,7 @@ const TITLES: Record<string, string> = {
   '/review': 'Review & Approve',
   '/workflow': 'Workflow',
   '/architecture': 'Architecture',
+  '/demo': 'Demo Flow',
   '/settings': 'Settings',
 }
 
