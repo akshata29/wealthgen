@@ -1,117 +1,162 @@
-# WealthGen — Demo Walkthrough (Scenarios A & B)
+# WealthGen — Demo Walkthrough
 
-Click-by-click guide for the July 9 readout demo (Ashish, ~10 min). Each step maps a
-script beat to the **actual screen/action** in the app, what to **say**, and any
-**honest caveat**. Also available in-app under **Architecture → Demo Flow**.
-
----
-
-## Pre-flight checklist (do this before you present)
-
-- [ ] **Backend running** — `./run_backend.bat` (http://localhost:8000)
-- [ ] **Frontend running** — `./run_frontend.bat` → open the printed URL
-- [ ] **Testing the DEPLOYED app?** It's one App Service container serving UI + API at `https://wgenhack-app.azurewebsites.net`. Config comes from App Service settings (pushed from `.env` at deploy). Sign in with Entra; hard-refresh after a fresh deploy.
-- [ ] **Modes** — backend `.env`: `DATA_SOURCE_MODE=fabric` (real iShares ETFs), `GROUNDING_MODE=foundry_iq`
-- [ ] **Hard-refresh** the browser (Ctrl+Shift+R) so it isn't showing stale data
-- [ ] **Morningstar is already logged in** (headless) — the OAuth refresh token is stored, so the app auto-mints access tokens at runtime. No manual step. Only re-run `python -m scripts.mcp_login morningstar` if the token was revoked (a `getaddrinfo` error is just transient network — retry).
-- [ ] **Pre-export a PDF** for one commentary and keep it in a browser tab (never demo the export retry)
-- [ ] **Have the recorded backup** open in a tab in case live fails
-
-### What's live vs. substituted (say this if asked)
-- **Live**: Fabric holdings/attribution (real iShares ETFs), commentary generation, tone/literacy toggle, review→approve→export (PDF/Word/email), next-best-action, event-driven context.
-- **Live provider (MCP)**: **Morningstar X-Ray** runs headlessly and is **auto-included as grounding when you generate commentary** (shows as an "Independent research (MCP)" context source). The manual **Run X-Ray** button on the portfolio page still works for the on-screen panel.
-- **Not wired in this env**: **LSEG** (placeholder creds). Market context comes from **Web IQ** (live web search; trial key is rate-limited so it may fall back) blended with the **curated market-context library** and **Fabric** index/FX numbers. Don't claim LSEG is live unless you re-enable it.
+Presenter guide (Ashish). This picks up **right after the business story** and carries
+it into the product. The through-line to hold onto the whole way: **hours to seconds,
+bespoke to each client, grounded in trusted data, reviewed by a human — the advisor
+stays the author.** Two scenarios: the everyday case (**an annual review**) and the hard
+case (**a market event**).
 
 ---
 
-## Deck alignment (for the presenter)
+## Setting the stage (say this before you touch the app)
 
-**Flow slide — "Ingest → Analyze → Contextualize → Draft → Guardrail":**
+*Carry your peer's momentum — don't reset it. You're turning the business problem into a
+working system, layer by layer.*
 
-| Deck step | In the app |
-|---|---|
-| Ingest — holdings & client context | Clients & Portfolios + Holdings table (Fabric / OneLake) |
-| Analyze — Morningstar X-Ray | Attribution / risk / weights (Fabric) + Morningstar X-Ray over MCP |
-| Contextualize — market events · manager bulletins | Live **Web IQ** events + curated context library (advisor portals, market commentary, PM notes, webcasts, alerts, wholesaler) |
-| Draft — template · tone · literacy | Generate → Tone & delivery + commentary type |
-| Guardrail — review & approve | Review & Approve — compliance gate, edit + re-run compliance, PM/Compliance sign-off |
+> "So that's the problem: a bespoke, compliant portfolio narrative takes about two hours
+> today — so only the top of the book ever gets one. And a thousand advisors means a
+> thousand versions of your firm's voice for compliance to police. What I'll show you is
+> the same job done in seconds, for every client, in one voice, with a human still in
+> control. Let me walk you through what's happening under the hood — because *how* it's
+> built is what makes it a compliance product, not a chatbot."
 
-**Architecture slide — say it straight if asked:**
+### The data flow, in plain terms — each layer removes a piece of that two-hour job
 
-- **Morningstar (MCP)** is live and headless — the backend mints access tokens from a stored OAuth refresh token (the slide's "OAuth token mint").
-- **LSEG** on the slide uses the *same* MCP + OAuth pattern — a config swap, not wired in this build. The live **market events & context** you'll demo come from **Web IQ** (Microsoft AI web search), filling the same "external providers" role.
-- **Foundry Models**: the slide says GPT-4o; the running deployment uses **GPT-5** (GPT-4o was retired in this tenant). Same architecture, newer model.
-- **Fabric Data Agent + API Management** are the productionization path on the slide; the working build reads **Fabric over its SQL analytics endpoint** and mints MCP tokens **headlessly in the backend** — same shape, fewer moving parts.
-- Everything else matches the build: Entra ID SSO, Foundry IQ grounding, Work IQ approved-language / next-best-action, AI Content Safety, human approval, PDF/Word/Email delivery, and the private-link / VNet production path.
+1. **It starts with the advisor.** They sign in with your own identity (**Microsoft Entra
+   ID** SSO) and open their real book. Nothing here replaces the advisor — it gives them
+   their hours back. They stay the author of record.
+2. **The numbers come from your systems, not a model's imagination.** Holdings, client and
+   portfolio data, weights and attribution are read live from **Microsoft Fabric /
+   OneLake** — the firm's system of record. No re-keying, no guessing.
+3. **Independent analytics on top.** The portfolio runs through a live **Morningstar X-Ray
+   over MCP** — sector, allocation, style, risk and return — with the provider's
+   attribution kept on every figure. That's the analyst's first hour, done and traceable.
+4. **The market context an advisor actually reads.** Live web signals and manager bulletins
+   come in through **Web IQ** and a curated context library — advisor portals, market
+   commentary, PM notes, webcasts, alerts, wholesaler notes — each one cited.
+5. **The firm's knowledge and rules are built in.** **Foundry IQ** grounds fund/ETF facts
+   and benchmarks; **Work IQ** carries your approved language, the disclosure library, and
+   the next-best-action playbooks. This is the layer that makes it compliant by design.
+6. **Agents draft it in your voice.** **Azure AI Foundry** agents orchestrate research →
+   plan → draft against the firm's template, tuned to each client's tone and financial
+   literacy.
+7. **A guardrail before anything ships.** **AI Content Safety** plus a mandatory **human
+   approval gate** (PM and Compliance). Every figure carries its source, nothing reaches a
+   client unreviewed, and it goes out as PDF, Word, or email.
 
----
-
-## Scenario A — The Market-Event Morning (~6 min)
-
-> Period to use: **Q1-2026** (the VIX-spike / risk-off quarter). Client to use:
-> **Delacroix Global Growth** or **Northbridge Global Balanced** (both hold the energy fund **IXC** and gold **IAU**, so the event lands on real holdings).
-
-### 1. Setup (say it, no click)
-> "It's that Monday morning. Watch what happens for one of your advisor's clients."
-
-### 2. A market event, mapped to your clients
-- On **Clients & Portfolios**, click **Scan live market events**. A current market headline appears, already cross-referenced to your book — **"Affects 6 of your 8 portfolios"** with the funds involved.
-- Click **Event brief** on it to open Generate for the most-affected client — or open **Delacroix Family Office → Delacroix Global Growth** at **Q1-2026** directly.
-- Say: "A live market signal, mapped to the exact clients who hold what moved — not the market in general."
-
-> If Web IQ is rate-limited the live scan returns empty — use the built-in amber **Q1-2026 · VIX 31 · risk-off** scenario banner instead; the rest of the flow is identical. (Optional autonomous angle: `python -m scripts.scan_events --period Q1-2026` lists every affected portfolio with weights.)
-
-### 3. The portfolio, analyzed
-- The portfolio page shows the **metrics** (return, active, tracking error, Sharpe), **Benchmark compare**, **Index/ETF compare**, **Attribution by fund sleeve**, and the **Holdings** table (IVV, IEFA, IEMG, IJR, **IXC**, LQD, **IAU** …) with weights and returns — all from Fabric.
-- (Optional) Click **Run X-Ray** to show Morningstar's independent analysis of these holdings, live over MCP.
-- Say: "Sector, allocation, weights, risk and return — with Morningstar's independent X-Ray over the top, every figure traces to its source."
-
-### 4. Generate the brief — grounded, in one click
-- Click **Generate commentary** (the type is already **Event** if you came from the live-event **Event brief**).
-- One call orchestrates it all: **Fabric** holdings/attribution, **Web IQ** market context, and **Morningstar's X-Ray over MCP** — which appears in the **"Real-world context used"** panel as an *Independent research* source, alongside advisor portals, market commentary, PM notes, webcasts, alerts, and wholesaler notes.
-- Every claim cites its source, and **"Your holdings affected: IXC 14.2%"** badges tie the event to this exact portfolio.
-- Say: "Foundry, Fabric, and the Morningstar provider — one click — and every number carries its source, tied to the holdings the event touches."
-
-### 5. Tone / literacy toggle — flip it live  ⭐ money moment
-- In **Tone & delivery**, flip **Ease (literacy)** from **Expert → Novice** (and/or tick **Non-financial language**), then **regenerate**.
-- Say: "This client is a retired teacher, not a CFA. Watch the same analysis become her language." Show the plain-English version next to the technical one.
-
-### 6. Reviewer approval → delivery  (Guardrail — the advisor stays the author)
-- Click **Send to review & approval** (or **Review queue → open the item**).
-- On **Review & Approve**: if compliance flagged something, click **Edit draft**, revise the flagged wording, **Save changes**, then **Re-run compliance** — the banner updates live (rejected → rewritten → passed). This is the human-in-the-loop: the advisor stays the author of record.
-- Approve as **PM**, then **Compliance** (both gates), then **Deliver**.
-- Open **Export**: **PDF**, **Word (.docx)**, or **Email** (downloads a ready-to-send `.eml`).
-- Say: "Reviewed — and editable — by a human before it leaves the building." (Use the pre-exported PDF tab if export is slow.)
-
-### 7. Closer (say it)
-> "A hundred clients. Same morning. Every one gets this."
+> "Two things set this in motion: **on demand** — a review that's coming up — or a **market
+> event** — the day the market moves and the phones start ringing. Let me show you both,
+> starting with the everyday case, and I'll call out each of those layers as we go."
 
 ---
 
-## Scenario B — The Quarterly Review (~4 min)
+## Scenario A — The Annual Review (~5 min)
 
-> Period to use: **Q2-2026** (calmer quarter). Client to use: **Thornton Household →
-> Thornton Lifestyle Balanced** (life event: *New child / education planning* — matches
-> "her daughter starts university"). Alternatives: **Northbridge** (*Approaching
-> retirement 5y*), **Rivera** (*Liquidity event — business sale*).
+The everyday case: an advisor prepping for a client's annual review, on demand. Client:
+**Thornton Household → Thornton Lifestyle Balanced** — a novice, warm-tone client with a
+life event on file (*New child / education planning*). Flow: **Clients & Portfolios →
+Portfolio detail → Generate commentary**, calling out each layer from the stage-setting.
 
 ### 1. Setup (say it)
-> "Now the calmer, more common case — review season."
+> "Let's start with the everyday case — review season. An advisor has a client meeting
+> tomorrow and needs a bespoke narrative, on demand — the kind that takes two hours today."
 
-### 2. Open the client, prep for tomorrow's review
-- Open **Thornton Household → Thornton Lifestyle Balanced**, period **Q2-2026**. Note the **life event** chip ("New child / education planning") and the **Next best actions** panel on the portfolio page.
-- Say: "No market emergency — an advisor prepping for tomorrow's review, on demand."
+### 2. The advisor's book — Clients & Portfolios
+- Open **Clients & Portfolios**. Point to the book: **8 clients**, total AUM, and the
+  **Filter by type** chips (Family Office / Institutional / Private Client).
+- **Under the hood → business:** "This is the advisor's real book, read live from
+  **Microsoft Fabric / OneLake** — your system of record. Every client, every mandate, no
+  re-keying. That's layer one: it starts with the advisor and *your* data."
 
-### 3. Life event → next-best-action, in the brief  ⭐ money moment
-- Click **Generate commentary**, **Commentary type = Quarterly**. The recommendation surfaces *alongside* the commentary — grounded in the client's life, not just the market.
-- Say: "Her daughter starts university next year. This is where commentary becomes a conversation starter."
+### 3. The portfolio, already analyzed — Thornton Lifestyle Balanced
+- Open **Thornton Household → Thornton Lifestyle Balanced**. Walk the page: the **metrics**
+  (return, active, tracking error, Sharpe), **Benchmark compare**, **Attribution by fund
+  sleeve**, and the **Holdings** table — real iShares ETFs (IVV, IEFA, IEMG, IJR, IXC, LQD,
+  IAU) with weights and returns.
+- Point out the client's **life event** chip (*New child / education planning*) and the
+  **Next best actions** panel.
+- (Optional) Click **Run X-Ray** — Morningstar's independent analysis of these holdings,
+  live over MCP.
+- **Under the hood → business:** "Holdings and attribution are straight from Fabric;
+  Morningstar's independent X-Ray sits over the top, attribution kept on every figure.
+  That's the analyst's first hour — already done, already traceable. And notice the system
+  already knows this client's life event; that's about to matter."
 
-### 4. Same firm voice, different client
-- Briefly open a second client (e.g. **Northbridge**) and generate — same house voice, different portfolio and tone.
-- Say: "A thousand advisors. One voice."
+### 4. Generate the annual review — grounded, in one click
+- Click **Generate commentary**. Set **Commentary type = Yearly (Annual Review)**, audience
+  **Client**. Generate.
+- **Under the hood → business:** "This one click orchestrates the whole pipeline —
+  **Fabric** numbers, **Web IQ** market context, the **Morningstar X-Ray** over MCP (it
+  shows up as *Independent research* in the 'Real-world context used' panel), **Foundry IQ /
+  Work IQ** grounding and your approved language, and **Foundry agents** drafting in the
+  house voice."
+- The brief appears: a full-year narrative across seven sections — **every claim cites its
+  source** — and the **next-best-action** surfaces *alongside* the commentary.
+  ⭐ **money moment**
+- Say: "Two hours becomes seconds. It's bespoke to this client — their holdings, their
+  year, their life event — and every number carries its source. This is where commentary
+  becomes a conversation starter, not a form letter."
+
+### 5. Same analysis, the client's language — tone / literacy
+- In **Tone & delivery**, flip **Ease (literacy)** **Expert → Novice** (and/or tick
+  **Non-financial language**), then **regenerate**.
+- Say: "This client isn't a CFA. Watch the same analysis become her language —
+  automatically." Show the plain-English version next to the technical one.
+  ⭐ **money moment**
+
+### 6. The guardrail — review, edit, approve, deliver
+- Click **Send to review & approval** (or **Review queue → open the item**).
+- If compliance flags anything, click **Edit draft**, revise the wording, **Save changes**,
+  then **Re-run compliance** — the banner updates live (rejected → rewritten → passed). The
+  advisor stays the author.
+- Approve as **PM**, then **Compliance**, then **Deliver** — **PDF**, **Word**, or **email**.
+- **Under the hood → business:** "Approved language and disclosures are built in, AI Content
+  Safety and a human both sign off, and every figure is traceable. Compliance stops sampling
+  and starts guaranteeing — a thousand advisors, one reviewed voice."
+
+### 7. Closer (say it)
+> "That's every client's annual review — grounded, compliant, in seconds instead of hours."
+
+---
+
+## Scenario B — The Market Event (~4 min)
+
+The hard case: the market moves and every client wants to know what it means for *them*.
+Same engine as the annual review — the new parts are the **live trigger** and the
+**holdings cross-reference**. Keep it tight; the mechanics were shown in Scenario A.
+
+### 1. Setup (say it)
+> "Now the day the market moves — the phones start ringing. Same engine, but it starts
+> itself, and it already knows exactly which clients are exposed."
+
+### 2. A live market signal, mapped to the book — Clients & Portfolios
+- On **Clients & Portfolios**, click **Scan live market events**. A current market headline
+  comes back from **Web IQ**, already cross-referenced to the book — **"Affects 6 of your 8
+  portfolios"** with the funds involved.
+- **Under the hood → business:** "That's a live web signal matched against the holdings in
+  Fabric — so it's not 'the market is down,' it's 'these six clients hold what moved.'"
+
+> If Web IQ is rate-limited the live scan returns empty — use the built-in amber **Q1-2026 ·
+> VIX 31 · risk-off** scenario banner instead; the rest of the flow is identical. (Optional:
+> `python -m scripts.scan_events --period Q1-2026` lists every affected portfolio with weights.)
+
+### 3. An event brief for an affected client  ⭐ money moment
+- Click **Event brief** on the event — it opens **Generate** for the most-affected client
+  (one holding **IXC**), commentary type pre-set to **Event**. Generate.
+- The brief opens calm and event-aware, with **"Your holdings affected: IXC 14.2%"** badges
+  tying the event to that exact portfolio, and a compliant advisor **talking point**.
+- Say: "Same grounded pipeline — Fabric, Web IQ, Morningstar — but now the narrative leads
+  with the event, names the affected holding and its weight, and gives the advisor something
+  compliant to say."
+
+### 4. Same guardrail, same voice
+- Flip tone/literacy if you like, then **Send to review & approval** → approve → **Deliver**.
+  Same human-in-the-loop, same firm voice.
+- Say: "A hundred clients, same morning — every one gets a bespoke, reviewed answer."
 
 ### 5. Closer (say it)
-> "Hours to seconds — grounded, reviewed, delivered."
+> "Triggered by markets or on demand — hours to seconds, grounded, reviewed, delivered. The
+> advisor stays the author."
 
 ---
 
@@ -132,6 +177,10 @@ script beat to the **actual screen/action** in the app, what to **say**, and any
 | Export PDF / Word / Email | Commentary view → Export |
 | Next-best-action | Portfolio page → Next best actions (driven by client life event) |
 
-## Two things not to say
-- Don't call **LSEG** live — it's not wired in this environment.
-- If the Morningstar X-Ray ever errors mid-demo (transient network), just move on — generation still completes; the X-Ray is best-effort grounding.
+## If asked (honest one-liners)
+- **Morningstar** is live over MCP (headless); **LSEG** on the architecture uses the same
+  MCP pattern and is a config swap — the live market context you saw comes from **Web IQ**.
+- Some **client data is synthetic** while the shared environment finishes — the architecture
+  is identical either way.
+- If the Morningstar X-Ray ever errors mid-demo, move on — generation still completes; it's
+  best-effort grounding.
