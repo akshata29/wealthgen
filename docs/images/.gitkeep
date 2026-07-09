@@ -1,0 +1,8 @@
+Drop demo screenshots here (referenced by README.md → Screenshots):
+
+  clients-portfolios.png    Clients & Portfolios — book, market-event banner, type filter
+  portfolio-detail.png      Portfolio detail (Thornton) — holdings, attribution, next-best-action
+  generate-commentary.png   Generate — tone/literacy, commentary type, real-world context used
+  review-approve.png        Review & Approve — compliance banner, edit + re-run compliance
+
+PNG, ~1400px wide works well. This file just keeps the folder in git.

@@ -9,6 +9,22 @@ with a human approval gate before anything reaches a client.
 
 ---
 
+## Quickstart
+
+```powershell
+# 1. Backend (FastAPI · http://localhost:8000)  — needs backend/.env (see Configuration)
+./run_backend.bat
+
+# 2. Frontend (Vite · http://localhost:5173, proxies /api → :8000)
+./run_frontend.bat
+```
+
+Open **http://localhost:5173**, sign in with Entra ID, and start at **Clients & Portfolios**.
+New here? Jump to [Prerequisites](#prerequisites) and [Configuration](#configuration). Deploying
+to Azure? See [Deploy](#deploy-to-azure). Giving the demo? See [`DEMO_WALKTHROUGH.md`](DEMO_WALKTHROUGH.md).
+
+---
+
 ## The problem
 
 A bespoke, compliant portfolio narrative takes an advisor roughly **two hours** today — pull
@@ -41,6 +57,15 @@ data and reviewed by a human.
 
 ## Architecture (the data flow)
 
+```mermaid
+flowchart LR
+    A["Ingest<br/>holdings & client context"] --> B["Analyze<br/>Fabric attribution + Morningstar X-Ray"]
+    B --> C["Contextualize<br/>market events · manager bulletins"]
+    C --> D["Draft<br/>template · tone · literacy"]
+    D --> E["Guardrail<br/>review & approve"]
+    E --> F["Deliver<br/>PDF · Word · Email"]
+```
+
 Each layer removes a piece of the two-hour job:
 
 1. **Advisor / identity** — Microsoft Entra ID SSO; the advisor is the author of record.
@@ -54,6 +79,52 @@ Each layer removes a piece of the two-hour job:
    carries approved language, the disclosure library, and next-best-action playbooks.
 6. **Orchestration** — **Azure AI Foundry** agents (research → plan → draft) in the house voice.
 7. **Guardrail & delivery** — **Azure AI Content Safety** + human approval → PDF / Word / email.
+
+```mermaid
+flowchart TB
+    Advisor(["Advisor — author of record"])
+    Advisor -->|"Entra ID SSO"| SPA["React SPA · Azure Web App"]
+    SPA -->|"generate / market event"| Foundry
+
+    subgraph ORCH["Orchestration"]
+      Foundry["Azure AI Foundry agents<br/>research → plan → draft"]
+      Safety["AI Content Safety"]
+    end
+
+    subgraph GROUND["Grounding & Knowledge"]
+      FoundryIQ["Foundry IQ<br/>fund / ETF facts · benchmarks"]
+      WorkIQ["Work IQ<br/>approved language · disclosures · NBA"]
+      Search[("Azure AI Search<br/>fact-sheet index")]
+    end
+
+    subgraph DATA["Enterprise Data"]
+      Fabric[("Microsoft Fabric / OneLake<br/>clients · holdings · attribution")]
+    end
+
+    subgraph PROV["External providers · MCP"]
+      Morningstar["Morningstar<br/>Portfolio X-Ray"]
+      WebIQ["Web IQ<br/>live market context"]
+      LSEG["LSEG · optional"]
+    end
+
+    subgraph HITL["Human-in-the-loop"]
+      Gate["PM + Compliance approval"]
+      Deliver["PDF · Word · Email"]
+    end
+
+    Foundry --> Fabric
+    Foundry --> Morningstar
+    Foundry --> WebIQ
+    Foundry -. "config-swap" .-> LSEG
+    Foundry --> FoundryIQ
+    FoundryIQ --> Search
+    Foundry --> WorkIQ
+    Foundry --> Safety
+    Safety --> Gate
+    Gate --> Deliver
+    Foundry -. "drafts · audit" .-> Cosmos[("Cosmos DB")]
+    Gate -. "approvals" .-> Cosmos
+```
 
 ### Azure services
 
@@ -69,6 +140,23 @@ Each layer removes a piece of the two-hour job:
 | Morningstar (MCP) | Portfolio X-Ray analytics (headless OAuth) |
 | LSEG (MCP) | Market data — same MCP pattern, optional / config-swap |
 | Microsoft Entra ID | SPA single sign-on |
+
+## Screenshots
+
+_Add PNGs under `docs/images/` with the names below (your demo captures work well) and they'll
+render here._
+
+### Clients & Portfolios — the advisor's book, market-event banner, type filter
+![Clients & Portfolios](docs/images/clients-portfolios.png)
+
+### Portfolio detail — real-fund holdings, attribution, next-best-action
+![Portfolio detail](docs/images/portfolio-detail.png)
+
+### Generate — grounded commentary with tone/literacy and cited real-world context
+![Generate commentary](docs/images/generate-commentary.png)
+
+### Review & Approve — compliance gate, edit + re-run compliance, sign-off
+![Review and approve](docs/images/review-approve.png)
 
 ## Tech stack
 
